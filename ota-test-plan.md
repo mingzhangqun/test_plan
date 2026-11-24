@@ -67,11 +67,15 @@ cat /etc/armbian-image-release
 
 ```sh
 cat /etc/armbian-image-release     # § 前置确认：逐项核对，含 SEEED_EXTENSION_COMMIT
+journalctl -b | grep -iE "SSKR|tee-supplicant"   # 首启 SSKR 迁移 86da→SSKR（仅首启可观察）
 systemctl status armbian-ota-init-uboot.service
 journalctl -b -u armbian-ota-init-uboot | grep -E "Installed|unreadable"
 cat /etc/fw_env.config        # 双条目 3 字段，设备为 /dev/nvme0n1
 fw_printenv | head
 ```
+
+版本核对辅以 `uname -v`：事务后 image-release 可能被 upper 陈旧文件遮蔽显示旧值
+（261121 批 E1 实证，属预期非失败），前置确认只在首启做。
 
 ### A-2/A-3 重启×2（§1）
 
@@ -94,7 +98,8 @@ sync && reboot
 
 ```sh
 /usr/sbin/armbian-ota start bad.tar.gz
-# 秒级拒绝，报错含 "dual-payload assertion failed"（no boot payload）
+# 拒绝在 extract 之后（断言跑在解压目录上，分钟级非秒级，261121 批事务 ~73s 量级）
+# 报错含 "dual-payload assertion failed"（no boot payload）
 fw_printenv -n ota_in_progress   # 未被触碰（仍 0/unset）
 ```
 
@@ -106,9 +111,11 @@ USB 克隆盘插入；`blkid | grep -c security` 应见双份 PARTLABEL。
 
 ```sh
 # 1. 牺牲事务：后台起，等 target mapper 挂载出现后杀掉（制造残留）
-/usr/sbin/armbian-ota start pkg.tar.gz &     # 记 PID
+/usr/sbin/armbian-ota start pkg.tar.gz &     # 记 start 的精确 PID
 until findmnt | grep -q armbian-ota-root-; do sleep 5; done
-sleep 30 && kill -9 <PID 及子进程>            # pkill -9 -f armbian-ota
+sleep 30 && kill -9 <精确PID>
+# 勿 pkill/pgrep -f（261121 批实证会匹配自身命令行、误杀 ssh 会话）
+# kill 只杀顶层 bash；孤儿写者留下为预期——正是 Detaching 有界等待要验的场景
 findmnt | grep armbi_                         # 记录残留挂载
 cryptsetup status armbian-ota-root-<slot>     # 记录残留 mapper
 
@@ -143,24 +150,26 @@ NVMe 全盘烧 recovery-secure 镜像 + SPI-NOR 写回 secure loader → 上电�
 
 ### B-1 首启
 
-前置确认（同 A-1：`cat /etc/armbian-image-release` 逐项核对）。健康进入 normal
-（decryption-disk 正常解锁）；记录 `cat /boot/payload-id` 旧值（§6 基线）；插克隆盘。
+前置确认（同 A-1：`cat /etc/armbian-image-release` 逐项核对）。串口观察首启
+**明文口令窗口**（security marker 86da → tee-supplicant → SSKR 迁移，仅首启可见）；
+健康进入 normal（decryption-disk 正常解锁）；记录 `cat /boot/payload-id` 旧值（§6 基线）；插克隆盘。
 
 ### B-2 Recovery OTA（§6 + §5 recovery/加密面）
 
 ```sh
 /usr/sbin/armbian-ota start pkg.tar.gz
 fw_printenv ota_in_progress ota_boot_next    # =1 / =recovery
-reboot                                        # 进 Rescue apply（串口观察）
-# 串口：apply 全程 boot 文件逐个换新，/boot/payload-id 保持旧值到最后才翻转
-# 回 normal 后：cat /boot/payload-id == status 的 CANDIDATE_ID → mark-success
+reboot                                        # 进 Rescue apply（期间 ssh 不可达，观察走串口）
+# apply 完成后设备自动 reboot 回 normal（串口 "OTA done, rebooting"，手动重启预算不变）
+# 硬断言（前后）：apply 前 payload-id=旧值；回 normal 后 == status 的 CANDIDATE_ID → mark-success
+# 串口日志若含 boot 文件交换序，记录 payload-id 行的相对位置（应最晚）
 # 克隆盘在场：armbi_boot/rootfs/LUKS 解析均落启动盘（§5）
 ```
 
 ### B-3 负例复测（§3b recovery 同语义）
 
 ```sh
-/usr/sbin/armbian-ota start bad.tar.gz      # 同款秒拒（extract 后断言失败）
+/usr/sbin/armbian-ota start bad.tar.gz      # 同款拒绝（extract 后断言，分钟级）
 ```
 
 ### B-4 双坏自愈（§2b）
@@ -184,6 +193,12 @@ reboot                                       # 确认安静 boot 一次
 
 - 合并事务任一观察点失败：先清残留（`umount -R` + `cryptsetup luksClose armbian-ota-root-*`）再单项重跑；各手册项均可独立复测，不依赖整链
 - §7 未按预期（走到明文挂载/继续启动）→ 立即断电，保存串口全文
+
+## 本 rig 不覆盖（沿 261121 批残余缺口）
+
+- `p?` optional-p 的 sd/vd 分支：锚定正则前缀由启动盘决定，devkit boot 盘为 NVMe 走不到该分支（克隆 USB 盘是 /dev/sdX 但只充当"重复 LABEL 锚定"干扰源）
+- 真跨 release 全量切换：缺 resolute cli crypt 包
+
 - 报告：沿用 261121 批格式，按形态各一份（ab-secure / recovery-secure），**头部必含镜像身份块**：
 
 ```

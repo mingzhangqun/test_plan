@@ -105,8 +105,8 @@ cat /var/lib/armbian-ota/ota-state.env   # OTA_MODE/STATUS/TARGET_SLOT 等键齐
 /usr/sbin/armbian-ota start <pkg> &   # 先起一个
 /usr/sbin/armbian-ota start <pkg2>    # 第二个立即被拒：Another OTA process is running
 
-# 负例：包内缺 boot payload —— 断言已移到解压后目录上跑（不再流式列全包成员）
-# 预期秒级失败：KIND=full package has no boot payload (dual-payload assertion failed)
+# 负例：包内缺 boot payload —— 断言跑在解压后目录上（不再流式列全包成员，但需付完整解压，分钟级）
+# 预期：KIND=full package has no boot payload (dual-payload assertion failed)
 ```
 
 通过标准：第二个 start 退出码非 0 且不碰 env/state；缺 boot payload 的包在 extract 后
@@ -132,7 +132,8 @@ mount --bind /tmp /tmp/stale-root/tmp # 模拟被杀 hook 留下的嵌套挂载
 
 - A/B secure：security 分区解析结果属于当前启动盘（journal 中 ab_get_security_part 路径）；
 - recovery：armbi_boot / rootfs / LUKS 容器解析均落在启动盘，不落到克隆盘；
-- 加密镜像双盘：decryption-disk 的 LUKS 容器来自启动盘（`p?` 可选锚定对 sda1/vda1 同样命中）。
+- 加密镜像双盘：decryption-disk 的 LUKS 容器来自启动盘（`p?` 可选锚定对 sd/vd 系统盘生效——
+  需相应盘型才走得到该分支，devkit/NVMe rig 不覆盖，列残余）。
 
 通过标准：全程无错盘写入/错盘解锁，OTA 落盘分区全在启动盘。
 
