@@ -40,6 +40,21 @@
 - 坏包 ×1：解包删 boot 成员（boot.itb 或 boot.tar.<fmt>）→ 重打包
 - USB 克隆盘：dd 同镜像（两形态可复用一块盘，Session 间在 host 重 dd）
 - plain / secure loader 文件（loaders/ 相对路径）；scp 通道、串口会话就绪
+- 记录烧录镜像与 OTA 包的 sha256（host 侧，入报告）
+
+## 前置确认（每 Session 首启后第一步；不通过则中止该 Session）
+
+```sh
+cat /etc/armbian-image-release
+```
+
+逐项核对并记入报告：
+
+- `BOARD` / `RELEASE` / `IMAGE_VARIANT` / `VERSION`：与烧录镜像、OTA 包三方一致
+- `SEEED_EXTENSION_REPO` + `SEEED_EXTENSION_COMMIT`：**必须等于被测 commit**（本批 = main 849bdd25 系列）
+- `BUILD_REPOSITORY_COMMIT`（带 `-dirty` 需注明）、`IMAGE_UUID`
+
+示例设备当前为 `SEEED_EXTENSION_COMMIT=4245749a...`——非本批被测版本，测试前必须先烧新构建镜像。
 
 ---
 
@@ -48,9 +63,10 @@
 ### A-0 🔌 人工断电窗口 W1
 关机 → NVMe 全盘烧 A/B-secure 镜像 + SPI-NOR 写 secure loader → 上电。
 
-### A-1 首启（§1）
+### A-1 首启（前置确认 + §1）
 
 ```sh
+cat /etc/armbian-image-release     # § 前置确认：逐项核对，含 SEEED_EXTENSION_COMMIT
 systemctl status armbian-ota-init-uboot.service
 journalctl -b -u armbian-ota-init-uboot | grep -E "Installed|unreadable"
 cat /etc/fw_env.config        # 双条目 3 字段，设备为 /dev/nvme0n1
@@ -127,7 +143,8 @@ NVMe 全盘烧 recovery-secure 镜像 + SPI-NOR 写回 secure loader → 上电�
 
 ### B-1 首启
 
-健康进入 normal（decryption-disk 正常解锁）；记录 `cat /boot/payload-id` 旧值（§6 基线）；插克隆盘。
+前置确认（同 A-1：`cat /etc/armbian-image-release` 逐项核对）。健康进入 normal
+（decryption-disk 正常解锁）；记录 `cat /boot/payload-id` 旧值（§6 基线）；插克隆盘。
 
 ### B-2 Recovery OTA（§6 + §5 recovery/加密面）
 
@@ -167,4 +184,11 @@ reboot                                       # 确认安静 boot 一次
 
 - 合并事务任一观察点失败：先清残留（`umount -R` + `cryptsetup luksClose armbian-ota-root-*`）再单项重跑；各手册项均可独立复测，不依赖整链
 - §7 未按预期（走到明文挂载/继续启动）→ 立即断电，保存串口全文
-- 报告：沿用 261121 批格式，按形态各一份（ab-secure / recovery-secure）
+- 报告：沿用 261121 批格式，按形态各一份（ab-secure / recovery-secure），**头部必含镜像身份块**：
+
+```
+- 设备/介质/loader：reComputer RK3576 DevKit / NVMe / SPI-NOR loader
+- 镜像身份（/etc/armbian-image-release）：BOARD / RELEASE / IMAGE_VARIANT / VERSION /
+  SEEED_EXTENSION_REPO + SEEED_EXTENSION_COMMIT / BUILD_REPOSITORY_COMMIT / IMAGE_UUID
+- 烧录镜像 sha256 / OTA 包 sha256；烧录时间与 boot 计数基线
+```

@@ -162,6 +162,9 @@ secure 加密镜像在 plain loader（无 OP-TEE/BL32，无 `/dev/tee*`）下上
 
 ## 8. 记录模板
 
+每批先记镜像身份（`cat /etc/armbian-image-release`）：BOARD / RELEASE / IMAGE_VARIANT /
+VERSION / SEEED_EXTENSION_REPO+COMMIT / BUILD_REPOSITORY_COMMIT / IMAGE_UUID，外加烧录镜像
+与 OTA 包的 sha256。SEEED_EXTENSION_COMMIT 必须等于被测 commit，不符先解决镜像。
 每项记录：板型 / 镜像（sha）/ boot 次数 / journal 关键行 / 通过-失败。
 失败时附：`fw_printenv` 输出、`/etc/fw_env.config`、双偏移 od 头 16 字节、
 `journalctl -b -u armbian-ota-*`。
