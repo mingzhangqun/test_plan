@@ -1,6 +1,6 @@
-# OTA 真机回归清单（fix/ota @ 94806596 后、合并前）
+# OTA 真机回归清单（OTA 系列合入 main @ 849bdd25 后）
 
-针对 PR #42 追加提交 `94806596`（统一冗余 env + fw_setenv -f 重建）的三项真机验证。
+基线 PR #42（统一冗余 env + fw_setenv -f 重建），叠加 PR45/46/47 合入后的新增行为。
 前置：目标板 ssh 可达（或串口）；root；fw_printenv/fw_setenv 在 PATH。
 
 ## 0. 公共参数与工具
@@ -71,6 +71,9 @@ fw_printenv | grep -E "boot_slot|boot_success"        # slot 正确
 
 通过标准：一次重启内自愈完成、boot_slot/boot_success 与实际运行 slot 一致、无手工干预。
 
+PR45 增验：双坏盘不得被 env-format probe 误判为单副本格式 —— 自愈后 `/etc/fw_env.config`
+仍为双条目（非单条 `0x3f8000`）；两副本 blob 头均合法且 flags=01（即"双副本 flags"项收口）。
+
 ### 2b. Recovery
 
 同款双坏 dd → reboot → 设备应进 Rescue（默认 env 路由）→ initramfs `99-ota-apply`
@@ -89,12 +92,75 @@ fw_printenv -n ota_boot_next
 /usr/sbin/armbian-ota mark-success  # 或等 firstboot health 自动确认
 fw_printenv -n ota_in_progress      # =0，flags 清除
 systemctl status armbian-ota-firstboot.service
+cat /var/lib/armbian-ota/ota-state.env   # OTA_MODE/STATUS/TARGET_SLOT 等键齐全
 ```
 
 通过标准：arm 两键写入即成功（无 WARNING "rebuilding env"——坏 CRC 重试不应触发）、
 读回一致、事务全程 env 写入零失败、mark-success 后状态与 env 收敛。
 
-## 4. 记录模板
+### 3b. 并发锁与负例（PR46/45 合入后）
+
+```sh
+# 并发锁：start 在读包元数据前先 acquire_lock（CLI 与 backend 同 PID 重入为 no-op）
+/usr/sbin/armbian-ota start <pkg> &   # 先起一个
+/usr/sbin/armbian-ota start <pkg2>    # 第二个立即被拒：Another OTA process is running
+
+# 负例：包内缺 boot payload —— 断言已移到解压后目录上跑（不再流式列全包成员）
+# 预期秒级失败：KIND=full package has no boot payload (dual-payload assertion failed)
+```
+
+通过标准：第二个 start 退出码非 0 且不碰 env/state；缺 boot payload 的包在 extract 后
+立即被拒（A/B 与 recovery 同语义，报错行含 "dual-payload assertion failed"）。
+
+## 4. A/B 陈旧目标根挂载自愈（PR46）
+
+```sh
+target_root=/dev/mmcblkXpN            # 非活动 slot 的 root 分区
+mkdir -p /tmp/stale-root
+mount "${target_root}" /tmp/stale-root
+mount --bind /tmp /tmp/stale-root/tmp # 模拟被杀 hook 留下的嵌套挂载
+/usr/sbin/armbian-ota start <package.tar.gz>
+```
+
+预期：journal 见 `Detaching stale target-root mount`，`umount -R` 递归拆干净（含嵌套）
+后事务继续，mkfs 正常执行。残留写者 120s 拆不掉才失败（负例可不做）。
+事后 `umount -R /tmp/stale-root 2>/dev/null` 清理。
+
+## 5. 克隆盘在场时的磁盘锚定（PR45/46 锚定系 + PR47 optional-p）
+
+第二块盘烧同款镜像（LABEL/PARTLABEL/UUID 全重复）接入后跑一轮 OTA：
+
+- A/B secure：security 分区解析结果属于当前启动盘（journal 中 ab_get_security_part 路径）；
+- recovery：armbi_boot / rootfs / LUKS 容器解析均落在启动盘，不落到克隆盘；
+- 加密镜像双盘：decryption-disk 的 LUKS 容器来自启动盘（`p?` 可选锚定对 sda1/vda1 同样命中）。
+
+通过标准：全程无错盘写入/错盘解锁，OTA 落盘分区全在启动盘。
+
+## 6. Recovery OTA payload-id 翻转顺序（PR46）
+
+recovery 事务 apply 阶段观察 `/boot/payload-id`：
+
+```sh
+watch -n1 cat /boot/payload-id   # apply 期间；所有 boot 文件换完前应保持旧值
+/usr/sbin/armbian-ota status     # 事务完成后
+cat /boot/payload-id             # == CANDIDATE_ID / INSTALLED_ID
+```
+
+通过标准：payload-id 归入 critical 类最后翻转 —— health 比对不会在 boot 文件半新半旧时
+提前放行；完成后与 status 的 ID 一致。
+
+## 7. secure 镜像 + 无 BL32 loader 硬停（PR47）
+
+secure 加密镜像在 plain loader（无 OP-TEE/BL32，无 `/dev/tee*`）下上电：
+
+串口预期（依次）：
+`[Decryption-disk] Error: loader/OS mismatch: no OP-TEE/BL32 under this loader`
+→ `panic: Decryption-disk: this image requires a secure loader (BL32). Boot halted; rootfs stays locked.`
+→ 启动停止、rootfs 保持锁定。
+
+通过标准：不得回退挂明文 rootfs、不得走到 overlayroot RW fallback。
+
+## 8. 记录模板
 
 每项记录：板型 / 镜像（sha）/ boot 次数 / journal 关键行 / 通过-失败。
 失败时附：`fw_printenv` 输出、`/etc/fw_env.config`、双偏移 od 头 16 字节、
