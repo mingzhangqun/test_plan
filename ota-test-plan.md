@@ -122,7 +122,8 @@ fw_printenv | grep -E "boot_slot|ab_boot_mode"
 - 每步一抓：boot 后 25s 内存档 + 按预期行 grep；成功启动的 U-Boot 段须 reboot 后 5-15s 连抓，
   失败启动（硬停）天然全保
 - 读（不抢 Attached）：`ssh office 'screen -S usb0 -X hardcopy -h /tmp/uart.txt && tail -N /tmp/uart.txt'`
-- 写：`ssh office 'screen -S USB0 -X stuff $'"'"'cmd\n'"'"''`——换行必须 `$'…\n'`（`$(printf "x\n")` 吞换行）
+- 写：`ssh office 'screen -S USB0 -X stuff "命令\n"'`——换行必须真实传入（外层 ssh 双引号内
+  写 `$'…\n'` 最稳；`$(printf "x\n")` 会吞换行）
 - 用户查看：`screen -x usb0`；industrial 板另接 1a86 会话
 - ssh 不可达段（A-9 halt 后、B-1 首启、B-2 apply 全程、RESCUE SHELL 交互）均走串口
 
@@ -324,7 +325,8 @@ reboot    # 串口观察硬停（ssh 不再回来——闸门生效的反证）
 预期（按形态/盘状态）：
 
 - F=secure（plain loader）+ SSKR 已迁移盘：`SSKR marker found → Error: … requires working
-  OP-TEE and keybox_app` → cryptroot 手动口令提示（二进制 keyfile 不可输）→ 事实死锁、rootfs 锁定 ✓
+  OP-TEE and keybox_app` → cryptroot 手动口令提示（二进制 keyfile 不可输）→ 事实死锁、rootfs 锁定 ✓；
+  内核佐证 `optee: api uid mismatch`
 - F=secure + 86da 新鲜盘（raw-FIT 引导）：FIT 自带 bl32 可放行 raw passphrase、完整启动
   （**86da 闸对 raw-FIT 引导存在缺口**，记录）
 - SD 在场 U-Boot 选 SD（`Bootdev(atags): mmc 1`）；A-9 须拔 SD/USB
