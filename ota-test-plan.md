@@ -3,7 +3,7 @@
 - 基线：统一冗余 env（PR#42）+ PR45/46/47 + PR50–54 跨形态重构及后续修复；被测版本以 `SEEED_EXTENSION_COMMIT` 核对为准
 - 前置：ssh 可达（或串口）、root、fw_printenv/fw_setenv 在 PATH
 - 用法：每批选形态 F ∈ {plain, secure}，跑 Session AB(F) + REC(F)；换形态另起一批
-- rig：reComputer RK3576 DevKit / NVMe 系统盘 / SPI-NOR loader；手册 `mmcblkX` → `/dev/nvme0n1`，偏移/扇区数不变
+- 命令均按 NVMe 系统盘写死 `/dev/nvme0n1`；换启动介质须自行映射（手册 mmcblkX 偏移/扇区数不变）
 
 ## 形态差异表（未列项两形态通用）
 
