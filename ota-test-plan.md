@@ -275,7 +275,7 @@ status 无 root 守卫为只读设计。
 | E1 | `start --no-backup <异 ID 包>` | 武装且 start 日志零 backup 行（grep 计数 = 0） |
 | E2 | 事务中并发第二个 `start` | `Another OTA process is running (PID:…)` RC=1，env/state 不动 |
 | E3 | armed 态同 ID 重复 `start` | 重复闸先于 abandon，armed 态不被扰动 |
-| E4 | `start --force <异 ID 包>` 穿闸 | `Removing orphan payload directory: …` → 新 campaign 重武装 |
+| E4 | `start --force <异 ID 包>` 穿闸 | `Removing orphan payload directory: …` → 新 campaign 重武装；**武装后不正常 apply——直接作为 B-6 中断载体**（一次上电同时收 E4 与 B-6 断言，省一个 apply 循环） |
 | E5 | 三 flag 并用 / mark-success 正向 | 低价值 / 结构性走不到（health auto-confirm 同函数），不测 |
 
 ### B-4 双坏自愈（§2b）
@@ -299,8 +299,9 @@ sync && reboot
 
 ### B-6 Rescue apply 中断恢复（需一次人工断电）
 
-载体 `start --no-backup --force`；事务前 armbianEnv 加 `myoverlay=1`；reboot 后断电于 rootfs
-解包窗（上电 ~20s 进 apply、解包窗 ~28-66s、apply 全程 ~74s）。
+载体 `start --no-backup --force`（可复用 B-3e E4 的武装事务，省一个 apply 循环）；事务前
+armbianEnv 加 `myoverlay=1`；reboot 后断电于 rootfs 解包窗（上电 ~20s 进 apply、解包窗
+~28-66s、apply 全程 ~74s）。
 
 判定：
 
@@ -354,10 +355,10 @@ df -h /media/root-rw
 exit 75 循环后收敛算过但记录次数；plain 不应见任何 LUKS 行。
 通过：exit 0、容量≈盘尾、无 "not the last partition"/"refusing to shrink"/"unsupported userdata filesystem"。
 
-### A-2/A-3 重启×2（§1 安静通过）
+### A-2/A-3 重启（§1 安静通过；幂等一个 reboot 已证，第二次可选）
 
 ```sh
-reboot    # ×2，每次 boot 后：
+reboot    # 每次复位 boot 后：
 journalctl -b -u armbian-ota-init-uboot --no-pager | tail -3
 journalctl -b -u armbian-resize-userdata --no-pager | tail -2   # already uses available space 快退
 ```
