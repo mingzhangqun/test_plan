@@ -337,9 +337,12 @@ conv=notrunc` → reboot → 武装。
 | V2 | rootfs | 确认后 | 内核起、解密/挂载失败 → panic/看门狗重置 → 重入后同 V1 shell |
 | V3 | p1 FIT | 武装态 | **自动修复**：rescue 路由 → campaign 重识别（STATUS=applied）→ 重写 FIT+rootfs → 回 normal 健康确认 |
 | V4 | rootfs | 武装态 | 同 V3（重放全量重写自愈） |
+| V5 | p1 FIT + p2 rescue 均损 | 确认后（双重故障） | U-Boot 无可引导目标 → **硬停砖**；无明文/未验证 fallback；恢复 = maskrom 重刷（安排在批次末，设备本就要换形态重刷，零额外窗口） |
+| V6 | 候选 + backup payload 均不可用 | 武装态（三重故障：重放反复失败耗尽 + restore 失败） | rescue shell fail-stop（不静默、不砖）；构造贵（apply 层故障注入 ×3 + 损 backup），低优先 |
 
 注记：四变体均须 rescue 引擎 fw_* 可用（libyaml 修复后跑）；V2/V4 的 rootfs 损坏不触发
-campaign_fail（重放成功即自愈），失败梯子另见 2.5 耗尽行。
+campaign_fail（重放成功即自愈），失败梯子另见 2.5 耗尽行。env 重建失败两分支（normal 侧
+fail-open / rescue 侧 fail-stop shell）已被 libyaml 缺陷期实证（B-1 首启与历次 rescue 原样落壳）。
 
 ---
 
@@ -449,6 +452,9 @@ U-Boot 阶段 ssh 不可达，全程串口；扣减次数记人工断电数入�
 **F2（rootfs 损坏变体）**：同 F1 流程，改 `dd` 512B 零进候选槽 rootfs 尾部（保 LUKS 头，破坏
 ext4）→ 内核起但解密/挂载失败 → retry 扣减同 F1 → 回落锚槽（确认 rootfs 级失败同样受
 slot_retry 保护）。
+
+**F3（双槽全坏）**：F1 回落后再损锚槽（boot_a 头 + rootfs_a）→ 无可引导槽 → **硬停砖**；
+无明文/未验证 fallback；恢复 = maskrom 重刷（批次末执行，衔接换形态烧录窗）。
 
 ### A-6 插克隆盘（§5）
 
