@@ -17,8 +17,6 @@
 | §5 克隆盘锚定 | 分区/PARTLABEL 解析 | + security 分区 / LUKS 容器 |
 | §7 失配方向 | 换 **secure** loader | 换 **plain** loader |
 
-ab/security 查询统一走 common 的 `ota_get_security_part`（原 ab_get_security_part 已删）。
-
 ## 判据与工具
 
 - **每步 UART 取证（强制）**：每步收尾（boot 后 25s 内、事务后、异常时）抓 `usb0` 存档
