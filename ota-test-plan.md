@@ -247,7 +247,7 @@ settle 后 ota_boot_next=normal；串口记录 payload-id 行相对位置（应�
 ### B-3 负例（B-2 回 normal 后先重挂）
 
 ```sh
-/usr/sbin/armbian-ota start bad.tar.gz     # 同款 extract 后断言拒
+/usr/sbin/armbian-ota start bad.tar.gz     # extract 后断言拒；包 ID==装机时先撞重复闸，须加 --force
 /usr/sbin/armbian-ota start <AB 包>        # G6 反向：require_mode_backend 拒（have: recovery）
 ```
 
@@ -389,7 +389,7 @@ CURRENT_SLOT——先 switch-slot 武装再零化可验 armed 槽不丢。
 ### A-5 负例（零重启；A-4 后先重挂 /mnt/imgs）
 
 ```sh
-/usr/sbin/armbian-ota start bad.tar.gz   # extract 后拒（断言跑在解压目录上，~73s）
+/usr/sbin/armbian-ota start bad.tar.gz   # extract 后拒（~73s）；包 ID==装机时先撞重复闸，须加 --force
 fw_printenv -n ota_in_progress           # 未触碰
 ```
 
