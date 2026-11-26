@@ -160,7 +160,8 @@ G6 反向即 B-3 的 AB 包例）。
 | 项 | 前置素材 | 操作 | 预期 |
 |---|---|---|---|
 | `p?` optional-p 启动盘侧分支 | 启动盘为 sd/vd 的板（NVMe 启动盘走不到该正则前缀） | 常规事务跑一次 | 分区解析命中启动盘侧 `p?[0-9]` 正则 |
-| 真跨 release 全量切换 | 同变体异 release 包对（现有矩阵无此对） | `start --allow-release-change <跨 release 包>` | release WARN 放行 → 全链事务成功 |
+| 放行链正向事务（`--allow-release-change`） | 改装包：sed 只改 RELEASE 保 VARIANT（gate 在签名前、payload.env 已存在不重生成，无交叉校验） | `start --allow-release-change <改装包>` | WARN 放行 → 全链事务提交（可复跑验幂等） |
+| 真跨 release 内容级切换 | 同变体异 release 真包对（现有矩阵无此对，改装覆盖不了内容差异） | `start --allow-release-change <真跨 release 包>` | 放行 + resolute 用户态完整落地 |
 | itb-on-ext4 混装闸 | 加密 ext4-boot 镜像 + itb 包（现有包先被加密闸拦） | `start <itb 包>`；武装后进 Rescue | start 拒配对；campaign_fail `boot.itb payload but device exposes an ext4 boot partition` |
 | find_raw_boot_dev 无锚定 | 手工剥离 cmdline 的 `armbian.bootdev` token | 武装后触发 itb 写回 | 拒写 + campaign 失败（fail-closed，不落无锚 dd） |
 | rescue boot 分区挂载失败 | 损坏 boot 分区 superblock | 武装 → reboot 进 Rescue | fail-campaign（不 skip，停在设计分支） |
