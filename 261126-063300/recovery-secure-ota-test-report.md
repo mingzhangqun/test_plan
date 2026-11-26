@@ -28,6 +28,7 @@
 | B-3c 闸门负例 | ✅ | G1–G5/G7 六例 metadata 阶段秒级拒（G6 反向在 B-3） |
 | B-3d 命令面轻负例 | ✅ | 非 root start / usage / 未知选项 / mark-success 无事务 |
 | B-3e 参数组合/重复执行 | ✅ | 并发锁、abandon、--no-backup 单独、三命令拒 |
+| B-3f 复跑（新计划序） | ✅ | 3 循环全断言幂等复现；闸序发现（重复闸先于 dual-payload 断言） |
 | B-4 双坏自愈 | ⏸ | libyaml 阻断，待重建镜像重跑 |
 | B-5 收口 | ✅ | 克隆盘面跳过（用户裁定，261124 批已验） |
 | B-6 中断恢复 | ⏸ | 同 B-4；--no-backup 载体语义已并入 B-3b |
@@ -158,6 +159,28 @@ Mode/Status/ID，信息面轻微，261124 批未验此项）。
 注记：mark-success 正向路径结构性走不到（health auto-confirm 与其共用
 recovery_commit_success，总先到）；三 flag 并用组合未枚举（低价值）。
 
+## B-3f 复跑（新计划序验证）
+
+命令：按重组后计划序重跑 REC 全流程（B-2 → 同窗负例批 → --force → E1/E2/E3 → E4 收尾），
+3 个注入循环（首跑 5 个）。设备起点 = 8eedf865/b048f73f idle，终点同。
+
+| 检查项 | 结果 | 说明 |
+|---|---|---|
+| 循环 1（B-2 pkg-old） | ✅ | payload-id 8eedf865→8ee2ed5b；p1 md5==71860179；懒 backup 复用；syspw 净；boot_next 停 recovery（261124 旧 runtime 已知偏差） |
+| 同窗批（B-3×2 + G 六例 + C 类 + 重复闸） | ✅ | 全 RC=1、G3 WARN+VARIANT 链、env 全程 0 |
+| 循环 2（--force pkg-old） | ✅ | payload-id 不变（同 ID 重装语义）；p1 md5==71860179；syspw 净 |
+| E1/E2/E3 | ✅ | --no-backup 零 backup 行（grep=0）；并发锁 PID 拒；重复闸且 armed CANDIDATE 不扰动 |
+| 循环 3（E4 pkg-sameid --force） | ✅ | abandon 重武装 → apply → 8eedf865、p1 md5==2bfcf71f、**boot_next=normal**（b048f73f 复位再现）、syspw 净 |
+| 幂等性 | ✅ | 全部断言与首跑逐项一致 |
+
+注记：
+
+- **E4+B-6 合并执行位**（新计划优化）受 libyaml 阻断——E4 改正常注入 apply；合并路径待重建镜像批验证
+- **闸序发现**：坏包负例本轮先撞 INSTALLED_ID 重复闸（bad.tar.gz 由 pkg-old 制成，ID==装机）——重复闸
+  先于 extract 后 dual-payload 断言；`start --force bad.tar.gz` 穿闸后断言照常命中。素材序约束：
+  坏包须在"包 ID ≠ 装机 ID"窗口跑，或一律带 --force
+- 串口证据：`uart/rerun-cycle{1,2,3}.txt`
+
 ## B-4 双坏自愈 ⏸
 
 | 检查项 | 结果 | 说明 |
@@ -185,7 +208,8 @@ recovery_commit_success，总先到）；三 flag 并用组合未枚举（低价
 
 ## 批次总结
 
-- B-1 / B-2（含补充循环）/ B-3 / B-3b / B-3c（G 套件）/ B-3d（C 类）/ B-3e（参数组合与
-  重复执行）全过；B-4/B-6 被 libyaml 构建缺陷阻塞，收敛于"待 bd5211b8 重建镜像"单一依赖
+- B-1 / B-2（含补充循环）/ B-3 全系（b/c/d/e/f，含新计划序复跑）/ B-5 全过；B-4/B-6 被
+  libyaml 构建缺陷阻塞，收敛于"待 bd5211b8 重建镜像"单一依赖
 - 附加实证：懒 backup 复用、boot_next=normal 复位（b048f73f 侧）、--no-backup 保留 last-good、
-  itb 写回三轮 md5 精确、payload-id 内容寻址跨构建翻转
+  itb 写回三轮 md5 精确、payload-id 内容寻址跨构建翻转、**新计划序可行性**（3 循环完成 REC 可跑面，
+  E4+B-6 合并待重建批验证）
