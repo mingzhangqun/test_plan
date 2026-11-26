@@ -168,6 +168,7 @@ G6 反向即 B-3 的 AB 包例）。
 | payload magic mismatch | 篡改 payload 头 | `start` | staging 拒 |
 | 双 boot 成员 ambiguous | 包内 boot.tar.<fmt> 与 boot.itb 并存 | `start` | 拒（ambiguous） |
 | zst 协商拒绝 | 无 zst 解码环境 | `start <zst 包>` | 拒 |
+| campaign 耗尽 → backup restore | apply 写入层故障注入（解包窗拔 NVMe） | 反复失败 3 次 | 第 4 次自动 restore backup payload → normal 回 last-good |
 | 加密反向闸 | plain 设备收加密包（留 plain session） | `start` | `encryption mismatch: package=yes, device=no` |
 
 ## 2.6 报告
@@ -211,6 +212,7 @@ G6 反向即 B-3 的 AB 包例）。
 | 参数组合与重复执行 | B-3e |
 | 失败回落 + 坏槽修复 F1 | A-5d |
 | REC 中断恢复 | B-6 |
+| OTA 后非健康系统 fallback（boot/rootfs 损坏） | B-7（确认后/武装态×boot/rootfs）；A-5d F1/F2 |
 | 双干扰源三盘锚定 | A-6b |
 | 首启 userdata resize | A-1、B-1；A-2/A-3 安静复跑 |
 | 双坏 env 引导内重建 | A-4、B-4 |
@@ -318,6 +320,27 @@ armbianEnv 加 `myoverlay=1`；reboot 后断电于 rootfs 解包窗（上电 ~20
 `xz -dc <img>.xz | dd bs=512 skip=8064 count=128` → 推设备 `dd of=/dev/nvme0n1 bs=512 seek=8064
 conv=notrunc` → reboot → 武装。
 
+### B-7 OTA 后非健康系统 fallback（boot/rootfs 损坏 × 确认态）
+
+构造（两种状态、两类损坏，共四变体）：
+
+- **确认后损坏**（V1/V2）：事务 commit 后（in_progress=0/success）构造损坏
+- **武装态损坏**（V3/V4）：commit 后手工重武装模拟"health 未确认 + 候选坏"——
+  `fw_setenv ota_in_progress 1; fw_setenv ota_boot_next recovery` + state 文件改 `STATUS=applied`
+  （合法构造，同 C5 手工 env 模拟口径）
+- 损坏：boot = `dd` 1MB 零进 p1 FIT 头；rootfs = `dd` 512B 零进 p4 尾部区域（保 LUKS 头，
+  破坏 ext4 内容）
+
+| 变体 | 损坏 | 状态 | 预期 |
+|---|---|---|---|
+| V1 | p1 FIT | 确认后 | U-Boot normal 失败 → 顺延 rescue → `normal boot failed or manual entry` **rescue shell**（fail-stop 人工修复，非自动回退；rootfs 安全） |
+| V2 | rootfs | 确认后 | 内核起、解密/挂载失败 → panic/看门狗重置 → 重入后同 V1 shell |
+| V3 | p1 FIT | 武装态 | **自动修复**：rescue 路由 → campaign 重识别（STATUS=applied）→ 重写 FIT+rootfs → 回 normal 健康确认 |
+| V4 | rootfs | 武装态 | 同 V3（重放全量重写自愈） |
+
+注记：四变体均须 rescue 引擎 fw_* 可用（libyaml 修复后跑）；V2/V4 的 rootfs 损坏不触发
+campaign_fail（重放成功即自愈），失败梯子另见 2.5 耗尽行。
+
 ---
 
 # 四、ab 布局（Session AB(F)）
@@ -421,7 +444,11 @@ fw_printenv -n ota_in_progress           # 未触碰
 | 锚槽落地 | reconcile 记 U-Boot-rollback：`target slot … did not pass boot verification`，state=rollback |
 | 修复 | 重跑 start 重写坏槽（p2+rootfs）→ reboot 候选槽健康确认；可与 A-7 牺牲事务合并省一次全量 |
 
-U-Boot 阶段 ssh 不可达，全程串口；扣减次数记人工断电数入报告。F2（坏 rootfs 变体）留后续。
+U-Boot 阶段 ssh 不可达，全程串口；扣减次数记人工断电数入报告。
+
+**F2（rootfs 损坏变体）**：同 F1 流程，改 `dd` 512B 零进候选槽 rootfs 尾部（保 LUKS 头，破坏
+ext4）→ 内核起但解密/挂载失败 → retry 扣减同 F1 → 回落锚槽（确认 rootfs 级失败同样受
+slot_retry 保护）。
 
 ### A-6 插克隆盘（§5）
 
