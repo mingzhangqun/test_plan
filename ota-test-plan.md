@@ -18,6 +18,8 @@
 | 首启额外观察 | — | AB: journal SSKR 迁移 86da→SSKR；REC: 串口明文口令窗口 |
 | A-7 残留记录 | findmnt armbi_ | + cryptsetup status armbian-ota-root-<slot> |
 | §5 克隆盘锚定 | 分区/PARTLABEL 解析 | + security 分区 / LUKS 容器（decryption-disk） |
+
+（261125 起 ab/security 查询统一走 common 的 `ota_get_security_part`，原 ab_get_security_part 已删）
 | §7 失配方向 | 换 **secure** loader | 换 **plain** loader |
 
 ## 判据与工具（各步骤通用）
@@ -146,7 +148,8 @@ ssh 仍失联按三坑处置（顺序 1→3→2）：userdata 510M 两段式扩�
 - 用户人工查看：`screen -x usb0`
 - 各步预期行（grep 目标）：boot 类 = `security partition resolved: <启动盘>p3`、`SSKR`、`mapper ready`、
   `overlayroot: configured`；A-4 = 坏 env 后 `persistent env unreadable`（journal）+ 正常解锁链（串口）；
-  A-7/A/B 事务 reboot = 候选槽解锁（`Found LUKS device: …p5`）；A-9 = `loader/OS mismatch` + `panic`；
+  A-7/A/B 事务 reboot = 候选槽解锁（`Found LUKS device: …p5`）；A-9 = `loader/OS mismatch` + `panic`
+（运行时串出自 armbian-build 侧 0009/booti 补丁，仓内 patch 只有注释提及——以 261124 实测为准）；
   B-2 = `OTA done, rebooting` / rescue apply 行
 - A-9（halt 后 ssh 不可达）、B-1 首启观察、B-2 Rescue apply 全程、RESCUE SHELL 交互/解武均走此通道
 
@@ -263,7 +266,7 @@ plain/REC/raw 三例直接用现成文件软链。每例收口判据：RC≠0 + 
 | G3 | 同上 + `--allow-release-change` | WARN 放行 release → `IMAGE_VARIANT mismatch`（防误入真事务：双改确保再被拦） |
 | G4 | variant.tar（仅 VARIANT 改 desktop） | `IMAGE_VARIANT mismatch`（单因） |
 | G5 | plain AB 正包（xz） | `encryption mismatch: package=no, device=yes` |
-| G6 | REC zst 正包 | `mode mismatch`（recovery backend 没装/have: ab） |
+| G6 | REC zst 正包 | `recovery OTA backend is not installed on this firmware (have: ab)`（require_mode_backend；261125 起跨模式包在 start 即拒，串不再是 "mode mismatch"） |
 | G7 | 原始 .img.xz | `metadata missing package.env` |
 
 未覆盖（本 rig 无素材）：容量/空间闸**拒绝**分支（需超尺寸包或缩分区）、payload magic mismatch、
@@ -310,7 +313,7 @@ SD 克隆盘（dd 同镜像，可启动）+ USB 克隆盘同时在场——三�
 | 检查点 | 预期 |
 |---|---|
 | 三份 PARTLABEL | blkid 计 3×（nvme/sda/mmcblkXpY 各一套） |
-| **mmcblk 锚定分支** | `get_partition_number`/`p?[0-9]`/`ab_blkid_first_on_disk` 的 mmcblk 分支首次真机覆盖；resize/ab 解析仍落 nvme |
+| **mmcblk 锚定分支** | `get_partition_number_from_dev`/`p?[0-9]`/`ota_blkid_first_on_disk`（261125 682e0334 改名，原 ab_blkid_first_on_disk）的 mmcblk 分支首次真机覆盖；resize/ab 解析仍落 nvme |
 | **U-Boot 引导设备选择** | SD 在场 reboot → `armbian.bootdev=mmc`（**SD 抢走 NVMe = RK 既定行为，261124 实测**，记录在案即可）；拔 SD 后 bootdev=nvme |
 | 时机 | 若与 A-9 同轮 reboot：mtd 换 loader 前插好 SD，一次 reboot 双验（引导选择 + mismatch 硬停） |
 
@@ -358,7 +361,7 @@ Detaching 拆干净（含嵌套）后 mkfs 正常（残留写者 120s 拆不掉�
 
 ### A-8 §5 AB 收口
 
-journal 确认分区解析选中 `/dev/nvme0n1p*`（[仅 secure] security 分区路径 ab_get_security_part；
+journal 确认分区解析选中 `/dev/nvme0n1p*`（[仅 secure] security 分区路径 ota_get_security_part；
 [仅 plain] boot/rootfs PARTLABEL 路径），均非克隆盘；拔克隆盘。
 
 ### A-9（§7，方向按形态）—— **软件化，无需断电/maskrom**
@@ -464,7 +467,8 @@ sync && reboot
 
 - 串口/initramfs 日志见 `armbian-ota: env unreadable; rebuilding routing set on <disk>`，
   **同 boot 内**完成（fail-open：失败仅 `WARNING env rebuild failed; continuing boot` 不砖）
-- 双坏时有武装事务（state ready_to_boot/boot_verifying）：改走
+- 双坏时有武装事务（state STATUS=prepared|applied，recovery 侧取值——AB 侧 ab_env_rebuild_slot
+  对应值为 ready_to_boot/boot_verifying）：改走
   `env unreadable; re-arming for Rescue (STATUS=…)`——armed 事务不丢
 - 重启后 `fw_printenv` 路由集+基底完整、bootdev token 回归、**直接武装可跑**（原死锁解除）
 - 保留注记：坏 env 首启解密仍走 scan order（窗口期勿插克隆盘）；loader 默认 env 仍不带路由
@@ -484,8 +488,9 @@ sync && reboot
   clean + 从头重解 → applied → 自动回 normal，一次上电 <2 min 收敛——幂等重放，arm 期
   "power loss is safe at any point" 证实
 - 时序：上电 ~20s 进 apply、解包窗 ~28-66s（喊断电的窗口）、apply 全程 ~74s
-- **载体武装前置**：须 bootdev token 在场（cmdline `armbian.bootdev=nvme`）——env 异常时先按
-  B-4 恢复链修 env 再武装
+- **载体武装前置**：bootdev token 在 cmdline（`armbian.bootdev=nvme`）最稳；261125 起
+  `fw_env_boot_disk` 亦接受 mapper 锚（a5c6d1c8，trixie udev 实节点），token 缺失不再必然硬失败；
+  env 异常时先按 B-4 恢复链修 env 再武装
 - 串口全程存档（中断前 + 重放全程各一份）
 - **261125 增验（c9200e89）pre-OTA armbianEnv 断电存续**：事务前在 armbianEnv 加自定义行
   （如 `myoverlay=1`）→ 中断选在 boot 清除后的 boot.tar 解包窗（分钟级宽窗）→ 重放收敛后
@@ -511,14 +516,13 @@ office 从镜像 xz 提取 `xz -dc <img>.xz | dd bs=512 skip=8064 count=128`（0
 
 - `p?` optional-p 的 sd/vd **启动盘侧**分支：锚定正则前缀由启动盘决定，devkit boot 盘为 NVMe 走不到
   （A-6b 的 mmcblk 克隆只覆盖干扰侧/BLKID 扫描分支，启动盘侧正则仍不触发）
-- 真跨 release 全量切换：缺 resolute cli crypt 包
+- 真跨 release 全量切换：CI 矩阵仅 cli=trixie / gnome=resolute（build-images.yml:225），无同变体
+  跨 release 对，异变体组合先被 G4 拦
 - itb-on-ext4 混装闸（4f70b1b1，campaign_fail `boot.itb payload but device exposes an ext4 boot
   partition` + start 侧拒配对）：需加密 ext4-boot 镜像 + itb 包素材，现有两形态包会先被加密闸拦
 - find_raw_boot_dev 无锚定 fail-closed（4f70b1b1：cmdline 缺 bootdev token 拒写、campaign 失败）
   ——B-4 修复后正常路径 token 总在场，负例需手工剥离 cmdline
 - rescue boot 分区挂载失败 fail-campaign（e101e111，warn-and-skip 已废）：需破坏挂载性（损 superblock）
-- payload 哈希/ID 失败传播（cc22b869）：构建侧+备份侧故障注入，非真机路径
-- raw 口令 SSKR 前缀拒写（acb4d747）：构建期守卫，非设备路径
 
 ## 报告
 
