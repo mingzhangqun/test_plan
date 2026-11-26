@@ -11,8 +11,8 @@
 ## 1.1 素材预备（host 侧）
 
 - 构建两镜像同 commit；**REC 配异 VERSION 包**（payload-id 翻转才有意义；同版包只能配 B-3b 的
-  --force 场景）；AB 同 VERSION 可行（无 version 闸）。payload-id v2 内容寻址（R/B 哈希+域 tag，
-  VERSION 不进哈希）——同 VERSION 异内容也翻转，配包仍按异 VERSION
+  --force 场景）；AB 同 VERSION 可行（无 version 闸）；payload-id v2 内容寻址——同 VERSION 异内容
+  也翻转，配包仍按异 VERSION
 - 坏包 ×1：解包删 boot 成员 → 重打包
 - USB 克隆盘：dd 同镜像（两 Session 复用，间期 host 重 dd）
 - 本形态 + 异形态 loader（loaders/ 相对路径）；scp 通道、串口 screen 会话就绪
@@ -26,7 +26,7 @@ office 反向隧道 sshfs → 设备 `/mnt/imgs`，包放 `history/<批号>/`：
 ssh office 'SSH_AUTH_SOCK=/run/user/1000/gcr/ssh ~/upgrade_tool/mnt-imgs.sh root@recomputer-rk3576-devkit.lan -p root'
 ```
 
-gcr socket 是 office 唯一持钥 agent；设备密码 root/root；脚本装 sshfs、建 2200 隧道并挂载
+gcr socket 是 office 唯一持钥 agent；设备密码 root/root；脚本自动装 sshfs、建隧道并挂载
 （~50MB/s）；设备上不落密钥。
 
 ## 1.3 烧录后形态自检（用户刷完告知后执行）
@@ -94,10 +94,8 @@ fw_printenv | grep -E "boot_slot|ab_boot_mode"
 
 - §1 只能占烧录后首启，放最前；零重启负例穿插消化
 - 同一 ssh 活窗打包所有"免重启且需 /mnt/imgs"的步骤（A-5/A-5b/A-5c）——reboot 杀挂载，散窗 = 每窗重挂
-- **A-4 先于 A-7**：双坏重建丢槽记忆（boot_success 重置为探测值），A-7 成功态会被 A-4 清掉
-- §2a 先于 §3：自愈刚重建的健康 env，才能可信判定"无 rebuilding 警告"
-- §4 真事务 kill 制造残留，重跑即 §3 本体，并与锁、§5 克隆盘合并省 1 次重启
 - §7 收尾 AB：halt 后断电窗口直滚 REC 烧录（含写回本形态 loader），零额外恢复
+- AB session 内部顺序见四节首
 
 ---
 
@@ -144,11 +142,8 @@ gate 在签名校验前生效，篡改 `package.env` 即触发。制包（office
 | G6 | 异布局正包 | `<对侧> OTA backend is not installed (have: <本侧>)` |
 | G7 | 原始 .img.xz | `metadata missing package.env` |
 
-执行位：**ab 侧**随 A-5 同窗跑 G1–G5+G7（G5 用 plain AB 包）；**recovery 侧** B-3c
-（G5 用 plain REC 包、G7 raw 镜像、G6 反向即 B-3 的 AB 包例）。
-
-无素材未覆盖：容量/空间闸拒绝分支、payload magic mismatch、双 boot 成员 ambiguous、zst 协商拒、
-加密反向（plain 设备收加密包）。
+执行位：ab 侧 A-5b（G5 用 plain AB 包）；recovery 侧 B-3c（G5 用 plain REC 包、G7 raw 镜像、
+G6 反向即 B-3 的 AB 包例）。
 
 ## 2.4 失败处置
 
@@ -169,6 +164,11 @@ gate 在签名校验前生效，篡改 `package.env` 即触发。制包（office
 | itb-on-ext4 混装闸 | 加密 ext4-boot 镜像 + itb 包（现有包先被加密闸拦） | `start <itb 包>`；武装后进 Rescue | start 拒配对；campaign_fail `boot.itb payload but device exposes an ext4 boot partition` |
 | find_raw_boot_dev 无锚定 | 手工剥离 cmdline 的 `armbian.bootdev` token | 武装后触发 itb 写回 | 拒写 + campaign 失败（fail-closed，不落无锚 dd） |
 | rescue boot 分区挂载失败 | 损坏 boot 分区 superblock | 武装 → reboot 进 Rescue | fail-campaign（不 skip，停在设计分支） |
+| 容量/空间闸拒绝分支 | 超尺寸包或缩分区 | `start` | 拒（fail-closed） |
+| payload magic mismatch | 篡改 payload 头 | `start` | staging 拒 |
+| 双 boot 成员 ambiguous | 包内 boot.tar.<fmt> 与 boot.itb 并存 | `start` | 拒（ambiguous） |
+| zst 协商拒绝 | 无 zst 解码环境 | `start <zst 包>` | 拒 |
+| 加密反向闸 | plain 设备收加密包（留 plain session） | `start` | `encryption mismatch: package=yes, device=no` |
 
 ## 2.6 报告
 
@@ -206,7 +206,7 @@ gate 在签名校验前生效，篡改 `package.env` 即触发。制包（office
 | §5 克隆盘锚定 | A-6–A-8、B-2/B-4 |
 | §6 payload-id 翻转顺序 | B-2 |
 | §7 loader/OS 失配硬停 | A-9（方向按形态差异表） |
-| 闸门负例 G1–G7 | 公共 2.3；A-5b/B-3c 执行；B-3 补 G6 反向 |
+| 闸门负例 G1–G7 | 2.3（A-5b/B-3c 执行） |
 | 命令面 C1–C7 | A-5c；B-3d REC 侧；B-3b 补 --force/--no-backup |
 | 参数组合与重复执行 | B-3e |
 | 失败回落 + 坏槽修复 F1 | A-5d |
@@ -258,8 +258,8 @@ settle 后 ota_boot_next=normal；串口记录 payload-id 行相对位置（应�
 
 ### B-3c 闸门负例（G 套件 REC 侧执行位）
 
-按公共 2.3 制包与判定；素材：g5 = plain REC 正包软链、g7 = raw 镜像软链、G6 反向 = AB 包（B-3 第二例）。
-每例 metadata 阶段秒级拒；判据 RC=1 + env 不触碰。
+按公共 2.3 制包与判定（判据 RC=1 + env 不触碰）；素材：g5 = plain REC 正包软链、g7 = raw 镜像
+软链、G6 反向 = AB 包（B-3 第二例）。
 
 ### B-3d 命令面轻负例（C 类 REC 侧）
 
@@ -320,6 +320,10 @@ conv=notrunc` → reboot → 武装。
 ---
 
 # 四、ab 布局（Session AB(F)）
+
+内部顺序：**A-4 先于 A-7**（双坏重建丢槽记忆，A-7 成功态会被 A-4 清掉）；§2a 先于 §3
+（自愈刚重建的健康 env 才能可信判定"无 rebuilding 警告"）；§4 重跑事务即 §3 本体，与锁、
+§5 克隆盘合并省 1 次重启。
 
 ### A-0 🔌 W1：关机 → NVMe 烧 AB-F + SPI-NOR 写 F loader → 上电
 
@@ -392,7 +396,7 @@ fw_printenv -n ota_in_progress           # 未触碰
 
 ### A-5b 闸门负例（G 套件 ab 侧执行位）
 
-按公共 2.3 制包与判定，随 A-5 同窗执行（G5 用 plain AB 包）；判定与判据同公共节。
+按公共 2.3 制包与判定，随 A-5 同窗执行（G5 用 plain AB 包）。
 
 ### A-5c 命令面 C 系列
 
