@@ -1,0 +1,40 @@
+Checking variant: radxa,rock-4d-spi, hw_id 0xd not in range [0x17c, 0x1cc], bom_id 0xaa5 not in range [0x7d0, 0x820]
+Checking variant: radxa,nx4-c200, hw_id 0xd not in range [0x30c, 0x35c], bom_id 0xaa5 not in range [0x0, 0xffffffff]
+Model: reComputer RK3576 DevKit
+[Vendor ERROR]:Invalid boot device type(0)
+## Error: Can't overwrite "ethaddr"
+## Error inserting "ethaddr" variable, errno=1
+## Error: Can't overwrite "eth1addr"
+## Error inserting "eth1addr" variable, errno=1
+[Vendor ERROR]:Invalid boot device type(0)
+rockchip_set_ethaddr: vendor_storage_write failed -19
+[Vendor ERROR]:Invalid boot device type(0)
+No bootdev
+dev_desc is NULL!
+boot mode: normal
+No bootdev
+CLK: (sync kernel. arm: enter 1008000 KHz, init 1008000 KHz, kernel 0N/A)
+  bpll 816000 KHz
+  lpll 816000 KHz
+  vpll 594000 KHz
+  aupll 786432 KHz
+  cpll 1000000 KHz
+  gpll 1188000 KHz
+  ppll 1300000 KHz
+  aclk_bus_root 396000 KHz
+  pclk_bus_root 100000 KHz
+  hclk_bus_root 198000 KHz
+  aclk_top 786432 KHz
+  aclk_top_mid 396000 KHz
+  pclk_top 100000 KHz
+  hclk_top 200000 KHz
+No bootdev
+Net:   No ethernet found.
+Hit key to stop autoboot('CTRL+C'):  0
+Saving Environment to ENV_BLK...
+Writing to redundant nvme(0)... done
+## Booting FIT Image FIT: No fit blob
+FIT: No FIT image
+No CLI available
+### ERROR ### Please RESET the board ###
+

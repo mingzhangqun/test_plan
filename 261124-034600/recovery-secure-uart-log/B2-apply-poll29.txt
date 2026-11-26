@@ -1,0 +1,1050 @@
+systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/Hibernat
+eLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[   36.107316] systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+[   36.107369] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-machine-id-commit.service - Save Transient machine-id to Disk skipped, unmet condition check ConditionPathIsMountPoint=/etc/machine-id
+[   36.107409] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   36.110037] systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+         Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+[   36.135030] systemd[1]: Finished armbian-ota-init-uboot.service - Initialize u-boot environment for AB OTA.
+[  OK  ] Finished armbian-ota-init-uboot.se&lize u-boot environment for AB OTA.
+[   36.135535] systemd[1]: armbian-ota-firstboot.service - Armbian AB OTA First Boot Health Check skipped, unmet condition check ConditionPathExists=/var/lib/armbian-
+ota/ota-state.env
+systemd[1]: Finished armbian-ota-init-uboot.service - Initialize u-boot environment for AB OTA.
+systemd[1]: armbian-ota-firstboot.service - Armbian AB OTA First Boot Health Check skipped, unmet condition check ConditionPathExists=/var/lib/armbian-ota/ota-state.e
+nv
+[   36.145607] systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+[   36.146080] systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[  OK  ] Finished fake-hwclock-load.service - Restore the current clock.
+systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[   36.149915] systemd[1]: Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+[  OK  ] Mounted proc-sys-fs-binfmt_misc.mo&xecutable File Formats File System.
+systemd[1]: Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+[   36.152730] systemd[1]: Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+[  OK  ] Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+systemd[1]: Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+[   36.180033] aicbsp: bt patch version: - Aug 01 2025 11:05:26 - git a26f071
+[   36.180107] rwnx_plat_bin_fw_upload_android
+[   36.180117] rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fmacfw_8800d80_u02.bin
+aicbsp: bt patch version: - Aug 01 2025 11:05:26 - git a26f071
+rwnx_plat_bin_fw_upload_android
+rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fmacfw_8800d80_u02.bin
+[   36.193343] file md5:56562779b8c4debfd9b354891418249a
+file md5:56562779b8c4debfd9b354891418249a
+[   36.196346] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   36.237335] zram: Added device: zram0
+zram: Added device: zram0
+[   36.238073] zram: Added device: zram1
+[   36.238784] zram: Added device: zram2
+zram: Added device: zram1
+zram: Added device: zram2
+[   36.251153] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[   36.251189] [BT_RFKILL]: ENABLE UART_RTS
+[BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[BT_RFKILL]: ENABLE UART_RTS
+[   36.275777] rd_version_val=06090101
+rd_version_val=06090101
+[   36.292630] aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   36.292676] aicsdio: aicwf_sdio_reg_init
+aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+aicsdio: aicwf_sdio_reg_init
+[   36.298199] aicwf_prealloc_init enter
+[   36.298455] pre alloc rxbuff list len: 30
+[   36.298502] aicbsp: aicbsp_resv_mem_alloc_skb, alloc resv_mem_txdata succuss, id: 0, size: 98304
+[   36.299387] aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   36.299761] tcp_ack_init
+aicwf_prealloc_init enter
+pre alloc rxbuff list len: 30
+aicbsp: aicbsp_resv_mem_alloc_skb, alloc resv_mem_txdata succuss, id: 0, size: 98304
+aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+tcp_ack_init
+[   36.324684] zram0: detected capacity change from 0 to 8102760
+zram0: detected capacity change from 0 to 8102760
+[   36.357990] [BT_RFKILL]: DISABLE UART_RTS
+[   36.358056] [BT_RFKILL]: bt turn on power
+[   36.358326] [BT_RFKILL]: Request irq for bt wakeup host
+[   36.358860] [BT_RFKILL]: ** disable irq
+[   36.359154] Adding 4051376k swap on /dev/zram0.  Priority:5 extents:1 across:4051376k SSFS
+[   36.360517] bluetooth_set_power: start_block=0
+[   36.360538] aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+[   36.360546] aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+[BT_RFKILL]: DISABLE UART_RTS
+[   36.360552] bluetooth_set_power: end_block=0
+[BT_RFKILL]: bt turn on power
+[BT_RFKILL]: Request irq for bt wakeup host
+[BT_RFKILL]: ** disable irq
+Adding 4051376k swap on /dev/zram0.  Priority:5 extents:1 across:4051376k SSFS
+bluetooth_set_power: start_block=0
+aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+[   36.365800] systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+bluetooth_set_power: end_block=0
+[  OK  ] Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+[   36.525779] zram1: detected capacity change from 0 to 102400
+zram1: detected capacity change from 0 to 102400
+[   36.603638] systemd[1]: Finished armbian-zram-config.service - Armbian ZRAM config.
+[  OK  ] Finished armbian-zram-config.service - Armbian ZRAM config.
+systemd[1]: Finished armbian-zram-config.service - Armbian ZRAM config.
+[   36.606712] systemd[1]: Starting armbian-ramlog.service - Armbian memory supported logging...
+         Starting armbian-ramlog.service - Armbian memory supported logging...
+systemd[1]: Starting armbian-ramlog.service - Armbian memory supported logging...
+[   36.712297] EXT4-fs (zram1): mounted filesystem without journal. Quota mode: none.
+EXT4-fs (zram1): mounted filesystem without journal. Quota mode: none.
+[   37.149830] systemd[1]: Finished armbian-ramlog.service - Armbian memory supported logging.
+[  OK  ] Finished armbian-ramlog.service - Armbian memory supported logging.
+systemd[1]: Finished armbian-ramlog.service - Armbian memory supported logging.
+[   37.155396] systemd[1]: Starting systemd-journald.service - Journal Service...
+         Starting systemd-journald.service - Journal Service...
+systemd[1]: Starting systemd-journald.service - Journal Service...
+[   37.228545] systemd-journald[794]: Collecting audit messages is disabled.
+systemd-journald[794]: Collecting audit messages is disabled.
+[   37.489097] systemd[1]: Started systemd-journald.service - Journal Service.
+[  OK  ] Started systemd-journald.service - Journal Service.
+systemd[1]: Started systemd-journald.service - Journal Service.
+         Starting systemd-journal-flush.ser&sh Journal to Persistent Storage...
+[   37.542549] systemd-journald[794]: Received client request to flush runtime journal.
+systemd-journald[794]: Received client request to flush runtime journal.
+[   37.559938] systemd-journald[794]: /var/log/journal/bd663ec63fff4ec896adecde7b067a89/system.journal: Realtime clock jumped backwards relative to last journal entry
+, rotating.
+[   37.559972] systemd-journald[794]: Rotating system journal.
+systemd-journald[794]: /var/log/journal/bd663ec63fff4ec896adecde7b067a89/system.journal: Realtime clock jumped backwards relative to last journal entry, rotating.
+systemd-journald[794]: Rotating system journal.
+[   37.619685] ieee80211 phy0: HT supp 1, VHT supp 1, HE supp 1
+[   37.620127] rwnx_reg_notifier Enter
+ieee80211 phy0: HT supp 1, VHT supp 1, HE supp 1
+rwnx_reg_notifier Enter
+[   37.633694] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[  OK  ] Finished systemd-journal-flush.ser&lush Journal to Persistent Storage.
+         Starting systemd-tmpfiles-setup.se&ate System Files and Directories...
+[  OK  ] Finished systemd-tmpfiles-setup.se&reate System Files and Directories.
+         Mounting run-rpc_pipefs.mount - RPC Pipe File System...
+         Starting rpcbind.service - RPC bind portmap service...
+[  OK  ] Reached target sysinit.target - System Initialization.
+[  OK  ] Started apt-daily.timer - Daily apt download activities.
+[  OK  ] Started apt-daily-upgrade.timer - &y apt upgrade and clean activities.
+[  OK  ] Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+[  OK  ] Started e2scrub_all.timer - Period&Metadata Check for All Filesystems.
+[  OK  ] Started fake-hwclock-save.timer - Periodically save current clock.
+[  OK  ] Started fstrim.timer - Discard unused filesystem blocks once a week.
+[  OK  ] Started logrotate.timer - Daily rotation of log files.
+[  OK  ] Started man-db.timer - Daily man-db regeneration.
+[  OK  ] Started systemd-tmpfiles-clean.tim&y Cleanup of Temporary Directories.
+[  OK  ] Reached target timers.target - Timer Units.
+[  OK  ] Listening on dbus.socket - D-Bus System Message Bus Socket.
+[  OK  ] Listening on sshd-unix-local.socke&temd-ssh-generator, AF_UNIX Local).
+[  OK  ] Listening on systemd-hostnamed.socket - Hostname Service Socket.
+[  OK  ] Reached target sockets.target - Socket Units.
+         Starting armbian-hardware-monitor.&ce - Armbian hardware monitoring...
+         Starting armbian-led-state.service - Armbian leds state...
+[  OK  ] Mounted run-rpc_pipefs.mount - RPC Pipe File System.
+[  OK  ] Reached target rpc_pipefs.target.
+         Starting nfs-blkmap.service - pNFS block layout mapping daemon...
+[  OK  ] Reached target nfs-client.target - NFS client services.
+[  OK  ] Finished armbian-hardware-monitor.&vice - Armbian hardware monitoring.
+[  OK  ] Reached target basic.target - Basic System.
+[  OK  ] Started aic-bluetooth.service - AIC8800 Bluetooth.
+         Starting alsa-restore.service - Save/Restore Sound Card State...
+         Starting armbian-resize-userdata.s& userdata partition to fill disk...
+         Starting chrony.service - chrony, an NTP client/server...
+         Starting dbus.service - D-Bus System Message Bus...
+         Starting e2scrub_reap.service - Re&ne ext4 Metadata Check Snapshots...
+         Starting rkaiq_3A.service - Rockchip rkaiq 3A Image Quality Server...
+         Starting rsyslog.service - System Logging Service...
+         Starting systemd-logind.service - User Login Management...
+         Starting usb-automount@sda4.service - Auto-mount USB device sda4...
+         Starting usb-automount@sda5.service - Auto-mount USB device sda5...
+         Starting usbdevice.service - USB G&get ConfigFS Manager (usbdevice)...
+[  OK  ] Started rpcbind.service - RPC bind portmap service.
+[  OK  ] Finished armbian-led-state.service - Armbian leds state.
+[  OK  ] Started nfs-blkmap.service - pNFS block layout mapping daemon.
+[  OK  ] Finished alsa-restore.service - Save/Restore Sound Card State.
+[  OK  ] Started rkaiq_3A.service - Rockchip rkaiq 3A Image Quality Server.
+[  OK  ] Reached target remote-fs-pre.targe&reparation for Remote File Systems.
+[  OK  ] Reached target remote-fs.target - Remote File Systems.
+[  OK  ] Reached target rpcbind.target - RPC Port Mapper.
+[  OK  ] Reached target sound.target - Sound Card.
+[  OK  ] Started cron.service - Regular background program processing daemon.
+         Starting rng-tools-debian.service &gatherer daemon (Debian variant)...
+[FAILED] Failed to start usb-automount@sda4&rvice - Auto-mount USB device sda4.
+See 'systemctl status usb-automount@sda4.service' for details.
+[  OK  ] Started dbus.service - D-Bus System Message Bus.
+[  OK  ] Finished usb-automount@sda5.service - Auto-mount USB device sda5.
+         Starting NetworkManager.service - Network Manager...
+         Starting bluetooth.service - Bluetooth service...
+         Starting wpa_supplicant.service - WPA supplicant...
+[  OK  ] Started systemd-logind.service - User Login Management.
+[  OK  ] Started bluetooth.service - Bluetooth service.
+[  OK  ] Started rsyslog.service - System Logging Service.
+         Starting systemd-hostnamed.service - Hostname Service...
+[  OK  ] Started chrony.service - chrony, an NTP client/server.
+[  OK  ] Started wpa_supplicant.service - WPA supplicant.
+[   38.690740] systemd-journald[794]: Received client request to relinquish /var/log/journal/bd663ec63fff4ec896adecde7b067a89 access.
+systemd-journald[794]: Received client request to relinquish /var/log/journal/bd663ec63fff4ec896adecde7b067a89 access.
+[  OK  ] Started systemd-hostnamed.service - Hostname Service.
+         Starting NetworkManager-dispatcher&anager Script Dispatcher Service...
+[   39.518400]  nvme0n1: p1 p2 p3 p4 p5
+ nvme0n1: p1 p2 p3 p4 p5
+[   39.595062] rk_gmac-dwmac 2a220000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[   39.595582] phy_rtl8211f_led_fixup in
+[   39.595736] phy_rtl8211f_led_fixup in  val=0x0a42
+[   39.596204] phy_rtl8211f_led_fixup in
+[   39.596329] phy_rtl8211f_led_fixup in  val=0x0000
+rk_gmac-dwmac 2a220000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-0
+phy_rtl8211f_led_fixup in
+phy_rtl8211f_led_fixup in  val=0x0a42
+phy_rtl8211f_led_fixup in
+phy_rtl8211f_led_fixup in  val=0x0000
+[   39.630396]  nvme0n1: p1 p2 p3 p4 p5
+ nvme0n1: p1 p2 p3 p4 p5
+[  OK  ] Started NetworkManager-dispatcher.& Manager Script Dispatcher Service.
+[   39.687840] rk_gmac-dwmac 2a220000.ethernet end0: PHY [stmmac-0:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   39.688401] dwmac4: Master AXI performs any burst length
+[   39.688446] rk_gmac-dwmac 2a220000.ethernet end0: No Safety Features support found
+[   39.688477] rk_gmac-dwmac 2a220000.ethernet end0: IEEE 1588-2008 Advanced Timestamp supported
+[   39.688798] rk_gmac-dwmac 2a220000.ethernet end0: registered PTP clock
+[   39.690993] rk_gmac-dwmac 2a220000.ethernet end0: FPE workqueue start
+rk_gmac-dwmac 2a220000.ethernet end0: PHY [stmmac-0:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   39.691020] rk_gmac-dwmac 2a220000.ethernet end0: configuring for phy/rgmii-rxid link mode
+dwmac4: Master AXI performs any burst length
+rk_gmac-dwmac 2a220000.ethernet end0: No Safety Features support found
+rk_gmac-dwmac 2a220000.ethernet end0: IEEE 1588-2008 Advanced Timestamp supported
+rk_gmac-dwmac 2a220000.ethernet end0: registered PTP clock
+rk_gmac-dwmac 2a220000.ethernet end0: FPE workqueue start
+rk_gmac-dwmac 2a220000.ethernet end0: configuring for phy/rgmii-rxid link mode
+[   39.728475] rk_gmac-dwmac 2a230000.ethernet end1: Register MEM_TYPE_PAGE_POOL RxQ-0
+[   39.728674] phy_rtl8211f_led_fixup in
+[   39.728806] phy_rtl8211f_led_fixup in  val=0x0000
+[   39.729258] phy_rtl8211f_led_fixup in
+[   39.729376] phy_rtl8211f_led_fixup in  val=0x0000
+rk_gmac-dwmac 2a230000.ethernet end1: Register MEM_TYPE_PAGE_POOL RxQ-0
+phy_rtl8211f_led_fixup in
+phy_rtl8211f_led_fixup in  val=0x0000
+phy_rtl8211f_led_fixup in
+phy_rtl8211f_led_fixup in  val=0x0000
+[   39.821291] rk_gmac-dwmac 2a230000.ethernet end1: PHY [stmmac-1:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   39.821854] dwmac4: Master AXI performs any burst length
+[   39.821877] rk_gmac-dwmac 2a230000.ethernet end1: No Safety Features support found
+[   39.821906] rk_gmac-dwmac 2a230000.ethernet end1: IEEE 1588-2008 Advanced Timestamp supported
+[   39.822273] rk_gmac-dwmac 2a230000.ethernet end1: registered PTP clock
+[   39.823067] rk_gmac-dwmac 2a230000.ethernet end1: FPE workqueue start
+[   39.823089] rk_gmac-dwmac 2a230000.ethernet end1: configuring for phy/rgmii-rxid link mode
+rk_gmac-dwmac 2a230000.ethernet end1: PHY [stmmac-1:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+dwmac4: Master AXI performs any burst length
+rk_gmac-dwmac 2a230000.ethernet end1: No Safety Features support found
+rk_gmac-dwmac 2a230000.ethernet end1: IEEE 1588-2008 Advanced Timestamp supported
+rk_gmac-dwmac 2a230000.ethernet end1: registered PTP clock
+rk_gmac-dwmac 2a230000.ethernet end1: FPE workqueue start
+rk_gmac-dwmac 2a230000.ethernet end1: configuring for phy/rgmii-rxid link mode
+[   39.850196] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   39.875073] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[  OK  ] Started NetworkManager.service - Network Manager.
+[  OK  ] Reached target network.target - Network.
+         Starting NetworkManager-wait-onlin&ce - Network Manager Wait Online...
+[  OK  ] Started fail2ban.service - Fail2Ban Service.
+         Starting openvpn.service - OpenVPN service...
+         Starting systemd-user-sessions.service - Permit User Sessions...
+[  OK  ] Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+[  OK  ] Started vnstat.service - vnStat network traffic monitor.
+[  OK  ] Finished openvpn.service - OpenVPN service.
+[  OK  ] Finished systemd-user-sessions.service - Permit User Sessions.
+[   40.001536] get_txpwr_max:txpwr_max:18
+[   40.001629] get_txpwr_max:txpwr_max:18
+[   40.001962] get_txpwr_max:txpwr_max:18
+[   40.002008] get_txpwr_max:txpwr_max:18
+[   40.003279] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   40.146563] rwnx_virtual_interface_add: 10, p2p-dev-wlan0
+[   40.146605] rwnx_virtual_interface_add, ifname=p2p-dev-wlan0, wdev=000000005cf4e34c, vif_idx=1
+[   40.146617] p2p dev addr=ca c8 37 e3 fb 20
+rwnx_virtual_interface_add: 10, p2p-dev-wlan0
+[   40.146638] get_txpwr_max:txpwr_max:18
+rwnx_virtual_interface_add, ifname=p2p-dev-wlan0, wdev=000000005cf4e34c, vif_idx=1
+[   40.146659] get_txpwr_max:txpwr_max:18
+p2p dev addr=ca c8 37 e3 fb 20
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   40.161453] get_txpwr_max:txpwr_max:18
+[   40.161960] get_txpwr_max:txpwr_max:18
+[   40.162027] get_txpwr_max:txpwr_max:18
+[   40.162102] get_txpwr_max:txpwr_max:18
+[   40.162943] get_txpwr_max:txpwr_max:18
+[   40.163325] get_txpwr_max:txpwr_max:18
+[   40.163382] P2P interface started
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+P2P interface started
+[   40.804212] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   40.816120] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   40.851867] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   40.906511] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[  OK  ] Finished e2scrub_reap.service - Re&line ext4 Metadata Check Snapshots.
+[   41.501490] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   41.527610] using random self ethernet address
+[   41.527659] using random host ethernet address
+using random self ethernet address
+using random host ethernet address
+[   41.586906] usb0: HOST MAC da:9e:70:6c:79:85
+[   41.586945] usb0: MAC d6:a8:22:3a:8f:44
+usb0: HOST MAC da:9e:70:6c:79:85
+usb0: MAC d6:a8:22:3a:8f:44
+[   41.595439] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   41.600527] dwc3 23000000.usb: device reset
+dwc3 23000000.usb: device reset
+[   41.649047] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   41.733219] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   41.753802] dwc3 23000000.usb: device reset
+dwc3 23000000.usb: device reset
+[   41.827309] android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+[   41.831786] android_work: sent uevent USB_STATE=CONFIGURED
+android_work: sent uevent USB_STATE=CONFIGURED
+[  OK  ] Finished usbdevice.service - USB Gadget ConfigFS Manager (usbdevice).
+[   43.788697] rk_gmac-dwmac 2a220000.ethernet end0: Link is Up - 1Gbps/Full - flow control rx/tx
+[   43.788766] IPv6: ADDRCONF(NETDEV_CHANGE): end0: link becomes ready
+rk_gmac-dwmac 2a220000.ethernet end0: Link is Up - 1Gbps/Full - flow control rx/tx
+IPv6: ADDRCONF(NETDEV_CHANGE): end0: link becomes ready
+[*     ] (1 of 2) Job armbian-resize-userdat&rvice/start running (9s / 2min 3s)
+[   44.064331] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   44.087994] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[   44.088032] [BT_RFKILL]: ENABLE UART_RTS
+[BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[BT_RFKILL]: ENABLE UART_RTS
+[   44.194525] [BT_RFKILL]: DISABLE UART_RTS
+[   44.194563] [BT_RFKILL]: bt turn on power
+[   44.194720] [BT_RFKILL]: Request irq for bt wakeup host
+[   44.195075] [BT_RFKILL]: ** disable irq
+[   44.195095] bluetooth_set_power: start_block=0
+[   44.195102] aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+[   44.195108] aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+[   44.195114] bluetooth_set_power: end_block=0
+[BT_RFKILL]: DISABLE UART_RTS
+[BT_RFKILL]: bt turn on power
+[BT_RFKILL]: Request irq for bt wakeup host
+[BT_RFKILL]: ** disable irq
+bluetooth_set_power: start_block=0
+aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+[  OK  ] Finished NetworkManager-wait-onlin&vice - Network Manager Wait Online.
+[  OK  ] Reached target network-online.target - Network is Online.
+         Starting dnsmasq.service - dnsmasq&ight DHCP and caching DNS server...
+         Starting rc-local.service - /etc/rc.local Compatibility...
+[   45.897458] of_dma_request_slave_channel: dma-names property of node '/serial@2ad70000' missing or empty
+of_dma_request_slave_channel: dma-names property of node '/serial@2ad70000' missing or empty
+[   45.897511] dw-apb-uart 2ad70000.serial: failed to request DMA, use interrupt mode
+dw-apb-uart 2ad70000.serial: failed to request DMA, use interrupt mode
+[  OK  ] Started rc-local.service - /etc/rc.local Compatibility.
+         Starting plymouth-quit-wait.servic&d until boot process finishes up...
+         Starting plymouth-quit.service - Terminate Plymouth Boot Screen...
+[   45.941693] Bluetooth: HCI UART driver ver 2.3
+[   45.941734] Bluetooth: HCI UART protocol H4 registered
+[   45.941742] Bluetooth: HCI UART protocol BCSP registered
+[   45.941749] Bluetooth: HCI UART protocol ATH3K registered
+[   45.941830] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[   45.942136] Bluetooth: HCI UART protocol Intel registered
+Bluetooth: HCI UART driver ver 2.3
+[   45.942391] Bluetooth: HCI UART protocol Broadcom registered
+Bluetooth: HCI UART protocol H4 registered
+[   45.942435] Bluetooth: HCI UART protocol QCA registered
+Bluetooth: HCI UART protocol BCSP registered
+[   45.942443] Bluetooth: HCI UART protocol AG6XX registered
+Bluetooth: HCI UART protocol ATH3K registered
+[   45.942472] Bluetooth: HCI UART protocol AIC (H4) registered
+Bluetooth: HCI UART protocol Three-wire (H5) registered
+Bluetooth: HCI UART protocol Intel registered
+Bluetooth: HCI UART protocol Broadcom registered
+Bluetooth: HCI UART protocol QCA registered
+Bluetooth: HCI UART protocol AG6XX registered
+Bluetooth: HCI UART protocol AIC (H4) registered
+         Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+[  OK  ] Finished plymouth-quit-wait.servic&old until boot process finishes up.
+[  OK  ] Finished plymouth-quit.service - Terminate Plymouth Boot Screen.
+[   47.013563] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   47.041315] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[   47.041353] [BT_RFKILL]: ENABLE UART_RTS
+[   47.147888] [BT_RFKILL]: DISABLE UART_RTS
+[   47.147937] [BT_RFKILL]: bt turn on power
+[   47.148144] [BT_RFKILL]: Request irq for bt wakeup host
+[   47.148621] [BT_RFKILL]: ** disable irq
+[   47.148660] bluetooth_set_power: start_block=0
+[   47.148684] aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+[   47.148692] aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+[   47.148697] bluetooth_set_power: end_block=0
+[   47.149379] Bluetooth: MGMT ver 1.22
+
+Armbian-unofficial 26.11.0-trunk Trixie ttyFIQ0
+
+recomputer-rk3576-devkit login: root
+Password:
+
+Login incorrect
+[   92.804521] ttyFIQ ttyFIQ0: tty_port_close_start: tty->count = 1 port count = 2
+
+Armbian-unofficial 26.11.0-trunk Trixie ttyFIQ0
+
+recomputer-rk3576-devkit login: root
+Password:
+
+Login incorrect
+[  106.617716] ttyFIQ ttyFIQ0: tty_port_close_start: tty->count = 1 port count = 2
+
+Armbian-unofficial 26.11.0-trunk Trixie ttyFIQ0
+
+recomputer-rk3576-devkit login: root
+Password:
+
+    _             _    _                             __  __ _    _      _
+   /_\  _ _ _ __ | |__(_)__ _ _ _ ___ _  _ _ _  ___ / _|/ _(_)__(_)__ _| |
+  / _ \| '_| '  \| '_ \ / _` | ' \___| || | ' \/ _ \  _|  _| / _| / _` | |
+ /_/ \_\_| |_|_|_|_.__/_\__,_|_||_|   \_,_|_||_\___/_| |_| |_\__|_\__,_|_|
+
+ v26.11 rolling for reComputer RK3576 running Armbian Linux 6.1.172-vendor-rk35xx
+
+ Packages:     Debian stable (trixie)
+ Updates:      Kernel upgrade enabled and 21 packages available for upgrade
+ Support:      DIY (custom image)
+ IPv4:        (LAN) 192.168.111.174, 192.168.42.1 (WAN) 183.23.152.88
+
+ Performance:
+
+ Load:         3%                Uptime:         2m
+ Memory usage: 4% of 7.73G
+ CPU temp:     48°C              Usage of /:   24% of 453M      (read only rootfs)
+ RX today:     488 KiB
+
+ Featured:
+
+ Contribute to Armbian on GitHub
+ https://docs.armbian.com/contribute/
+
+ Commands:
+
+ Configuration: armbian-config
+ Upgrade      : armbian-upgrade
+ Monitoring   : htop
+
+
+Press Enter to start the first login setup on this console.
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# timeout 15 dd if=/dev/nvme0n1 of=/dev/null bs=512 skip=2138090 count=16 2>&1 | tail -2; timeout 40 dd if=/dev/nvme0n1 of=/dev/null bs
+=1M count=256 2>&1 | tail -2; cat /sys/block/nvme0n1/device/model; dmesg | grep -c nvme0n1; echo END1
+16+0 records out
+8192 bytes (8.2 kB, 8.0 KiB) copied, 0.000793643 s, 10.3 MB/s
+YX-520 NVME 128GB
+3
+END1
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# dmesg | grep -c I/O.Error; timeout 60 dd if=/dev/nvme0n1 of=/dev/null bs=1M count=256 2>&1 | tail -1; dmesg | grep -c I/O.Error; echo
+ END2
+0
+
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# dmesg | grep I/O.Error | wc -l; dd if=/dev/nvme0n1 of=/dev/null bs=1M count=64 2>&1; echo END3
+0
+64+0 records in
+64+0 records out
+67108864 bytes (67 MB, 64 MiB) copied, 0.206603 s, 325 MB/s
+END3
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# systemctl enable --now ssh 2>/dev/null || systemctl start ssh; sleep 2; systemctl is-active ssh; echo SSHD_DONE
+
+root@recomputer-rk3576-devkit:~# [  288.991775] systemd-fstab-generator[2070]: Checking was requested for "/media/root-ro/", but it is not a device.
+
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# echo ===M1; ss -tln | grep 22; systemctl is-active ssh sshd 2>&1; echo ===M2
+===M1
+inactive
+inactive
+===M2
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# [  332.381731] get_txpwr_max:txpwr_max:18
+
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# echo ===M3; ssh-keygen -A 2>&1 | tail -1; systemctl start ssh 2>&1; sleep 2; ss -tln | grep 22; echo ===M4
+===M3
+
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# /usr/sbin/sshd -D >/tmp/sshd.log 2>&1 &
+[1] 2115
+root@recomputer-rk3576-devkit:~#
+[1]+  Exit 255                /usr/sbin/sshd -D > /tmp/sshd.log 2>&1
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# [  407.625637] systemd-fstab-generator[2603]: Checking was requested for "/media/root-ro/", but it is not a device.
+
+root@recomputer-rk3576-devkit:~# [  408.465978] systemd-fstab-generator[2644]: Checking was requested for "/media/root-ro/", but it is not a device.
+[  409.254076] systemd-fstab-generator[2684]: Checking was requested for "/media/root-ro/", but it is not a device.
+
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~# [  413.106246] EXT4-fs (nvme0n1p1): VFS: Can't find ext4 filesystem
+[  413.106985] EXT4-fs (nvme0n1p1): VFS: Can't find ext4 filesystem
+[  413.107375] EXT4-fs (nvme0n1p1): VFS: Can't find ext4 filesystem
+[  413.107823] FAT-fs (nvme0n1p1): bogus number of FAT structure
+[  413.107845] FAT-fs (nvme0n1p1): Can't find a valid FAT filesystem
+
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
+root@recomputer-rk3576-devkit:~#
