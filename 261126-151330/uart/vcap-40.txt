@@ -1,0 +1,1048 @@
+   Using 'conf' configuration
+   Trying 'fdt' fdt subimage
+     Description:  unavailable
+     Type:         Flat Device Tree
+     Compression:  uncompressed
+     Data Start:   0xf715eb80
+     Data Size:    289621 Bytes = 282.8 KiB
+     Architecture: AArch64
+     Load Address: 0x48300000
+     Hash algo:    sha256
+     Hash value:   75fea1032a249cc4a5736387e7b141aab1e14e4bd1519f38b4e542b4f681dc68
+   Verifying Hash Integrity ... sha256+ OK
+   Using fdt from load-in fdt
+   Loading fdt from 0xf715eb80 to 0x48300000
+   Booting using the fdt blob at 0x48300000
+   Loading Kernel Image from 0xf71a5780 to 0x40400000 ... OK
+   kernel loaded at 0x40400000, end = 0x430ed200
+   Using Device Tree in place at 0000000048300000, end 0000000048349b54
+[Vendor ERROR]:Invalid boot device type(0)
+## reserved-memory:
+  ramoops@40110000: addr=40110000 size=e0000
+Adding bank: 0x40200000 - 0x48400000 (size: 0x08200000)
+Adding bank: 0x49400000 - 0x100000000 (size: 0xb6c00000)
+Adding bank: 0x100000000 - 0x240000000 (size: 0x140000000)
+Total: 1927.872/1970.788 ms
+
+Starting kernel ...
+
+[    1.976054] Booting Linux on physical CPU 0x0000000000 [0x410fd034]
+[    1.976088] Linux version 6.1.172-vendor-rk35xx (build@armbian) (aarch64-linux-gnu-gcc (Debian 14.2.0-19) 14.2.0, GNU ld (GNU Binutils for Debian) 2.44) #1 SMP Fri Nov 20 1
+5:55:18 UTC 2026
+[    1.985513] Machine model: Seeed Studio ReComputer RK3576 Dev Kit
+[    1.985538] earlycon: uart8250 at MMIO32 0x000000002ad40000 (options '')
+[    1.988933] printk: bootconsole [uart8250] enabled
+[    1.989485] efi: UEFI not found.
+[    1.993869] OF: fdt: Reserved memory: failed to reserve memory for node 'drm-logo@0': base 0x0000000000000000, size 0 MiB
+[    1.994918] OF: fdt: Reserved memory: failed to reserve memory for node 'drm-cubic-lut@0': base 0x0000000000000000, size 0 MiB
+[    2.187164] Zone ranges:
+[    2.187427]   DMA      [mem 0x0000000040200000-0x00000000ffffffff]
+[    2.188021]   DMA32    empty
+[    2.188297]   Normal   [mem 0x0000000100000000-0x000000023fffffff]
+[    2.188887] Movable zone start for each node
+[    2.189291] Early memory node ranges
+[    2.189631]   node   0: [mem 0x0000000040200000-0x00000000483fffff]
+[    2.190229]   node   0: [mem 0x0000000049400000-0x000000023fffffff]
+[    2.190830] Initmem setup node 0 [mem 0x0000000040200000-0x000000023fffffff]
+[    2.192263] On node 0, zone DMA: 512 pages in unavailable ranges
+[    2.208455] On node 0, zone DMA: 4096 pages in unavailable ranges
+[    2.237009] cma: Reserved 16 MiB at 0x00000000ff000000
+[    2.238300] psci: probing for conduit method from DT.
+[    2.238787] psci: PSCIv1.1 detected in firmware.
+[    2.239227] psci: Using standard PSCI v0.2 function IDs
+[    2.239726] psci: Trusted OS migration not required
+[    2.240195] psci: SMC Calling Convention v1.2
+[    2.241014] percpu: Embedded 30 pages/cpu s82920 r8192 d31768 u122880
+[    2.241796] Detected VIPT I-cache on CPU0
+[    2.242238] CPU features: detected: ARM erratum 845719
+[    2.242733] alternatives: applying boot alternatives
+[    2.243383] Built 1 zonelists, mobility grouping on.  Total pages: 2059784
+[    2.244044] Kernel command line: earlycon=uart8250,mmio32,0x2ad40000 console=ttyFIQ0 root=/dev/mapper/armbian-root rw rootwait fuse.programmed=0 armbian.bootdev=nvme armbia
+n.bootdevnum=0 armbian.ota_role=recovery androidboot.fwver=ddr-v1.08-fcb0cfd52f,bl31-v1.20,bl32-v1.08,uboot-rmbian-201-11/26/2026
+[    2.247935] Dentry cache hash table entries: 1048576 (order: 11, 8388608 bytes, linear)
+[    2.249175] Inode-cache hash table entries: 524288 (order: 10, 4194304 bytes, linear)
+[    2.249924] mem auto-init: stack:all(zero), heap alloc:off, heap free:off
+[    2.250570] software IO TLB: area num 8.
+[    2.266596] software IO TLB: mapped [mem 0x00000000fb000000-0x00000000ff000000] (64MB)
+[    2.388746] Memory: 8052308K/8370176K available (18176K kernel code, 4148K rwdata, 15480K rodata, 8064K init, 673K bss, 301484K reserved, 16384K cma-reserved)
+[    2.390261] SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=8, Nodes=1
+[    2.390923] ftrace: allocating 69611 entries in 272 pages
+[    2.509028] ftrace: allocated 272 pages with 2 groups
+[    2.509655] trace event string verifier disabled
+[    2.510339] rcu: Hierarchical RCU implementation.
+[    2.510790] rcu:     RCU event tracing is enabled.
+[    2.511221]  Rude variant of Tasks RCU enabled.
+[    2.511651]  Tracing variant of Tasks RCU enabled.
+[    2.512106] rcu: RCU calculated value of scheduler-enlistment delay is 30 jiffies.
+[    2.541183] NR_IRQS: 64, nr_irqs: 64, preallocated irqs: 0
+[    2.545981] Root IRQ handler: gic_handle_irq
+[    2.546418] GIC: Using split EOI/Deactivate mode
+[    2.547717] rcu: srcu_init: Setting srcu_struct sizes based on contention.
+[    2.574715] arch_timer: cp15 timer(s) running at 1000.00MHz (phys).
+[    2.575324] clocksource: arch_sys_counter: mask: 0x1fffffffffffffff max_cycles: 0x1cd42e4dffb, max_idle_ns: 881590591483 ns
+[    2.576356] sched_clock: 61 bits at 1000MHz, resolution 1ns, wraps every 4398046511103ns
+[    2.579633] Console: colour dummy device 80x25
+[    2.580094] Calibrating delay loop (skipped), value calculated using timer frequency.. 2000.33 BogoMIPS (lpj=3333333)
+[    2.581075] pid_max: default: 32768 minimum: 301
+[    2.581562] LSM: Security Framework initializing
+[    2.582125] AppArmor: AppArmor initialized
+[    2.582516] LSM support for eBPF active
+[    2.582973] Mount-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    2.583694] Mountpoint-cache hash table entries: 16384 (order: 5, 131072 bytes, linear)
+[    2.586521] cblist_init_generic: Setting adjustable number of callback queues.
+[    2.587201] cblist_init_generic: Setting shift to 3 and lim to 1.
+[    2.587847] cblist_init_generic: Setting adjustable number of callback queues.
+[    2.588512] cblist_init_generic: Setting shift to 3 and lim to 1.
+[    2.589258] rcu: Hierarchical SRCU implementation.
+[    2.589714] rcu:     Max phase no-delay instances is 1000.
+[    2.593915] EFI services will not be available.
+[    2.594923] smp: Bringing up secondary CPUs ...
+I/TC: Secondary CPU 1 initializing
+I/TC: Secondary CPU 1 switching to normal world boot
+I/TC: Secondary CPU 2 initializing
+I/TC: Secondary CPU 2 switching to normal world boot
+I/TC: Secondary CPU 3 initializing
+I/TC: Secondary CPU 3 switching to normal world boot
+I/TC: Secondary CPU 4 initializing
+I/TC: Secondary CPU 4 switching to normal world boot
+I/TC: Secondary CPU 5 initializing
+I/TC: Secondary CPU 5 switching to normal world boot
+I/TC: Secondary CPU 6 initializing
+I/TC: Secondary CPU 6 switching to normal world boot
+I/TC: Secondary CPU 7 initializing
+I/TC: Secondary CPU 7 switching to normal world boot
+[    2.596606] Detected VIPT I-cache on CPU1
+[    2.596722] CPU1: Booted secondary processor 0x0000000001 [0x410fd034]
+[    2.598111] Detected VIPT I-cache on CPU2
+[    2.598191] CPU2: Booted secondary processor 0x0000000002 [0x410fd034]
+[    2.599445] Detected VIPT I-cache on CPU3
+[    2.599513] CPU3: Booted secondary processor 0x0000000003 [0x410fd034]
+[    2.600760] CPU features: detected: Spectre-v3a
+[    2.600770] CPU features: detected: Spectre-BHB
+[    2.600775] CPU features: detected: ARM erratum 1742098
+[    2.600780] CPU features: detected: ARM errata 1165522, 1319367, or 1530923
+[    2.600784] Detected PIPT I-cache on CPU4
+[    2.600851] CPU4: Booted secondary processor 0x0000000100 [0x411fd080]
+[    2.602095] Detected PIPT I-cache on CPU5
+[    2.602147] CPU5: Booted secondary processor 0x0000000101 [0x411fd080]
+[    2.603370] Detected PIPT I-cache on CPU6
+[    2.603423] CPU6: Booted secondary processor 0x0000000102 [0x411fd080]
+[    2.604664] Detected PIPT I-cache on CPU7
+[    2.604715] CPU7: Booted secondary processor 0x0000000103 [0x411fd080]
+[    2.604792] smp: Brought up 1 node, 8 CPUs
+[    2.613903] SMP: Total of 8 processors activated.
+[    2.614340] CPU features: detected: 32-bit EL0 Support
+[    2.614814] CPU features: detected: 32-bit EL1 Support
+[    2.615296] CPU features: detected: CRC32 instructions
+[    2.615864] CPU: All CPU(s) started at EL2
+[    2.616258] alternatives: applying system-wide alternatives
+[    2.620159] devtmpfs: initialized
+[    2.646928] Registered cp15_barrier emulation handler
+[    2.647403] Registered setend emulation handler
+[    2.647964] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 6370867519511994 ns
+[    2.648870] futex hash table entries: 2048 (order: 5, 131072 bytes, linear)
+[    2.649865] pinctrl core: initialized pinctrl subsystem
+[    2.650710] DMI not present or invalid.
+[    2.651479] NET: Registered PF_NETLINK/PF_ROUTE protocol family
+[    2.652985] DMA: preallocated 1024 KiB GFP_KERNEL pool for atomic allocations
+[    2.653934] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA pool for atomic allocations
+[    2.654943] DMA: preallocated 1024 KiB GFP_KERNEL|GFP_DMA32 pool for atomic allocations
+[    2.655725] audit: initializing netlink subsys (disabled)
+[    2.656338] audit: type=2000 audit(0.076:1): state=initialized audit_enabled=0 res=1
+[    2.659289] Registered FIQ tty driver
+[    2.659886] thermal_sys: Registered thermal governor 'fair_share'
+[    2.659891] thermal_sys: Registered thermal governor 'step_wise'
+[    2.660448] thermal_sys: Registered thermal governor 'user_space'
+[    2.660994] thermal_sys: Registered thermal governor 'power_allocator'
+[    2.661594] cpuidle: using governor menu
+[    2.662820] hw-breakpoint: found 6 breakpoint and 4 watchpoint registers.
+[    2.663627] ASID allocator initialised with 65536 entries
+[    2.666885] ramoops: dmesg-0 0x18000@0x0000000040110000
+[    2.667371] ramoops: dmesg-1 0x18000@0x0000000040128000
+[    2.668153] ramoops: console 0x80000@0x0000000040140000
+[    2.668641] ramoops: pmsg    0x30000@0x00000000401c0000
+[    2.669395] printk: console [ramoops-1] enabled
+[    2.669811] pstore: Registered ramoops as persistent store backend
+[    2.670383] ramoops: using 0xe0000@0x40110000, ecc: 0
+[    2.687026] /vop@27d00000: Fixed dependency cycle(s) with /hdmi@27da0000
+[    2.687712] /hdmi@27da0000: Fixed dependency cycle(s) with /vop@27d00000
+[    2.688630] /dp@27e40000: Fixed dependency cycle(s) with /vop@27d00000
+[    2.699643] /i2c@2ac70000/fusb302@22: Fixed dependency cycle(s) with /usb@23000000
+[    2.702155] /i2c@2ac70000/fusb302@22/connector: Fixed dependency cycle(s) with /phy@2b010000
+[    2.702982] /phy@2b010000: Fixed dependency cycle(s) with /i2c@2ac70000/fusb302@22/connector
+[    2.720939] gpio-19 (usb_hub_reset): hogged as output/high
+[    2.721713] rockchip-gpio 27320000.gpio: probed /pinctrl/gpio@27320000
+[    2.722796] rockchip-gpio 2ae10000.gpio: probed /pinctrl/gpio@2ae10000
+[    2.723963] rockchip-gpio 2ae20000.gpio: probed /pinctrl/gpio@2ae20000
+[    2.724997] rockchip-gpio 2ae30000.gpio: probed /pinctrl/gpio@2ae30000
+[    2.726095] rockchip-gpio 2ae40000.gpio: probed /pinctrl/gpio@2ae40000
+[    2.726828] rockchip-pinctrl pinctrl: probed pinctrl
+[    2.733594] KASLR disabled due to lack of seed
+[    2.742775] HugeTLB: registered 1.00 GiB page size, pre-allocated 0 pages
+[    2.743406] HugeTLB: 0 KiB vmemmap can be freed for a 1.00 GiB page
+[    2.743984] HugeTLB: registered 32.0 MiB page size, pre-allocated 0 pages
+[    2.744605] HugeTLB: 0 KiB vmemmap can be freed for a 32.0 MiB page
+[    2.745191] HugeTLB: registered 2.00 MiB page size, pre-allocated 0 pages
+[    2.745813] HugeTLB: 0 KiB vmemmap can be freed for a 2.00 MiB page
+[    2.746388] HugeTLB: registered 64.0 KiB page size, pre-allocated 0 pages
+[    2.747007] HugeTLB: 0 KiB vmemmap can be freed for a 64.0 KiB page
+[    2.749275] fiq_debugger fiq_debugger.0: error -ENXIO: IRQ fiq not found
+[    2.749911] fiq_debugger fiq_debugger.0: error -ENXIO: IRQ wakeup not found
+[    2.750565] fiq_debugger_probe: could not install nmi irq handler
+[[    2.751184] printk: console [ttyFIQ0] enabled
+    2.751184] printk: console [ttyFIQ0] enabled
+[    2.751966] printk: bootconsole [uart8250] disabled
+[    2.751966] printk: bootconsole [uart8250] disabled
+[    2.752585] Registered fiq debugger ttyFIQ0
+[    2.761826] iommu: Default domain type: Translated
+[    2.761843] iommu: DMA domain TLB invalidation policy: strict mode
+[    2.762168] SCSI subsystem initialized
+[    2.762307] usbcore: registered new interface driver usbfs
+[    2.762338] usbcore: registered new interface driver hub
+[    2.762365] usbcore: registered new device driver usb
+[    2.762451] mc: Linux media interface: v0.10
+[    2.762485] videodev: Linux video capture interface: v2.00
+[    2.762556] pps_core: LinuxPPS API ver. 1 registered
+[    2.762564] pps_core: Software ver. 5.3.6 - Copyright 2005-2007 Rodolfo Giometti <giometti@linux.it>
+[    2.762578] PTP clock support registered
+[    2.763162] arm-scmi firmware:scmi: Enabled polling mode TX channel - prot_id:16
+[    2.763272] arm-scmi firmware:scmi: SCMI Notifications - Core Enabled.
+[    2.763319] arm-scmi firmware:scmi: SCMI Protocol v2.0 'rockchip:' Firmware version 0x0
+[    2.764772] Advanced Linux Sound Architecture Driver Initialized.
+[    2.765196] Bluetooth: Core ver 2.22
+[    2.765233] NET: Registered PF_BLUETOOTH protocol family
+[    2.765241] Bluetooth: HCI device and connection manager initialized
+[    2.765251] Bluetooth: HCI socket layer initialized
+[    2.765260] Bluetooth: L2CAP socket layer initialized
+[    2.765275] Bluetooth: SCO socket layer initialized
+[    2.765338] NetLabel: Initializing
+[    2.765345] NetLabel:  domain hash size = 128
+[    2.765352] NetLabel:  protocols = UNLABELED CIPSOv4 CALIPSO
+[    2.765403] NetLabel:  unlabeled traffic allowed by default
+[    2.765631] vgaarb: loaded
+[    2.766191] clocksource: Switched to clocksource arch_sys_counter
+[    2.766424] VFS: Disk quotas dquot_6.6.0
+[    2.766461] VFS: Dquot-cache hash table entries: 512 (order 0, 4096 bytes)
+[    2.766826] AppArmor: AppArmor Filesystem Enabled
+[    2.773096] NET: Registered PF_INET protocol family
+[    2.773321] IP idents hash table entries: 131072 (order: 8, 1048576 bytes, linear)
+[    2.777484] tcp_listen_portaddr_hash hash table entries: 4096 (order: 4, 65536 bytes, linear)
+[    2.777545] Table-perturb hash table entries: 65536 (order: 6, 262144 bytes, linear)
+[    2.777592] TCP established hash table entries: 65536 (order: 7, 524288 bytes, linear)
+[    2.777891] TCP bind hash table entries: 65536 (order: 9, 2097152 bytes, linear)
+[    2.778963] TCP: Hash tables configured (established 65536 bind 65536)
+[    2.779167] MPTCP token hash table entries: 8192 (order: 6, 196608 bytes, linear)
+[    2.779257] UDP hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    2.779374] UDP-Lite hash table entries: 4096 (order: 5, 131072 bytes, linear)
+[    2.779619] NET: Registered PF_UNIX/PF_LOCAL protocol family
+[    2.779943] RPC: Registered named UNIX socket transport module.
+[    2.779956] RPC: Registered udp transport module.
+[    2.779963] RPC: Registered tcp transport module.
+[    2.779969] RPC: Registered tcp NFSv4.1 backchannel transport module.
+[    2.780681] PCI: CLS 0 bytes, default 64
+[    2.781154] Trying to unpack rootfs image as initramfs...
+[    2.781603] rockchip-thermal 2ae70000.tsadc: Missing rockchip,grf property
+[    2.784912] rockchip-thermal 2ae70000.tsadc: tsadc is probed successfully!
+[    2.805818] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[    2.810448] hw perfevents: enabled with armv8_cortex_a72 PMU driver, 7 counters available
+[    2.811248] kvm [1]: IPA Size Limit: 40 bits
+[    2.815086] kvm [1]: vgic interrupt IRQ9
+[    2.819811] kvm [1]: Hyp mode initialized successfully
+[    3.405290] Initialise system trusted keyrings
+[    3.405549] workingset: timestamp_bits=46 max_order=21 bucket_order=0
+[    3.408915] zbud: loaded
+[    3.410095] NFS: Registering the id_resolver key type
+[    3.410133] Key type id_resolver registered
+[    3.410142] Key type id_legacy registered
+[    3.410200] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    3.410215] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    3.437627] NET: Registered PF_ALG protocol family
+[    3.437656] Key type asymmetric registered
+[    3.437667] Asymmetric key parser 'x509' registered
+[    3.580740] Freeing initrd memory: 26000K
+[    3.601965] alg: self-tests for CTR-KDF (hmac(sha256)) passed
+[    3.602087] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 241)
+[    3.602370] io scheduler mq-deadline registered
+[    3.602383] io scheduler kyber registered
+[    3.604688] rockchip-csi2-dphy-hw 2b030000.csi2-dphy0-hw: csi2 dphy hw probe successfully!
+[    3.604903] rockchip-csi2-dphy-hw 2b070000.csi2-dphy1-hw: csi2 dphy hw probe successfully!
+[    3.607384] rockchip-usb2phy 2602e000.syscon:usb2-phy@0: error -ENXIO: IRQ index 0 not found
+[    3.607584] rockchip-usb2phy 2602e000.syscon:usb2-phy@0: refclk freq 24000000
+[    3.609962] rockchip-usb2phy 2602e000.syscon:usb2-phy@2000: error -ENXIO: IRQ index 0 not found
+[    3.610144] rockchip-usb2phy 2602e000.syscon:usb2-phy@2000: refclk freq 24000000
+[    3.621175] dw-pcie 2a200000.pcie: invalid resource
+[    3.621210] dw-pcie 2a200000.pcie: Failed to initialize host
+[    3.621255] dw-pcie: probe of 2a200000.pcie failed with error -22
+[    3.622164] rk-pcie 2a200000.pcie: invalid prsnt-gpios property in node
+[    3.622508] rk-pcie 2a200000.pcie: can't get current limit.
+[    3.622533] iep: Module initialized.
+[    3.622612] mpp_service mpp-srv: 90eefde08d7d author: Chandler Chen 2026-06-01 video: rockchip: mpp: fix vepu510 spurious wdg timeout after page fault
+[    3.622627] mpp_service mpp-srv: probe start
+[    3.622756] rk-pcie 2a200000.pcie: max MSI vector is 32
+[    3.622805] rk-pcie 2a200000.pcie: host bridge /pcie@2a200000 ranges:
+[    3.622842] rk-pcie 2a200000.pcie:      err 0x0020000000..0x00200fffff -> 0x0020000000
+[    3.622881] rk-pcie 2a200000.pcie:       IO 0x0020100000..0x00201fffff -> 0x0020100000
+[    3.622906] rk-pcie 2a200000.pcie:      MEM 0x0020200000..0x0020ffffff -> 0x0020200000
+[    3.622930] rk-pcie 2a200000.pcie:      MEM 0x0900000000..0x097fffffff -> 0x0900000000
+[    3.623114] rk-pcie 2a200000.pcie: iATU unroll: enabled
+[    3.623128] rk-pcie 2a200000.pcie: iATU regions: 8 ob, 8 ib, align 64K, limit 8G
+[    3.626863] mpp_rkvenc2 rkvenc-ccu: probing start
+[    3.626886] mpp_rkvenc2 rkvenc-ccu: probing finish
+[    3.628028] mpp_service mpp-srv: probe success
+[    3.641720] dma-pl330 2ab90000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    3.641749] dma-pl330 2ab90000.dma-controller:       DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    3.643358] dma-pl330 2abb0000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    3.643373] dma-pl330 2abb0000.dma-controller:       DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    3.644961] dma-pl330 2abd0000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    3.644975] dma-pl330 2abd0000.dma-controller:       DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    3.646101] rockchip-system-monitor rockchip-system-monitor: system monitor probe
+[    3.646950] arm-scmi firmware:scmi: Failed. SCMI protocol 22 not active.
+[    3.647132] Serial: 8250/16550 driver, 10 ports, IRQ sharing disabled
+[    3.648088] 2ad70000.serial: ttyS4 at MMIO 0x2ad70000 (irq = 59, base_baud = 11718) is a 16550A
+[    3.650157] random: crng init done
+[    3.661819] OF: graph: no port node found in /dp@27e40000
+[    3.662495] /vop@27d00000: Fixed dependency cycle(s) with /dp@27e40000
+[    3.670806] brd: module loaded
+[    3.675513] loop: module loaded
+[    3.675816] lkdtm: No crash points registered, enable through debugfs
+[    3.679513] rockchip-spi 2ad20000.spi: no high_speed pinctrl state
+[    3.680224] rockchip-spi 2ad20000.spi: register misc device rkspi-dev3
+[    3.680239] rockchip-spi 2ad20000.spi: probed, poll=0, rsd=0, cs-inactive=0, ready=0
+[    3.682101] spi-nor spi5.0: ZB25LQ128 (16384 Kbytes) read_data x4
+[    3.682188] 1 fixed-partitions partitions found on MTD device sfc_nor
+[    3.682202] Creating 1 MTD partitions on "sfc_nor":
+[    3.682213] 0x000000000000-0x000001000000 : "loader"
+[    3.686800] rk_gmac-dwmac 2a220000.ethernet: supply phy not found, using dummy regulator
+[    3.686924] rk_gmac-dwmac 2a220000.ethernet: clock input or output? (output).
+[    3.686937] rk_gmac-dwmac 2a220000.ethernet: TX delay(0x20).
+[    3.686948] rk_gmac-dwmac 2a220000.ethernet: Can not read property: rx_delay.
+[    3.686957] rk_gmac-dwmac 2a220000.ethernet: set rx_delay to 0xffffffff
+[    3.687076] rk_gmac-dwmac 2a220000.ethernet: integrated PHY? (no).
+[    3.687091] rk_gmac-dwmac 2a220000.ethernet: cannot get clock mac_clk_rx
+[    3.687103] rk_gmac-dwmac 2a220000.ethernet: cannot get clock mac_clk_tx
+[    3.687128] rk_gmac-dwmac 2a220000.ethernet: cannot get clock clk_mac_speed
+[    3.687363] rk_gmac-dwmac 2a220000.ethernet: init for RGMII_RXID
+[    3.687559] rk_gmac-dwmac 2a220000.ethernet: User ID: 0x30, Synopsys ID: 0x51
+[    3.687574] rk_gmac-dwmac 2a220000.ethernet:         DWMAC4/5
+[    3.687586] rk_gmac-dwmac 2a220000.ethernet: DMA HW capability register supported
+[    3.687596] rk_gmac-dwmac 2a220000.ethernet: RX Checksum Offload Engine supported
+[    3.687605] rk_gmac-dwmac 2a220000.ethernet: TX Checksum insertion supported
+[    3.687614] rk_gmac-dwmac 2a220000.ethernet: Wake-Up On Lan supported
+[    3.687666] rk_gmac-dwmac 2a220000.ethernet: TSO supported
+[    3.687676] rk_gmac-dwmac 2a220000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    3.687687] rk_gmac-dwmac 2a220000.ethernet: Enabled L3L4 Flow TC (entries=2)
+[    3.687698] rk_gmac-dwmac 2a220000.ethernet: Enabled RFS Flow TC (entries=10)
+[    3.687709] rk_gmac-dwmac 2a220000.ethernet: TSO feature enabled
+[    3.687719] rk_gmac-dwmac 2a220000.ethernet: Using 40/40 bits DMA host/device width
+[    3.825320] rk-pcie 2a200000.pcie: PCIe Linking... LTSSM is 0x3
+[    3.832136] rk_gmac-dwmac 2a230000.ethernet: supply phy not found, using dummy regulator
+[    3.832254] rk_gmac-dwmac 2a230000.ethernet: clock input or output? (output).
+[    3.832267] rk_gmac-dwmac 2a230000.ethernet: TX delay(0x1a).
+[    3.832278] rk_gmac-dwmac 2a230000.ethernet: Can not read property: rx_delay.
+[    3.832288] rk_gmac-dwmac 2a230000.ethernet: set rx_delay to 0xffffffff
+[    3.832315] rk_gmac-dwmac 2a230000.ethernet: integrated PHY? (no).
+[    3.832329] rk_gmac-dwmac 2a230000.ethernet: cannot get clock mac_clk_rx
+[    3.832341] rk_gmac-dwmac 2a230000.ethernet: cannot get clock mac_clk_tx
+[    3.832366] rk_gmac-dwmac 2a230000.ethernet: cannot get clock clk_mac_speed
+[    3.832604] rk_gmac-dwmac 2a230000.ethernet: init for RGMII_RXID
+[    3.832783] rk_gmac-dwmac 2a230000.ethernet: User ID: 0x30, Synopsys ID: 0x51
+[    3.832798] rk_gmac-dwmac 2a230000.ethernet:         DWMAC4/5
+[    3.832810] rk_gmac-dwmac 2a230000.ethernet: DMA HW capability register supported
+[    3.832820] rk_gmac-dwmac 2a230000.ethernet: RX Checksum Offload Engine supported
+[    3.832829] rk_gmac-dwmac 2a230000.ethernet: TX Checksum insertion supported
+[    3.832838] rk_gmac-dwmac 2a230000.ethernet: Wake-Up On Lan supported
+[    3.832901] rk_gmac-dwmac 2a230000.ethernet: TSO supported
+[    3.832911] rk_gmac-dwmac 2a230000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    3.832923] rk_gmac-dwmac 2a230000.ethernet: Enabled L3L4 Flow TC (entries=2)
+[    3.832933] rk_gmac-dwmac 2a230000.ethernet: Enabled RFS Flow TC (entries=10)
+[    3.832944] rk_gmac-dwmac 2a230000.ethernet: TSO feature enabled
+[    3.832955] rk_gmac-dwmac 2a230000.ethernet: Using 40/40 bits DMA host/device width
+[    3.902868] rk-pcie 2a200000.pcie: PCIe Link up, LTSSM is 0x130011
+[    3.902886] rk-pcie 2a200000.pcie: PCIe Gen.2 x1 link up
+[    3.904052] rk-pcie 2a200000.pcie: PCI host bridge to bus 0000:00
+[    3.904078] pci_bus 0000:00: root bus resource [bus 00-0f]
+[    3.904091] pci_bus 0000:00: root bus resource [??? 0x20000000-0x200fffff flags 0x0]
+[    3.904104] pci_bus 0000:00: root bus resource [io  0x0000-0xfffff] (bus address [0x20100000-0x201fffff])
+[    3.904116] pci_bus 0000:00: root bus resource [mem 0x20200000-0x20ffffff]
+[    3.904127] pci_bus 0000:00: root bus resource [mem 0x900000000-0x97fffffff]
+[    3.904164] pci 0000:00:00.0: [1d87:3576] type 01 class 0x060400
+[    3.904235] pci 0000:00:00.0: supports D1 D2
+[    3.904246] pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[    3.934273] pci_bus 0000:01: busn_res: can not insert [bus 01-ff] under [bus 00-0f] (conflicts with (null) [bus 00-0f])
+[    3.934381] pci 0000:01:00.0: [126f:2263] type 00 class 0x010802
+[    3.934460] pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x00003fff 64bit]
+[    3.934909] pci 0000:01:00.0: 4.000 Gb/s available PCIe bandwidth, limited by 5.0 GT/s PCIe x1 link at 0000:00:00.0 (capable of 31.504 Gb/s with 8.0 GT/s PCIe x4 link)
+[    3.942930] pci 0000:00:00.0: bridge window [mem 0x20200000-0x202fffff]: assigned
+[    3.942952] pci 0000:01:00.0: BAR 0 [mem 0x20200000-0x20203fff 64bit]: assigned
+[    3.942994] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    3.943007] pci 0000:00:00.0:   bridge window [mem 0x20200000-0x202fffff]
+[    3.944699] pcieport 0000:00:00.0: PME: Signaling with IRQ 78
+[    3.945077] nvme nvme0: pci function 0000:01:00.0
+[    3.945118] nvme 0000:01:00.0: enabling device (0000 -> 0002)
+[    3.950115] nvme nvme0: missing or invalid SUBNQN field.
+[    3.952065] hwmon hwmon6: temp1_input not attached to any thermal zone
+[    3.958403] nvme nvme0: allocated 64 MiB host memory buffer.
+[    3.973780] nvme nvme0: 8/0/0 default/read/poll queues
+[    3.974791] phy_rtl8211f_led_fixup in
+[    3.974939] phy_rtl8211f_led_fixup in  val=0x0a42
+[    3.978010] nvme nvme0: Ignoring bogus Namespace Identifiers
+[    3.979665] usbcore: registered new interface driver rndis_wlan
+[    3.979719] usbcore: registered new interface driver asix
+[    3.979753] usbcore: registered new interface driver cdc_ether
+[    3.979785] usbcore: registered new interface driver rndis_host
+[    3.979825] usbcore: registered new interface driver cdc_ncm
+[    3.979967] VFIO - User Level meta-driver version: 0.3
+[    3.980295]  nvme0n1: p1 p2 p3 p4 p5
+[    3.987884] usbcore: registered new interface driver cdc_acm
+[    3.987908] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    3.988106] usbcore: registered new interface driver uas
+[    3.988157] usbcore: registered new interface driver usb-storage
+[    3.988539] mousedev: PS/2 mouse device common for all mice
+[    3.989418] i2c_dev: i2c /dev entries driver
+[    3.994196] rk806 1-0023: chip id: RK806,ver:0xa, 0x5
+[    3.995112] rk806 1-0023: ON: 0x40 OFF:0x0
+[    3.995580] rk806 1-0023: shutown_by_pwrctrln missing!
+[    3.995596] rk806 1-0023: dvs-suspend-control-by missing!
+[    4.041178] vdda0v75_hdmi_s0: Bringing 750000uV into 837500-837500uV
+[    4.058268] vcca_3v3_s0: Bringing 3000000uV into 3300000-3300000uV
+[    4.065101] rk806 1-0023: no power-off pinctrl state
+[    4.065119] rk806 1-0023: no sleep-setting state
+[    4.065128] rk806 1-0023: no reset-setting pinctrl state
+[    4.065137] rk806 1-0023: no dvs-setting pinctrl state
+[    4.076786] pca953x 4-0021: supply vcc not found, using dummy regulator
+[    4.076889] pca953x 4-0021: using no AI
+[    4.078961] at24 4-0057: supply vcc not found, using dummy regulator
+[    4.079749] at24 4-0057: 32768 byte 24c256 EEPROM, writable, 16 bytes/write
+[    4.082543] rtc-pcf8563 4-0051: low voltage detected, date/time is not reliable.
+[    4.082668] rtc-pcf8563 4-0051: registered as rtc0
+[    4.083929] rtc-pcf8563 4-0051: low voltage detected, date/time is not reliable.
+[    4.083940] rtc-pcf8563 4-0051: hctosys: unable to read the hardware clock
+[    4.095344] rockchip-mipi-csi2-hw 27c80000.mipi0-csi2-hw: enter mipi csi2 hw probe!
+[    4.095657] rockchip-mipi-csi2-hw 27c80000.mipi0-csi2-hw: probe success, v4l2_dev:mipi0-csi2-hw!
+[    4.095735] rockchip-mipi-csi2-hw 27c90000.mipi1-csi2-hw: enter mipi csi2 hw probe!
+[    4.095872] rockchip-mipi-csi2-hw 27c90000.mipi1-csi2-hw: probe success, v4l2_dev:mipi1-csi2-hw!
+[    4.095931] rockchip-mipi-csi2-hw 27ca0000.mipi2-csi2-hw: enter mipi csi2 hw probe!
+[    4.096061] rockchip-mipi-csi2-hw 27ca0000.mipi2-csi2-hw: probe success, v4l2_dev:mipi2-csi2-hw!
+[    4.096118] rockchip-mipi-csi2-hw 27cb0000.mipi3-csi2-hw: enter mipi csi2 hw probe!
+[    4.096266] rockchip-mipi-csi2-hw 27cb0000.mipi3-csi2-hw: probe success, v4l2_dev:mipi3-csi2-hw!
+[    4.096325] rockchip-mipi-csi2-hw 27cc0000.mipi4-csi2-hw: enter mipi csi2 hw probe!
+[    4.096455] rockchip-mipi-csi2-hw 27cc0000.mipi4-csi2-hw: probe success, v4l2_dev:mipi4-csi2-hw!
+[    4.099464] usbcore: registered new interface driver uvcvideo
+[    4.100839] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[    4.102739] sdhci: Secure Digital Host Controller Interface driver
+[    4.102758] sdhci: Copyright(c) Pierre Ossman
+[    4.102766] Synopsys Designware Multimedia Card Interface Driver
+[    4.103621] sdhci-pltfm: SDHCI platform and OF driver helper
+[    4.104119] dwmmc_rockchip 2a320000.mmc: No normal pinctrl state
+[    4.104132] dwmmc_rockchip 2a320000.mmc: No idle pinctrl state
+[    4.104153] dwmmc_rockchip 2a310000.mmc: No normal pinctrl state
+[    4.104163] dwmmc_rockchip 2a310000.mmc: No idle pinctrl state
+[    4.104321] dwmmc_rockchip 2a320000.mmc: IDMAC supports 32-bit address mode.
+[    4.104354] dwmmc_rockchip 2a320000.mmc: Using internal DMA controller.
+[    4.104364] dwmmc_rockchip 2a320000.mmc: Version ID is 270a
+[    4.104370] dwmmc_rockchip 2a310000.mmc: IDMAC supports 32-bit address mode.
+[    4.104396] dwmmc_rockchip 2a310000.mmc: Using internal DMA controller.
+[    4.104398] dwmmc_rockchip 2a320000.mmc: DW MMC controller at irq 106,32 bit host data width,256 deep fifo
+[    4.104410] dwmmc_rockchip 2a310000.mmc: Version ID is 270a
+[    4.104433] dwmmc_rockchip 2a310000.mmc: DW MMC controller at irq 107,32 bit host data width,256 deep fifo
+[    4.104788] dwmmc_rockchip 2a320000.mmc: allocated mmc-pwrseq
+[    4.104801] mmc_host mmc2: card is non-removable.
+[    4.107616] ledtrig-cpu: registered to indicate activity on CPUs
+[    4.107669] arm-scmi firmware:scmi: Failed. SCMI protocol 17 not active.
+[    4.107735] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    4.108716] cryptodev: driver 1.12 loaded.
+[    4.108766] hid: raw HID events driver (C) Jiri Kosina
+[    4.108957] usbcore: registered new interface driver usbhid
+[    4.108968] usbhid: USB HID core driver
+[    4.114726] SPI driver inv-icm42600-spi has no spi_device_id for invensense,icm42600
+[    4.114748] SPI driver inv-icm42600-spi has no spi_device_id for invensense,icm42602
+[    4.114756] SPI driver inv-icm42600-spi has no spi_device_id for invensense,icm42605
+[    4.114764] SPI driver inv-icm42600-spi has no spi_device_id for invensense,icm42622
+[    4.115487] optee: probing for conduit method.
+[    4.115511] optee: revision 3.13 (500b55c8)
+[    4.115780] optee: dynamic shared memory is enabled
+[    4.115925] optee: initialized driver
+[    4.116765] usbcore: registered new interface driver snd-usb-audio
+[    4.117906] mmc_host mmc1: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    4.118658] es8311 4-0018: Don't need spk-ctl gpio
+[    4.120643] [Awinic] aw87xxx_pa_init:driver version: v2.2.0
+[    4.127350] rk-multicodecs es8311-sound: keymap is missing
+[    4.127379] rk-multicodecs es8311-sound: Has no input keys
+[    4.192264] input: rockchip-es8311 Headset as /devices/platform/es8311-sound/sound/card0/input0
+[    4.253429] NET: Registered PF_PACKET protocol family
+[    4.253750] [BT_RFKILL]: Enter rfkill_rk_init
+[    4.253760] [WLAN_RFKILL]: Enter rfkill_wlan_init
+[    4.254377] [WLAN_RFKILL]: Enter rfkill_wlan_probe
+[    4.254394] [WLAN_RFKILL]: can't find rockchip,grf property
+[    4.254401] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi_chip_type = fcs960k
+[    4.254408] [WLAN_RFKILL]: wlan_platdata_parse_dt: enable wifi power control.
+[    4.254414] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi power controled by gpio.
+[    4.254446] [WLAN_RFKILL]: wlan_platdata_parse_dt: WIFI,host_wake_irq = 8, flags = 0.
+[    4.254457] [WLAN_RFKILL]: wlan_platdata_parse_dt: The ref_wifi_clk not found !
+[    4.254463] [WLAN_RFKILL]: rfkill_wlan_probe: init gpio
+[    4.254471] [WLAN_RFKILL]: rfkill_set_wifi_bt_power: 1
+[    4.254478] [WLAN_RFKILL]: Exit rfkill_wlan_probe
+[    4.255096] [BT_RFKILL]: can't get dts bt_port prop
+[    4.255115] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: uart_rts_gpios = 50.
+[    4.255143] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,reset_gpio = 55.
+[    4.255156] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_gpio = 60.
+[    4.255168] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_host_irq = 9.
+[    4.255178] [BT_RFKILL]: bluetooth_platdata_parse_dt: clk_get failed!!!.
+[    4.255218] [BT_RFKILL]: Request irq for bt wakeup host
+[    4.255507] [BT_RFKILL]: ** disable irq
+[    4.255608] [BT_RFKILL]: bt shut off power
+[    4.255623] [BT_RFKILL]: bt_default device registered.
+[    4.255706] input: bt-powerkey as /devices/platform/wireless-bluetooth/input/input1
+[    4.256028] Key type dns_resolver registered
+[    4.257862] registered taskstats version 1
+[    4.257897] Loading compiled-in X.509 certificates
+[    4.260790] zswap: loaded using pool zstd/zbud
+[    4.261372] Key type .fscrypt registered
+[    4.261384] Key type fscrypt-provisioning registered
+[    4.261869] pstore: Using crash dump compression: deflate
+[    4.262132] Key type encrypted registered
+[    4.262303] AppArmor: AppArmor sha1 policy hashing enabled
+[    4.268795] rga2 27920000.rga: Adding to iommu group 2
+[    4.269205] rga2 27920000.rga: probe successfully, irq = 63, hw_version:3.e.19357
+[    4.269378] rga2 27930000.rga: Adding to iommu group 3
+[    4.269754] rga2 27930000.rga: probe successfully, irq = 64, hw_version:3.e.19357
+[    4.270006] rga: IOMMU binding successfully, default mapping core[0x4]
+[    4.270218] rga: Module initialized. v1.3.13
+[    4.296486] rockchip-usb2phy 2602e000.syscon:usb2-phy@2000: error -ENXIO: IRQ index 0 not found
+[    4.296672] rockchip-usb2phy 2602e000.syscon:usb2-phy@2000: refclk freq 24000000
+[    4.299049] mpp-iep2 27960000.iep: Adding to iommu group 4
+[    4.299475] mpp-iep2 27960000.iep: probe device
+[    4.299742] mpp-iep2 27960000.iep: reset_group->rw_sem_on=0
+[    4.299764] mpp-iep2 27960000.iep: reset_group->rw_sem_on=0
+[    4.299781] mpp-iep2 27960000.iep: reset_group->rw_sem_on=0
+[    4.300073] mpp-iep2 27960000.iep: probing finish
+[    4.300497] mpp_jpgdec 27910000.jpegd: Adding to iommu group 1
+[    4.300856] mpp_jpgdec 27910000.jpegd: probe device
+[    4.301093] mpp_jpgdec 27910000.jpegd: reset_group->rw_sem_on=0
+[    4.301112] mpp_jpgdec 27910000.jpegd: reset_group->rw_sem_on=0
+[    4.301200] mpp_jpgdec 27910000.jpegd: probing finish
+[    4.301526] mpp_jpgenc 27910800.jpege: Adding to iommu group 1
+[    4.301604] mpp_jpgenc 27910800.jpege: probe device
+[    4.301783] mpp_jpgenc 27910800.jpege: reset_group->rw_sem_on=0
+[    4.301796] mpp_jpgenc 27910800.jpege: reset_group->rw_sem_on=0
+[    4.301852] mpp_jpgenc 27910800.jpege: probe finish
+[    4.302242] mpp_rkvdec2 27b00100.rkvdec: Adding to iommu group 7
+[    4.302643] mpp_rkvdec2 27b00100.rkvdec: rkvdec, probing start
+[    4.302960] mpp_rkvdec2 27b00100.rkvdec: shared_niu_a is not found!
+[    4.302973] rkvdec2_init:1301: No niu aclk reset resource define
+[    4.302984] mpp_rkvdec2 27b00100.rkvdec: shared_niu_h is not found!
+[    4.302993] rkvdec2_init:1304: No niu hclk reset resource define
+[    4.303009] mpp_rkvdec2 27b00100.rkvdec: shared_video_cabac is not found!
+[    4.303018] rkvdec2_init:1310: No cabac reset resource define
+[    4.303087] mpp_rkvdec2 27b00100.rkvdec: no regulator, devfreq is disabled
+[    4.303381] mpp_rkvdec2 27b00100.rkvdec: sram_start 0x000000003ff88000
+[    4.303394] mpp_rkvdec2 27b00100.rkvdec: rcb_iova 0x0000000010000000
+[    4.303404] mpp_rkvdec2 27b00100.rkvdec: sram_size 491520
+[    4.303413] mpp_rkvdec2 27b00100.rkvdec: rcb_size 491520
+[    4.303424] mpp_rkvdec2 27b00100.rkvdec: min_width 512
+[    4.303463] mpp_rkvdec2 27b00100.rkvdec: link mode probe finish
+[    4.303534] mpp_rkvdec2 27b00100.rkvdec: probing finish
+[    4.303555] mpp_rkvdec2 27b00100.rkvdec: probing finish
+[    4.304007] mpp_rkvenc2 27a00000.rkvenc-core: Adding to iommu group 5
+[    4.304427] mpp_rkvenc2 27a00000.rkvenc-core: probing start
+[    4.304687] mpp_rkvenc2 27a00000.rkvenc-core: failed to init opp info
+[    4.304699] mpp_rkvenc2 27a00000.rkvenc-core: failed to init_opp_table
+[    4.304708] rkvenc_init:2412: failed to add venc devfreq
+[    4.304791] mpp_rkvenc2 27a00000.rkvenc-core: attach ccu as core 0
+[    4.304846] mpp_rkvenc2 27a00000.rkvenc-core: probing finish
+[    4.305236] mpp_rkvenc2 27a10000.rkvenc-core: Adding to iommu group 6
+[    4.305565] mpp_rkvenc2 27a10000.rkvenc-core: probing start
+[    4.305811] mpp_rkvenc2 27a10000.rkvenc-core: failed to init opp info
+[    4.305823] mpp_rkvenc2 27a10000.rkvenc-core: failed to init_opp_table
+[    4.305831] rkvenc_init:2412: failed to add venc devfreq
+[    4.305890] mpp_rkvenc2 27a10000.rkvenc-core: attach ccu as core 1
+[    4.305946] mpp_rkvenc2 27a10000.rkvenc-core: probing finish
+[    4.306276] mpp_vdpp 27961000.vdpp: Adding to iommu group 4
+[    4.306371] mpp_vdpp 27961000.vdpp: probe device
+[    4.306545] mpp_vdpp 27961000.vdpp: reset_group->rw_sem_on=0
+[    4.306558] mpp_vdpp 27961000.vdpp: reset_group->rw_sem_on=0
+[    4.306569] mpp_vdpp 27961000.vdpp: reset_group->rw_sem_on=0
+[    4.306633] mpp_vdpp 27961000.vdpp: probing finish
+[    4.307120] rockchip-vop2 27d00000.vop: Adding to iommu group 8
+[    4.308081] rockchip-vop2 27d00000.vop: [drm:vop2_bind] vp0 assign plane mask: Cluster0 | Esmart0[0x5], primary plane phy id: Esmart0[2]
+[    4.308110] rockchip-vop2 27d00000.vop: [drm:vop2_bind] vp1 assign plane mask: Cluster1 | Esmart1[0xa], primary plane phy id: Esmart1[3]
+[    4.308128] rockchip-vop2 27d00000.vop: [drm:vop2_bind] vp2 assign plane mask: Esmart2 | Esmart3[0x300], primary plane phy id: Esmart2[8]
+[    4.308357] [drm] unsupported AFBC format NV12 little-endian (0x3231564e)
+[    4.308436] rockchip-vop2 27d00000.vop: [drm:vop2_create_crtc] Cluster0-win0 as cursor plane for vp0
+[    4.308607] rockchip-vop2 27d00000.vop: [drm:vop2_create_crtc] Cluster1-win0 as cursor plane for vp1
+[    4.308640] [drm] Esmart2-win0(possible_vp_mask = 0x00000004) has no possible crtcs
+[    4.308680] [drm] Esmart3-win0(possible_vp_mask = 0x00000004) has no possible crtcs
+[    4.308720] [drm] failed to init overlay plane Cluster0-win1
+[    4.308728] [drm] failed to init overlay plane Cluster1-win1
+[    4.309127] rockchip-vop2 27d00000.vop: bin=0
+[    4.309314] rockchip-vop2 27d00000.vop: idc=12
+[    4.309332] rockchip-vop2 27d00000.vop: idc-volt-sel=1
+[    4.309348] rockchip-vop2 27d00000.vop: soc version=0, speed=1
+[    4.310458] rockchip-vop2 27d00000.vop: avs=0
+[    4.310607] rockchip-vop2 27d00000.vop: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    4.310645] debugfs: Directory 'vdd_logic_s0' with parent 'vdd_logic_s0' already present!
+[    4.311649] rockchip-vop2 27d00000.vop: Supported VOP aclk dvfs, normal mode:500000000, reset mode:594000000, advanced mode:702000000
+[    4.311947] rockchip-drm display-subsystem: bound 27d00000.vop (ops 0xffff80000930b2e0)
+[    4.313242] dw_hdmi_qp-rockchip 27da0000.hdmi: registered ddc I2C bus driver
+[    4.313272] dw_hdmi_qp-rockchip 27da0000.hdmi: scl_high_ns is out of range, set to 5000
+[    4.314204] rockchip-drm display-subsystem: bound 27da0000.hdmi (ops 0xffff80000932e390)
+[    4.314816] rockchip-drm display-subsystem: bound 27e40000.dp (ops 0xffff8000093304e8)
+[    4.317020] Registered IR keymap rc-cec
+[    4.317143] rc rc0: dw_hdmi_qp as /devices/platform/27da0000.hdmi/rc/rc0
+[    4.317292] input: dw_hdmi_qp as /devices/platform/27da0000.hdmi/rc/rc0/input2
+[    4.317826] dw-hdmi-qp-hdcp dw-hdmi-qp-hdcp.6.auto: dw_hdcp_qp_hdcp_probe success
+[    4.318719] [drm] Initialized rockchip 4.0.0 20140818 for display-subsystem on minor 0
+[    4.323030] mmc_host mmc2: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    4.341006] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x1
+[    4.356411] mmc_host mmc2: Bus speed (slot 0) = 100000000Hz (slot req 100000000Hz, actual 100000000HZ div = 0)
+[    4.356435] dwmmc_rockchip 2a320000.mmc: Successfully tuned phase to 0
+[    4.359311] mmc2: new ultra high speed SDR104 SDIO card at address 390b
+[    4.363953] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x10
+[    4.386849] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.409799] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.432746] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.455600] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.455624] dw_hdmi_qp-rockchip 27da0000.hdmi: failed to get edid
+[    4.486485] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x10
+[    4.509427] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.532318] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.555209] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.578046] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.578065] dw_hdmi_qp-rockchip 27da0000.hdmi: failed to get edid
+[    4.578394] dw_hdmi_qp-rockchip 27da0000.hdmi: use tmds mode
+[    4.578454] rockchip-vop2 27d00000.vop: [drm:vop2_crtc_atomic_enable] Update mode to 1920x1080p60, type: 11(if:HDMI0, flag:0x0) for vp0 dclk: 148500000
+[    4.579231] rockchip-vop2 27d00000.vop: [drm:vop2_crtc_atomic_enable] set dclk_vp0 to 148500000, get 148500000
+[    4.579271] dw_hdmi_qp-rockchip 27da0000.hdmi: final tmdsclk = 148500000
+[    4.601050] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x21
+[    4.623992] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc write failed
+[    4.624025] dw_hdmi_qp-rockchip 27da0000.hdmi: don't use dsc mode
+[    4.624031] dw_hdmi_qp-rockchip 27da0000.hdmi: dw hdmi qp use tmds mode
+[    4.624223] rockchip-vop2 27d00000.vop: [drm] vp0 post enable for intf:800
+[    4.697204] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x10
+[    4.720136] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.743020] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.765957] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.788896] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    4.788910] dw_hdmi_qp-rockchip 27da0000.hdmi: failed to get edid
+[    4.798998] Console: switching to colour frame buffer device 240x67
+[    4.815673] rockchip-drm display-subsystem: [drm] fb0: rockchipdrmfb frame buffer device
+[    4.816054] rockchip-drm display-subsystem: [drm] run display error_event monitor
+[    4.820044] phy phy-2602e000.syscon:usb2-phy@2000.7: illegal mode
+[    4.820073] xhci-hcd xhci-hcd.8.auto: xHCI Host Controller
+[    4.820096] xhci-hcd xhci-hcd.8.auto: new USB bus registered, assigned bus number 1
+[    4.820191] xhci-hcd xhci-hcd.8.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0004008002010010
+[    4.820239] xhci-hcd xhci-hcd.8.auto: irq 126, io mem 0x23400000
+[    4.820372] xhci-hcd xhci-hcd.8.auto: xHCI Host Controller
+[    4.820387] xhci-hcd xhci-hcd.8.auto: new USB bus registered, assigned bus number 2
+[    4.820402] xhci-hcd xhci-hcd.8.auto: Host supports USB 3.0 SuperSpeed
+[    4.820565] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    4.820579] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.820590] usb usb1: Product: xHCI Host Controller
+[    4.820600] usb usb1: Manufacturer: Linux 6.1.172-vendor-rk35xx xhci-hcd
+[    4.820609] usb usb1: SerialNumber: xhci-hcd.8.auto
+[    4.821034] hub 1-0:1.0: USB hub found
+[    4.821068] hub 1-0:1.0: 1 port detected
+[    4.821381] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    4.821491] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+[    4.821504] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    4.821515] usb usb2: Product: xHCI Host Controller
+[    4.821525] usb usb2: Manufacturer: Linux 6.1.172-vendor-rk35xx xhci-hcd
+[    4.821535] usb usb2: SerialNumber: xhci-hcd.8.auto
+[    4.821918] hub 2-0:1.0: USB hub found
+[    4.821949] hub 2-0:1.0: 1 port detected
+[    4.823121] rockchip-dmc dmc: bin=0
+[    4.823326] rockchip-dmc dmc: idc=12
+[    4.823343] rockchip-dmc dmc: idc-volt-sel=1
+[    4.824879] rockchip-dmc dmc: _of_add_opp_table_v2: no supported OPPs
+[    4.824895] rockchip-dmc dmc: failed to add opp table
+[    4.825154] rockchip-dmc: probe of dmc failed with error -2
+[    4.827258] input: rockchip-hdmi0 rockchip-hdmi0 as /devices/platform/hdmi-sound/sound/card1/input3
+[    4.828482] debugfs: File 'Capture' in directory 'dapm' already present!
+[    4.829061] input: rockchip-dp0 rockchip-dp0 as /devices/platform/dp0-sound/sound/card2/input4
+[    4.832306] cpu cpu0: bin=0
+[    4.832492] cpu cpu0: idc=3
+[    4.834931] cpu cpu0: pvtm=1998
+[    4.835555] cpu cpu0: pvtm-volt-sel=7
+[    4.835580] cpu cpu0: soc version=0, speed=7
+[    4.837558] cpu cpu4: bin=0
+[    4.837743] cpu cpu4: idc=5
+[    4.840119] cpu cpu4: pvtm=2138
+[    4.840785] cpu cpu4: pvtm-volt-sel=7
+[    4.840816] cpu cpu4: soc version=0, speed=7
+[    4.842483] cpu cpu0: avs=0
+[    4.843531] cpu cpu4: avs=0
+[    4.843641] cpu cpu0: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    4.844898] cpu cpu0: EM: created perf domain
+[    4.846776] cpu cpu4: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    4.848311] cpu cpu4: EM: created perf domain
+[    4.849639] RKNPU 27700000.npu: Adding to iommu group 0
+[    4.849847] RKNPU 27700000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[    4.850155] RKNPU 27700000.npu: can't request region for resource [mem 0x27700000-0x27707fff]
+[    4.850184] RKNPU 27700000.npu: can't request region for resource [mem 0x27708000-0x2770ffff]
+[    4.850547] [drm] Initialized rknpu 0.9.8 20240828 for 27700000.npu on minor 1
+[    4.852284] RKNPU 27700000.npu: bin=0
+[    4.852462] RKNPU 27700000.npu: idc=4
+[    4.852493] debugfs: Directory '27700000.npu-rknpu' with parent 'vdd_npu_s0' already present!
+[    4.854228] RKNPU 27700000.npu: pvtm=867
+[    4.854748] RKNPU 27700000.npu: pvtm-volt-sel=8
+[    4.854763] RKNPU 27700000.npu: soc version=0, speed=8
+[    4.854804] debugfs: Directory '27700000.npu-rknpu' with parent 'vdd_npu_s0' already present!
+[    4.855567] RKNPU 27700000.npu: avs=0
+[    4.855766] RKNPU 27700000.npu: EM: created perf domain
+[    4.855993] RKNPU 27700000.npu: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    4.857234] RKNPU 27700000.npu: RKNPU: nbuf region: [0x000000003fe80000, 0x000000003ff80000), nbuf size: 0x100000
+[    4.858814] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    4.874455] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    4.874740] cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    4.875687] clk: Disabling unused clocks
+[    4.876331] rockchip-pm rockchip-suspend: not set pwm-regulator-config
+[    4.876872] rockchip-suspend not set sleep-mode-config for mem-lite
+[    4.876884] rockchip-suspend not set wakeup-config for mem-lite
+[    4.876890] rockchip-suspend not set sleep-mode-config for mem-ultra
+[    4.876895] rockchip-suspend not set wakeup-config for mem-ultra
+[    4.877633] ALSA device list:
+[    4.877641]   #0: rockchip-es8311
+[    4.877646]   #1: rockchip-hdmi0
+[    4.877651]   #2: rockchip-dp0
+[    4.881577] Freeing unused kernel memory: 8064K
+[    4.881657] Run /init as init process
+Loading, please wait...
+[Decryption-disk] ENTER 0-decryption-disk
+[    4.909282] [Decryption-disk] ENTER 0-decryption-disk
+[Decryption-disk] Boot disk from cmdline: /dev/nvme0n1
+[    4.911829] [Decryption-disk] Boot disk from cmdline: /dev/nvme0n1
+[Decryption-disk] security partition resolved: /dev/nvme0n1p3
+[    4.982917] [Decryption-disk] security partition resolved: /dev/nvme0n1p3
+[Decryption-disk] Security partition marker: SSKR
+[    4.986097] [Decryption-disk] Security partition marker: SSKR
+[Decryption-disk] SSKR marker found, reading passphrase with keybox_app
+[    4.986517] [Decryption-disk] SSKR marker found, reading passphrase with keybox_app
+[Decryption-disk] tee-supplicant started
+[    4.987055] [Decryption-disk] tee-supplicant started
+[    5.012421] [Decryption-disk] Password successfully retrieved from security partition
+[Decryption-disk] Password successfully retrieved from security partition
+[    5.069634] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[Decryption-disk] Found LUKS device: /dev/nvme0n1p4 (UUID: 02fe9544-e039-4212-8ba5-a803fc4274bd)
+[    5.156999] [Decryption-disk] Found LUKS device: /dev/nvme0n1p4 (UUID: 02fe9544-e039-4212-8ba5-a803fc4274bd)
+[Decryption-disk] Unlocking LUKS encrypted partition
+[    5.157097] [Decryption-disk] Unlocking LUKS encrypted partition
+[    5.211164] usb 1-1: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=32.98
+[    5.211205] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    5.211218] usb 1-1: Product: USB2.0 Hub
+[    5.268972] hub 1-1:1.0: USB hub found
+[    5.269365] hub 1-1:1.0: 4 ports detected
+[    5.482912] phy phy-2602e000.syscon:usb2-phy@0.0: charger = USB_SDP_CHARGER
+[    5.612918] usb 1-1.4: new high-speed USB device number 3 using xhci-hcd
+[    5.704653] usb 1-1.4: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=32.98
+[    5.704671] usb 1-1.4: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    5.704681] usb 1-1.4: Product: USB2.0 Hub
+[    5.748955] hub 1-1.4:1.0: USB hub found
+[    5.749340] hub 1-1.4:1.0: 4 ports detected
+[    7.349586] vendor storage:20190527 ret = -1
+[Decryption-disk] root mapper ready: /dev/mapper/armbian-root
+[   11.045745] [Decryption-disk] root mapper ready: /dev/mapper/armbian-root
+[Decryption-disk] LUKS partition unlocked successfully
+[   11.045822] [Decryption-disk] LUKS partition unlocked successfully
+[Decryption-disk] Found encrypted userdata: /dev/nvme0n1p5
+[   11.147031] [Decryption-disk] Found encrypted userdata: /dev/nvme0n1p5
+[Decryption-disk] userdata mapper ready: /dev/mapper/armbian-userdata
+[   16.850675] [Decryption-disk] userdata mapper ready: /dev/mapper/armbian-userdata
+Starting systemd-udevd version 257.13-1~deb13u1
+[   17.452378] rk_gmac-dwmac 2a230000.ethernet end1: renamed from eth1
+[   17.473326] rk_gmac-dwmac 2a220000.ethernet end0: renamed from eth0
+[   17.482048] input: adc-keys as /devices/platform/adc-keys/input/input5
+[   17.486953] rockchip-cpuinfo cpuinfo: SoC            : 35760000
+[   17.486987] rockchip-cpuinfo cpuinfo: Serial         : 5a6886fcc73ec2a3
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... [   17.582109] OTA_DEBG init-premount ota hook start (role=recovery)
+[   17.582229] OTA_DEBG LOGFILE=/run/initramfs/ota.log
+[   17.618343] OTA_DEBG auto-decrypt candidate detected (mapper already open), waiting for /dev/mapper/armbian-root
+[   17.642480] OTA_DEBG auto-decrypt mode: ROOT_DEV=/dev/mapper/armbian-root, LUKS_UUID=02fe9544-e039-4212-8ba5-a803fc4274bd
+[   17.775937] OTA_DEBG auto-decrypt mode root detection: skip armbi_root label probing
+[   17.776449] OTA_DEBG auto-detected BOOT_DEV=, BOOT_UUID=, HAS_BOOT_PART=0
+[   17.941095] EXT4-fs (dm-1): recovery complete
+[   17.941701] EXT4-fs (dm-1): mounting with "discard" option, but the device does not support discard
+[   17.941718] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Quota mode: none.
+[   18.023715] OTA_DEBG campaign 910438c266b1b58622cf00aa9355810cbcc0cfad6cae0fee588b6c4439ab37ba attempt 2/3 (RESTORE_MODE=0, ROOTFS_TOUCHED=1)
+[   18.037308] OTA_DEBG mounting /dev/mapper/armbian-root -> /mnt/root ...
+[   18.042310] EXT4-fs (dm-0): warning: mounting fs with errors, running e2fsck is recommended
+[   18.043117] EXT4-fs (dm-0): mounting with "discard" option, but the device does not support discard
+[   18.043146] EXT4-fs (dm-0): mounted filesystem with writeback data mode. Quota mode: none.
+[   18.053865] OTA_DEBG mkfs path skipped: no separate boot partition, /boot stays on rootfs
+[   18.054059] OTA_DEBG cleaning /mnt/root (except boot)...
+[   18.054802] OTA_DEBG [HB] cleaning rootfs at /mnt/root
+[   21.839183] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34497: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl-base/unicore/lib/CompEx': Directory not empty
+[   21.839209] EXT4-fs error (device dm-0): htree_dirblock_to_tree:1083: inode #34497: comm rm: Directory block failed checksum
+[   21.839299] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34497: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+[   21.839310] EXT4-fs error (device dm-0): ext4_empty_dir:3139: inode #34497: comm rm: Directory block failed checksum
+[   21.862621] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+rm: can't remove 'usr/lib/aarch64-linux-gnu/zsh/5.9/zsh': Directory not empty
+[   21.862648] EXT4-fs error (device dm-0): htree_dirblock_to_tree:1083: inode #34713: comm rm: Directory block failed checksum
+[   21.862752] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+[   21.862764] EXT4-fs error (device dm-0): ext4_empty_dir:3139: inode #34713: comm rm: Directory block failed checksum
+[   21.878589] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #35005: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+rm: can't remove 'usr/lib/aarch64-linux-gnu/audit': Directory not empty
+[   21.878616] EXT4-fs error (device dm-0): htree_dirblock_to_tree:1083: inode #35005: comm rm: Directory block failed checksum
+rm: can't remove 'usr/lib/aarch64-linux-gnu/ldscripts': Directory not empty
+[   21.878715] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #35005: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+[   21.878727] EXT4-fs error (device dm-0): ext4_empty_dir:3139: inode #35005: comm rm: Directory block failed checksum
+[   21.879356] EXT4-fs error (device dm-0): ext4_dx_csum_verify:502: inode #35011: comm rm: dir seems corrupt?  Run e2fsck -D.
+[   21.879378] EXT4-fs error (device dm-0): dx_probe:823: inode #35011: comm rm: Directory index failed checksum
+[   21.879460] EXT4-fs error (device dm-0): ext4_empty_dir:3144: inode #35011: block 996341: comm rm: bad entry in directory: rec_len is smaller than minimal - offset=0, inode
+=0, rec_len=0, size=4096 fake=0
+[   21.879480] EXT4-fs warning (device dm-0): ext4_empty_dir:3147: inode #35011: comm rm: directory missing '.'
+[   21.905618] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #35753: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl/5.40.1/Filter/Util': Directory not empty
+[   21.905645] EXT4-fs error (device dm-0): htree_dirblock_to_tree:1083: inode #35753: comm rm: Directory block failed checksum
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl/5.40.1/Sub': Directory not empty
+[   21.905736] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #35753: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl/5.40.1/I18N': Directory not empty
+[   21.906225] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #35757: comm rm: No space for directory leaf checksum. Please run e2fsck -D.
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl/5.40.1/linux': Directory not empty
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl/5.40.1/sys': Directory not empty
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl/5.40.1/CORE': Directory not empty
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl/5.40.1/PerlIO': Directory not empty
+rm: can't remove 'usr/lib/aarch64-linux-gnu/perl/5.40.1/Sys': Directory not empty
+[   25.244681] OTA_DEBG extracting /mnt/userdata/ota-recovery/payloads/910438c266b1b58622cf00aa9355810cbcc0cfad6cae0fee588b6c4439ab37ba/rootfs.tar.zst -> /mnt/root ...
+[   25.245406] OTA_DEBG [HB] extracting rootfs.tar.zst to /mnt/root
+[   25.254048] OTA_DEBG rootfs: /usr/bin/zstd  -dc /mnt/userdata/ota-recovery/payloads/910438c266b1b58622cf00aa9355810cbcc0cfad6cae0fee588b6c4439ab37ba/rootfs.tar.zst | /usr/b
+in/tar --numeric-owner --xattrs --acls -xf - -C /mnt/root
+[   27.593299] platform mtd_vendor_storage: deferred probe pending
+[   35.249370] OTA_DEBG [HB] extracting rootfs.tar.zst to /mnt/root
+[   43.243218] EXT4-fs warning: 13 callbacks suppressed
+[   43.243224] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34497: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.243248] EXT4-fs error: 15 callbacks suppressed
+[   43.243250] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34497: comm tar: checksumming directory block 0
+[   43.365132] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.365165] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   43.365369] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.365385] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   43.365547] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.365560] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   43.365698] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.365710] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   43.365862] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.365875] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   43.366019] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.366031] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   43.367819] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.367842] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   43.368100] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.368117] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   43.368244] EXT4-fs warning (device dm-0): ext4_dirblock_csum_verify:406: inode #34713: comm tar: No space for directory leaf checksum. Please run e2fsck -D.
+[   43.368261] EXT4-fs error (device dm-0): __ext4_find_entry:1694: inode #34713: comm tar: checksumming directory block 0
+[   45.257153] OTA_DEBG [HB] extracting rootfs.tar.zst to /mnt/root
+[   55.265657] OTA_DEBG [HB] extracting rootfs.tar.zst to /mnt/root
+[   65.274366] OTA_DEBG [HB] extracting rootfs.tar.zst to /mnt/root
+[   71.816293] OTA_DEBG ERROR: rootfs extract failed (tar rc=2, decompressor rc=0)
+[   71.836324] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/bfd-plugins: time stamp 2026-11-25 18:47:31 is 1795632381.771626179 s in the future
+[   71.836581] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/gnupg2: time stamp 2026-11-25 18:47:36 is 1795632386.771546945 s in the future
+[   71.836900] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/aarch64-linux-gnu/perl/cross-config-5.40.1: time stamp 2026-11-25 18:47:25 is 1795632375.771463536 s in the futu
+re
+[   71.837163] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/aarch64-linux-gnu/perl: time stamp 2026-11-25 18:47:25 is 1795632375.771379206 s in the future
+[   71.837414] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/aarch64-linux-gnu: time stamp 2026-11-26 15:36:19 is 1795707309.771313385 s in the future
+[   71.837676] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/gcc/aarch64-linux-gnu/14: time stamp 2026-11-25 18:47:31 is 1795632381.771247223 s in the future
+[   71.837933] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/gcc/aarch64-linux-gnu: time stamp 2026-11-25 18:47:30 is 1795632380.771164885 s in the future
+[   71.838174] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/gcc: time stamp 2026-11-25 18:47:30 is 1795632380.771085192 s in the future
+[   71.838438] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/nvidia/gm20b/gr: time stamp 2026-11-26 15:33:48 is 1795707158.771000857 s in the future
+[   71.838697] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/nvidia/gm20b: time stamp 2026-11-26 15:33:37 is 1795707147.770918093 s in the future
+[   71.838946] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/nvidia: time stamp 2026-11-26 15:33:37 is 1795707147.770838142 s in the future
+[   71.839196] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/rtl_bt: time stamp 2026-11-26 15:33:48 is 1795707158.770755957 s in the future
+[   71.839483] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/updates/ath11k/WCN6855/hw2.1: time stamp 2026-11-26 15:33:48 is 1795707158.770670598 s in the future
+[   71.839869] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/updates/ath11k/WCN6855: time stamp 2026-11-26 15:33:48 is 1795707158.770587606 s in the future
+[   71.840161] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/updates/ath11k: time stamp 2026-11-26 15:33:48 is 1795707158.770506422 s in the future
+[   71.840453] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/updates: time stamp 2026-11-26 15:33:48 is 1795707158.770424583 s in the future
+[   71.840798] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware/brcm: time stamp 2026-11-26 15:33:48 is 1795707158.770342901 s in the future
+[   71.841094] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/firmware: time stamp 2026-11-26 15:33:48 is 1795707158.770261045 s in the future
+[   71.841400] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/openvpn: time stamp 2026-11-26 15:21:47 is 1795706437.770181643 s in the future
+[   71.841706] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/environment.d: time stamp 2026-11-25 18:47:17 is 1795632367.770101338 s in the future
+[   71.842007] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/apt/planners: time stamp 2026-11-25 18:46:38 is 1795632328.770017676 s in the future
+[   71.842288] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib/apt: time stamp 2026-11-25 18:46:38 is 1795632328.769918976 s in the future
+[   71.842564] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/lib: time stamp 2026-11-26 15:18:02 is 1795706212.769838208 s in the future
+[   71.843009] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/src/linux-headers-6.1.172-vendor-rk35xx/scripts/dtc/include-prefixes: time stamp 2026-11-26 15:23:21 is 1795706531.7
+69746493 s in the future
+[   71.843390] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/src/linux-headers-6.1.172-vendor-rk35xx/scripts/dtc: time stamp 2026-11-26 15:26:36 is 1795706726.769656277 s in the
+ future
+[   71.843758] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/src/linux-headers-6.1.172-vendor-rk35xx/scripts: time stamp 2026-11-26 15:26:53 is 1795706743.769569954 s in the fut
+ure
+[   71.844160] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/src/linux-headers-6.1.172-vendor-rk35xx/include/dt-bindings/input: time stamp 2026-11-26 15:23:21 is 1795706531.7694
+84414 s in the future
+[   71.844547] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/src/linux-headers-6.1.172-vendor-rk35xx/include/dt-bindings: time stamp 2026-11-26 15:23:21 is 1795706531.769397392
+s in the future
+[   71.844908] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/src/linux-headers-6.1.172-vendor-rk35xx/include: time stamp 2026-11-26 15:23:20 is 1795706530.76931093 s in the futu
+re
+[   71.845257] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/src/linux-headers-6.1.172-vendor-rk35xx: time stamp 2026-11-26 15:28:02 is 1795706812.769228582 s in the future
+[   71.845531] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/src: time stamp 2026-11-26 15:29:17 is 1795706887.769147913 s in the future
+[   71.845807] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/sbin: time stamp 2026-11-26 15:18:02 is 1795706212.769066725 s in the future
+[   71.846144] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mips64-linux-gnuabi64/asm: time stamp 2026-11-25 18:47:28 is 1795632378.768984087 s in the future
+[   71.846490] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mips64-linux-gnuabi64: time stamp 2026-11-25 18:47:28 is 1795632378.768904377 s in the future
+[   71.846827] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/loongarch64-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.76882218 s in the future
+[   71.847155] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/loongarch64-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.768740371 s in the future
+[   71.847484] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/arm-linux-gnueabi/asm: time stamp 2026-11-25 18:47:28 is 1795632378.768657702 s in the future
+[   71.847802] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/arm-linux-gnueabi: time stamp 2026-11-25 18:47:28 is 1795632378.76857731 s in the future
+[   71.848133] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/arm-linux-gnueabihf/asm: time stamp 2026-11-25 18:47:28 is 1795632378.76849434 s in the future
+[   71.848454] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/arm-linux-gnueabihf: time stamp 2026-11-25 18:47:28 is 1795632378.768414234 s in the future
+[   71.848787] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/powerpc64-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.768332808 s in the future
+[   71.849112] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/powerpc64-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.768250569 s in the future
+[   71.849453] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mips64el-linux-gnuabi64/asm: time stamp 2026-11-25 18:47:28 is 1795632378.76816892 s in the future
+[   71.849804] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mips64el-linux-gnuabi64: time stamp 2026-11-25 18:47:28 is 1795632378.768088332 s in the future
+[   71.850139] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/x86_64-linux-gnux32/asm: time stamp 2026-11-25 18:47:28 is 1795632378.768006493 s in the future
+[   71.850465] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/x86_64-linux-gnux32: time stamp 2026-11-25 18:47:28 is 1795632378.767926777 s in the future
+[   71.850795] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/i386-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.767842407 s in the future
+[   71.851116] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/i386-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.767762152 s in the future
+[   71.851443] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/x86_64-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.767680217 s in the future
+[   71.851762] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/x86_64-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.767599098 s in the future
+[   71.852112] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mipsisa64r6el-linux-gnuabi64/asm: time stamp 2026-11-25 18:47:28 is 1795632378.767517181 s in the future
+[   71.852455] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mipsisa64r6el-linux-gnuabi64: time stamp 2026-11-25 18:47:28 is 1795632378.767437482 s in the future
+[   71.852783] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mipsel-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.767354891 s in the future
+[   71.853163] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mipsel-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.767271693 s in the future
+[   71.853521] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mips-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.767188684 s in the future
+[   71.853885] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/mips-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.767100573 s in the future
+[   71.854150] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/powerpc-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.767017365 s in the future
+[   71.854430] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/powerpc-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.766937286 s in the future
+[   71.854756] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/powerpc64le-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.766855599 s in the future
+[   71.855021] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/powerpc64le-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.766775585 s in the future
+[   71.855286] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/riscv64-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.766693306 s in the future
+[   71.855544] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/riscv64-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.766601656 s in the future
+[   71.855800] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/m68k-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.766519343 s in the future
+[   71.856056] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/m68k-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.766437605 s in the future
+[   71.856333] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/aarch64-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.766355056 s in the future
+[   71.856592] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/aarch64-linux-gnu: time stamp 2026-11-26 15:23:16 is 1795706526.766275219 s in the future
+[   71.856853] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/s390x-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.766192914 s in the future
+[   71.857107] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/s390x-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.766112028 s in the future
+[   71.857361] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/sh4-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.76603033 s in the future
+[   71.857611] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/sh4-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.765950732 s in the future
+[   71.857872] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/sparc64-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.765870063 s in the future
+[   71.858131] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/sparc64-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.765790357 s in the future
+[   71.858390] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/hppa-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.765709223 s in the future
+[   71.858643] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/hppa-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.765628728 s in the future
+[   71.858913] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/alpha-linux-gnu/asm: time stamp 2026-11-25 18:47:28 is 1795632378.765547284 s in the future
+[   71.859168] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include/alpha-linux-gnu: time stamp 2026-11-25 18:47:28 is 1795632378.765467328 s in the future
+[   71.859396] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr/include: time stamp 2026-11-26 15:23:16 is 1795706526.765389587 s in the future
+[   71.859642] OTA_DEBG rootfs stderr: /usr/bin/tar: ./usr: time stamp 2026-11-26 15:18:02 is 1795706212.765312509 s in the future
+[   71.859853] OTA_DEBG rootfs stderr: /usr/bin/tar: .: time stamp 2026-11-26 15:18:02 is 1795706212.765251426 s in the future
+[   71.860044] OTA_DEBG rootfs stderr: /usr/bin/tar: Exiting with failure status due to previous errors
+[   71.864623] OTA_DEBG ERROR: extract rootfs.tar.zst failed, abort OTA
+[   71.864797] OTA_DEBG ERROR: campaign failed: rootfs apply failed
+[   71.864916] OTA_DEBG unmounting /mnt/root ...
+[   78.741715] EXT4-fs (dm-0): unmounting filesystem.
+[   78.776451] OTA_DEBG retry not exhausted (2/3); rebooting back into Rescue
+[   78.790561] OTA_DEBG OTA done, rebooting...
+DDR fcb0cfd52f cym 24/10/09-19:36:03,fwver: v1.08
+In
+ch0 ttot6
+ch1 ttot6
+ch0 ttot7
+LPDDR5, 2736MHz
+channel[0] BW=16 Col=10 Bk=16 CS0 Row=16 CS1 Row=16 CS=2 Die BW=16 Size=4096MB
+ch1 ttot7
+channel[1] BW=16 Col=10 Bk=16 CS0 Row=16 CS1 Row=16 CS=2 Die BW=16 Size=4096MB
+Manufacturer ID:0xff
+CH0 RX Vref:22.8%, RX DQS Vref:29.2%, TX Vref:20.0%,20.0%
+DQ roc:
+p2 n0, p2 n0, p1 n0, p5 n0, p2 n0, p5 n0, p1 n0, p5 n0, p1 n0,
+p2 n0, p2 n1, p1 n0, p5 n0, p6 n0, p1 n0, p6 n0, p0 n0, p7 n0,
+
+DQ rds:l0 l0 l0 h2 l0 h1 l0 l0, h1 l0 h1 l0 h1 h1 l0 l0
+DQS roc: p2, n0, p2, n0
+
+CH1 RX Vref:23.9%, RX DQS Vref:30.0%, TX Vref:21.0%,21.0%
+DQ roc:
+p6 n2, p4 n0, p5 n5, p3 n0, p1 n0, p1 n0, p1 n5, p7 n0, p4 n1,
+p0 n2, p5 n0, p5 n0, p4 n2, p3 n0, p3 n0, p7 n0, p0 n1, p1 n0,
+
+DQ rds:l0 h3 l0 l0 l0 l0 l0 h1, l0 l0 h1 h1 l0 l0 l0 h1
+DQS roc: p1, n0, p0, n0
+
+stride=0x3, ddr_config=0x6
+hash bank_mask0-3 0x0 0x2100 0x44200 0x88400, rank_mask0 0x800
+change to F1: 534MHz
+ch0 ttot6
+ch1 ttot6
+change to F2: 1320MHz
+ch0 ttot8
+ch1 ttot8
+change to F3: 1968MHz
+ch0 ttot6
+ch1 ttot6
+change to F0: 2736MHz
+ch0 ttot7
+ch1 ttot7
+out
+U-Boot SPL board init
+U-Boot SPL 2017.09_armbian-2017.09-S39cd-Pd93f-H8d28-V82a0-Bd800-R448a (Nov 26 2026 - 15:19:06)
+sfc cmd=03H(6BH-x4)
+0 60 dll training failed in 80000000MHz, reduce the speed
+unknown raw ID 50 18 5e
+Trying to boot from MMC2
+MMC: no card present
+mmc_init: -123, time 0
+spl: mmc init failed with error: -123
+Trying to boot from MTD2
+No misc partition
+Trying fit image at 0x4000 sector
+## Verified-boot: 0
+sha256,rsa2048:dev## Verified-boot: 0
++
+## Checking atf-1 0x40060000 ... sha256(868eaf583a...) + OK
+## Checking uboot 0x40200000 ... sha256(4116cf3ad6...) + OK
+## Checking fdt 0x40350cc0 ... sha256(e0a5c0ca23...) + OK
+## Checking atf-2 0x400f0000 ... sha256(8afb712810...) + OK
+## Checking atf-3 0x3fe70000 ... sha256(8b5729c8c7...) + OK
+## Checking optee 0x48400000 ... sha256(3d874a02ad...) + OK
+Jumping to U-Boot(0x40200000) via ARM Trusted Firmware(0x40060000)
+Total: 175.532/483.508 ms
+
+INFO:    Preloader serial: 0
+NOTICE:  BL31: v2.3():v2.3-931-g4d7e811c6:derrick.huang, fwver: v1.20
+NOTICE:  BL31: Built : 19:19:38, May 26 2025
+INFO:    SOC (0x35760101)
+INFO:    spec: 0x1
+INFO:    test version: 0x0
+INFO:    cost 489803 us before hptimer restart
+INFO:    soc warm boot, reset status: 0x1
+INFO:    ARM GICv2 driver initialized
+INFO:    bypass memory repair
+INFO:    dfs DDR fsp_params[0].freq_mhz= 2736MHz
+INFO:    dfs DDR fsp_params[1].freq_mhz= 534MHz
+INFO:    dfs DDR fsp_params[2].freq_mhz= 1320MHz
+INFO:    dfs DDR fsp_params[3].freq_mhz= 1968MHz
+INFO:    Using opteed sec cpu_context!
+INFO:    boot cpu mask: 1
+INFO:    BL31: Initializing runtime services
+INFO:    BL31: Initializing BL32
+I/TC:
+I/TC: OP-TEE version: 3.13.0-1034-g500b55c8a #hisping.lin (gcc version 10.2.1 20201103 (GNU Toolchain for the A-profile Architecture 10.2-2020.11 (arm-10.16))) #2 Fri Nov  7 0
+9:23:19 UTC 2025 aarch64, fwver: v1.08
+I/TC: OP-TEE memory size: TEEOS 0x200000 TA 0xc00000 SHM 0x200000
+I/TC: Primary CPU initializing
+I/TC: Primary CPU switching to normal world boot
+INFO:    BL31: Preparing for EL3 exit to normal world
+INFO:    Entry point address = 0x40200000
+INFO:    SPSR = 0x3c9
+
+
+U-Boot 2017.09_armbian-2017.09-S39cd-Pd93f-H8d28-V82a0-Bd800-R448a (Nov 26 2026 - 15:19:06 +0000)
+
+Model: reComputer RK3576 DevKit
+MPIDR: 0x0
+PreSerial: 0, raw, 0x2ad40000
+DRAM:  8 GiB
+Sysmem: init
+Relocation Offset: bda0e000
+Relocation fdt: fb9f89a0 - fb9fece0
+CR: M/C/I
+Cmd interface: disabled
+DM: v2
+RESC: No bootdev
+Failed to load DTB, ret=-19
+No valid DTB, ret=-22
+Failed to get kernel dtb, ret=-22
+Booted from SPI NOR; scanning OS boot devices
+mmc@2a310000: 1
+MMC: no card present
+mmc_init: -123, time 1
+pcie@2a200000: PCIe Linking... LTSSM is 0x0
+pcie@2a200000: PCIe Link up, LTSSM is 0x130011
+

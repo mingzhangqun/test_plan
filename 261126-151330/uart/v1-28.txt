@@ -1,0 +1,1048 @@
+[drm] Initialized rknpu 0.9.8 20240828 for 27700000.npu on minor 1
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up npu0-supply from device tree
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up npu0-supply property in node /power-management@27380000/power-controller failed
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up npu1-supply from device tree
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up npu1-supply property in node /power-management@27380000/power-controller failed
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up nputop-supply from device tree
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up nputop-supply property in node /power-management@27380000/power-controller failed
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up npu-supply from device tree
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up npu-supply property in node /power-management@27380000/power-controller failed
+RKNPU 27700000.npu: Looking up rknpu-supply from device tree
+vdd_npu_s0: could not add device link 27700000.npu: -EEXIST
+RKNPU 27700000.npu: bin=0
+RKNPU 27700000.npu: idc=4
+RKNPU 27700000.npu: Looking up rknpu-supply from device tree
+debugfs: Directory '27700000.npu-rknpu' with parent 'vdd_npu_s0' already present!
+vdd_npu_s0: Failed to create debugfs directory
+RKNPU 27700000.npu: pvtm=866
+RKNPU 27700000.npu: pvtm-volt-sel=8
+RKNPU 27700000.npu: soc version=0, speed=8
+RKNPU 27700000.npu: Looking up rknpu-supply from device tree
+debugfs: Directory '27700000.npu-rknpu' with parent 'vdd_npu_s0' already present!
+vdd_npu_s0: Failed to create debugfs directory
+RKNPU 27700000.npu: avs=0
+RKNPU 27700000.npu: EM: OPP:600000 is inefficient
+RKNPU 27700000.npu: EM: OPP:500000 is inefficient
+RKNPU 27700000.npu: EM: OPP:400000 is inefficient
+RKNPU 27700000.npu: EM: created perf domain
+RKNPU 27700000.npu: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+RKNPU 27700000.npu: RKNPU: nbuf region: [0x000000003fe80000, 0x000000003ff80000), nbuf size: 0x100000
+cfg80211: Loading compiled-in X.509 certificates for regulatory database
+cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+clk: Disabling unused clocks
+rockchip-pm rockchip-suspend: not set pwm-regulator-config
+rockchip-pm rockchip-suspend: Looking up vdd_npu_s0-supply from device tree
+rockchip-pm rockchip-suspend: Looking up vdd_npu_s0-supply property in node /rockchip-suspend failed
+rockchip-suspend not set sleep-mode-config for mem-lite
+rockchip-suspend not set wakeup-config for mem-lite
+rockchip-suspend not set sleep-mode-config for mem-ultra
+[   17.988869] raid6: int64x1  gen()  2591 MB/s
+rockchip-suspend not set wakeup-config for mem-ultra
+[   17.988876] raid6: using algorithm neonx4 gen() 6077 MB/s
+ALSA device list:
+  #0: rockchip-es8311
+  #1: rockchip-hdmi0
+  #2: rockchip-dp0
+Freeing unused kernel memory: 8064K
+Run /init as init process
+  with arguments:
+    /init
+  with environment:
+    HOME=/
+    TERM=linux
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up subphp-supply from device tree
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up subphp-supply property in node /power-management@27380000/power-controller failed
+[Decryption-disk] ENTER 0-decryption-disk
+[Decryption-disk] Boot disk from cmdline: /dev/nvme0n1
+[Decryption-disk] security partition resolved: /dev/nvme0n1p3
+[Decryption-disk] Security partition marker: SSKR
+[Decryption-disk] SSKR marker found, reading passphrase with keybox_app
+[Decryption-disk] tee-supplicant started
+[Decryption-disk] Password successfully retrieved from security partition
+usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[Decryption-disk] Found LUKS device: /dev/nvme0n1p4 (UUID: 02fe9544-e039-4212-8ba5-a803fc4274bd)
+[Decryption-disk] Unlocking LUKS encrypted partition
+usb 1-1: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=32.98
+usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+usb 1-1: Product: USB2.0 Hub
+hub 1-1:1.0: USB hub found
+hub 1-1:1.0: 4 ports detected
+phy phy-2602e000.syscon:usb2-phy@0.0: charger = USB_SDP_CHARGER
+usb 1-1.4: new high-speed USB device number 3 using xhci-hcd
+usb 1-1.4: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=32.98
+usb 1-1.4: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+usb 1-1.4: Product: USB2.0 Hub
+hub 1-1.4:1.0: USB hub found
+hub 1-1.4:1.0: 4 ports detected
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up vpu-supply from device tree
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up vpu-supply property in node /power-management@27380000/power-controller failed
+vendor storage:20190527 ret = -1
+[Decryption-disk] root mapper ready: /dev/mapper/armbian-root
+[Decryption-disk] LUKS partition unlocked successfully
+[Decryption-disk] Found encrypted userdata: /dev/nvme0n1p5
+[Decryption-disk] userdata mapper ready: /dev/mapper/armbian-userdata
+rk_gmac-dwmac 2a230000.ethernet end1: renamed from eth1
+rk_gmac-dwmac 2a220000.ethernet end0: renamed from eth0
+input: adc-keys as /devices/platform/adc-keys/input/input5
+rockchip-cpuinfo cpuinfo: SoC           : 35760000
+rockchip-cpuinfo cpuinfo: Serial                : 5a6886fcc73ec2a3
+done.
+Begin: Running /scripts/local-premount ... raid6: neonx8   gen()  5557 MB/s
+raid6: neonx4   gen()  6077 MB/s
+raid6: neonx2   gen()  5174 MB/s
+raid6: neonx1   gen()  3706 MB/s
+raid6: int64x8  gen()  1826 MB/s
+raid6: int64x4  gen()  2143 MB/s
+raid6: int64x2  gen()  3485 MB/s
+raid6: int64x1  gen()  2591 MB/s
+raid6: using algorithm neonx4 gen() 6077 MB/s
+[   18.045531] raid6: .... xor() 4475 MB/s, rmw enabled
+[   18.045540] raid6: using neon recovery algorithm
+[   18.046728] xor: measuring software checksum speed
+[   18.047006]    8regs           : 12570 MB/sec
+[   18.047318]    32regs          : 10752 MB/sec
+[   18.047698]    arm64_neon      :  8763 MB/sec
+[   18.047703] xor: using function: 8regs (12570 MB/sec)
+raid6: .... xor() 4475 MB/s, rmw enabled
+raid6: using neon recovery algorithm
+xor: measuring software checksum speed
+   8regs           : 12570 MB/sec
+   32regs          : 10752 MB/sec
+   arm64_neon      :  8763 MB/sec
+xor: using function: 8regs (12570 MB/sec)
+[   18.076376] Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+Scanning for Btrfs filesystems
+done.
+Begin: Will now check root file system ... fsck from util-linux 2.41.5
+[/sbin/fsck.ext4 (1) -- /dev/mapper/armbian-root] fsck.ext4 -a -C0 /dev/mapper/armbian-root
+armbi_root: recovering journal
+armbi_root: clean, 77921/249488 files, 705762/996352 blocks
+done.
+[   18.384703] EXT4-fs (dm-0): mounting with "discard" option, but the device does not support discard
+[   18.384741] EXT4-fs (dm-0): mounted filesystem with ordered data mode. Quota mode: none.
+done.
+EXT4-fs (dm-0): mounting with "discard" option, but the device does not support discard
+EXT4-fs (dm-0): mounted filesystem with ordered data mode. Quota mode: none.
+Begin: Running /scripts/local-bottom ... done.
+Begin: Running /scripts/init-bottom ... [seeed-bind-userdata] linked /dev/armbian-userdata -> /dev/mapper/armbian-userdata (encrypted)
+Warning: overlayroot: configuring overlayroot with driver=overlay mode=device opts='dev=/dev/mapper/armbian-userdata,timeout=30,recurse=0' per /dev/mapper/armbian-root/etc/ove
+rlayroot.conf
+[   18.789959] EXT4-fs (dm-1): recovery complete
+[   18.790588] EXT4-fs (dm-1): mounting with "discard" option, but the device does not support discard
+[   18.790606] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Quota mode: none.
+EXT4-fs (dm-1): recovery complete
+EXT4-fs (dm-1): mounting with "discard" option, but the device does not support discard
+EXT4-fs (dm-1): mounted filesystem with ordered data mode. Quota mode: none.
+Success: overlayroot: configured root with 'device:dev=/dev/mapper/armbian-userdata,timeout=30,recurse=0' using overlay per /dev/mapper/armbian-root/etc/overlayroot.conf
+armbian-ota: payload marker staged to /run/armbian-ota
+[seeed-mount-boot] no boot anchor recorded; skipping (raw-FIT or anchor failure)
+done.
+[   19.143352] systemd[1]: System time advanced to built-in epoch: Mon 2026-04-13 19:38:05 UTC
+systemd[1]: System time advanced to built-in epoch: Mon 2026-04-13 19:38:05 UTC
+[   19.174069] NET: Registered PF_INET6 protocol family
+[   19.175652] Segment Routing with IPv6
+NET: Registered PF_INET6 protocol family
+[   19.175705] In-situ OAM (IOAM) with IPv6
+Segment Routing with IPv6
+In-situ OAM (IOAM) with IPv6
+[   19.244877] systemd[1]: systemd 257.13-1~deb13u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL
+ +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +
+BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+systemd[1]: systemd 257.13-1~deb13u1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FID
+O2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF_FRAMEWORK +BTF -XKBCOMMON
+-UTMP +SYSVINIT +LIBARCHIVE)
+[   19.244926] systemd[1]: Detected architecture arm64.
+systemd[1]: Detected architecture arm64.
+[   19.250601] systemd[1]: Hostname set to <recomputer-rk3576-devkit>.
+
+Welcome to Armbian-unofficial 26.11.0-trunk trixie!
+
+systemd[1]: Hostname set to <recomputer-rk3576-devkit>.
+[   19.441789] systemd[1]: bpf-restrict-fs: Failed to link program; assuming BPF LSM is not available.
+systemd[1]: bpf-restrict-fs: Failed to link program; assuming BPF LSM is not available.
+[   19.477115] systemd-fstab-generator[488]: Checking was requested for "/media/root-ro/", but it is not a device.
+systemd-fstab-generator[488]: Checking was requested for "/media/root-ro/", but it is not a device.
+[   19.711516] systemd[1]: /usr/lib/systemd/system/bluetooth.service:4: Unknown key 'ConditionPathDirectory' in section [Unit], ignoring.
+systemd[1]: /usr/lib/systemd/system/bluetooth.service:4: Unknown key 'ConditionPathDirectory' in section [Unit], ignoring.
+[   19.811433] systemd[1]: Queued start job for default target graphical.target.
+systemd[1]: Queued start job for default target graphical.target.
+[   19.830702] systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[  OK  ] Created slice system-getty.slice - Slice /system/getty.
+systemd[1]: Created slice system-getty.slice - Slice /system/getty.
+[   19.832900] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[  OK  ] Created slice system-modprobe.slice - Slice /system/modprobe.
+[   19.834310] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[  OK  ] Created slice system-serial\x2dget&slice - Slice /system/serial-getty.
+[   19.835520] systemd[1]: Created slice system-systemd\x2dcryptsetup.slice - Encrypted Volume Units Service Slice.
+systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[   19.836431] systemd[1]: Created slice user.slice - User and Session Slice.
+systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[   19.836722] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+systemd[1]: Created slice system-systemd\x2dcryptsetup.slice - Encrypted Volume Units Service Slice.
+[   19.837281] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[  OK  ] Created slice system-systemd\x2dcr&crypted Volume Units Service Slice.
+[   19.837415] systemd[1]: Expecting device dev-disk-by\x2duuid-02fe9544\x2de039\x2d4212\x2d8ba5\x2da803fc4274bd.device - /dev/disk/by-uuid/02fe9544-e039-4212-8ba5-a803fc4274b
+d...
+[  OK  ] Created slice user.slice - User and Session Slice.
+[   19.837519] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[  OK  ] Started systemd-ask-password-wall.&d Requests to Wall Directory Watch.
+[   19.837684] systemd[1]: Reached target slices.target - Slice Units.
+[  OK  ] Set up automount proc-sys-fs-binfm&ormats File System Automount Point.
+[   19.837779] systemd[1]: Reached target swap.target - Swaps.
+         Expecting device dev-disk-by\x2duu&9544-e039-4212-8ba5-a803fc4274bd...
+[   19.837868] systemd[1]: Reached target usb-gadget.target - Hardware activated USB gadget.
+[  OK  ] Reached target integritysetup.targ& Local Integrity Protected Volumes.
+[   19.837942] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[  OK  ] Reached target slices.target - Slice Units.
+[  OK  ] Reached target swap.target - Swaps.
+[  OK  ] Reached target usb-gadget.target - Hardware activated USB gadget.
+[  OK  ] Reached target veritysetup.target - Local Verity Protected Volumes.
+systemd[1]: Created slice user.slice - User and Session Slice.
+[   19.853514] systemd[1]: Listening on rpcbind.socket - RPCbind Server Activation Socket.
+systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[   19.854229] systemd[1]: Listening on syslog.socket - Syslog Socket.
+systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+systemd[1]: Expecting device dev-disk-by\x2duuid-02fe9544\x2de039\x2d4212\x2d8ba5\x2da803fc4274bd.device - /dev/disk/by-uuid/02fe9544-e039-4212-8ba5-a803fc4274bd...
+[   19.857461] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[   19.857984] systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+systemd[1]: Reached target slices.target - Slice Units.
+[   19.858480] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+systemd[1]: Reached target swap.target - Swaps.
+[   19.859111] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+systemd[1]: Reached target usb-gadget.target - Hardware activated USB gadget.
+[   19.859382] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[   19.859463] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[  OK  ] Listening on rpcbind.socket - RPCbind Server Activation Socket.
+[   19.859926] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[  OK  ] Listening on syslog.socket - Syslog Socket.
+[   19.860375] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+systemd[1]: Listening on rpcbind.socket - RPCbind Server Activation Socket.
+[   19.864389] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+systemd[1]: Listening on syslog.socket - Syslog Socket.
+[   19.866979] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[  OK  ] Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[   19.870032] systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+[  OK  ] Listening on systemd-initctl.socke&- initctl Compatibility Named Pipe.
+[   19.873159] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[  OK  ] Listening on systemd-journald-dev-&socket - Journal Socket (/dev/log).
+systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[   19.876384] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+systemd[1]: Listening on systemd-initctl.socket - initctl Compatibility Named Pipe.
+[   19.877135] systemd[1]: auth-rpcgss-module.service - Kernel Module supporting RPCSEC_GSS skipped, unmet condition check ConditionPathExists=/etc/krb5.keytab
+systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[  OK  ] Listening on systemd-journald.socket - Journal Sockets.
+[  OK  ] Listening on systemd-udevd-control.socket - udev Control Socket.
+[   19.881256] systemd[1]: Starting fake-hwclock-load.service - Restore the current clock...
+[  OK  ] Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[   19.885305] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+         Mounting dev-hugepages.mount - Huge Pages File System...
+systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+         Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[   19.889244] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+         Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+systemd[1]: Mounting run-lock.mount - Legacy Locks Directory /run/lock...
+         Mounting sys-kernel-debug.mount - Kernel Debug File System...
+systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+         Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+systemd[1]: auth-rpcgss-module.service - Kernel Module supporting RPCSEC_GSS skipped, unmet condition check ConditionPathExists=/etc/krb5.keytab
+         Starting fake-hwclock-load.service - Restore the current clock...
+systemd[1]: Starting fake-hwclock-load.service - Restore the current clock...
+systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+         Starting keyboard-setup.service - Set the console keyboard layout...
+[   19.899613] systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+         Starting kmod-static-nodes.service&eate List of Static Device Nodes...
+systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+         Starting modprobe@configfs.service - Load Kernel Module configfs...
+systemd[1]: Starting modprobe@configfs.service - Load Kernel Module configfs...
+[   19.903179] systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+         Starting modprobe@drm.service - Load Kernel Module drm...
+systemd[1]: Starting modprobe@drm.service - Load Kernel Module drm...
+[   19.906522] systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+         Starting modprobe@efi_pstore.servi& - Load Kernel Module efi_pstore...
+systemd[1]: Starting modprobe@efi_pstore.service - Load Kernel Module efi_pstore...
+[   19.909538] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+         Starting modprobe@fuse.service - Load Kernel Module fuse...
+[   19.909961] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/Hi
+bernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation
+-8cf2644b-4b0b-428f-9387-6d876050dc67
+[   19.919882] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+         Starting systemd-modules-load.service - Load Kernel Modules...
+[   19.920261] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   19.924567] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+         Starting systemd-remount-fs.servic&unt Root and Kernel File Systems...
+[   19.925259] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   19.929927] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+         Starting systemd-udev-load-credent&Load udev Rules from Credentials...
+systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[   19.934400] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+         Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[   19.943912] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[  OK  ] Mounted dev-hugepages.mount - Huge Pages File System.
+[   19.944571] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[  OK  ] Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[   19.945282] systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[  OK  ] Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[   19.946012] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[   19.946612] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[   19.947530] systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+systemd[1]: Mounted run-lock.mount - Legacy Locks Directory /run/lock.
+[   19.948129] systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[  OK  ] Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[   19.949654] systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+[  OK  ] Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[   19.949719] fuse: unknown parameter 'programmed' ignored
+[  OK  ] Finished fake-hwclock-load.service - Restore the current clock.
+[   19.949869] fuse: init (API version 7.38)
+systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[   19.950984] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[   19.952827] systemd[1]: modprobe@configfs.service: Deactivated successfully.
+systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+[   19.953402] systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[   19.954376] systemd[1]: modprobe@drm.service: Deactivated successfully.
+[  OK  ] Finished keyboard-setup.service - Set the console keyboard layout.
+[   19.954896] systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[  OK  ] Finished kmod-static-nodes.service&Create List of Static Device Nodes.
+[   19.956006] systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+[   19.956602] systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+fuse: unknown parameter 'programmed' ignored
+[   19.957625] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+fuse: init (API version 7.38)
+[   19.958173] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[   19.963617] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[  OK  ] Finished modprobe@configfs.service - Load Kernel Module configfs.
+[   19.963647] Bluetooth: HIDP socket layer initialized
+[  OK  ] Finished modprobe@drm.service - Load Kernel Module drm.
+[   19.963696] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+systemd[1]: modprobe@configfs.service: Deactivated successfully.
+[   19.966281] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+systemd[1]: Finished modprobe@configfs.service - Load Kernel Module configfs.
+[   19.966847] Bluetooth: RFCOMM TTY layer initialized
+systemd[1]: modprobe@drm.service: Deactivated successfully.
+[   19.966874] Bluetooth: RFCOMM socket layer initialized
+systemd[1]: Finished modprobe@drm.service - Load Kernel Module drm.
+[   19.966904] Bluetooth: RFCOMM ver 1.11
+[  OK  ] Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[   19.969319] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[  OK  ] Finished modprobe@fuse.service - Load Kernel Module fuse.
+[   19.969341] Bluetooth: BNEP filters: protocol multicast
+systemd[1]: modprobe@efi_pstore.service: Deactivated successfully.
+[   19.969359] Bluetooth: BNEP socket layer initialized
+systemd[1]: Finished modprobe@efi_pstore.service - Load Kernel Module efi_pstore.
+[   19.970645] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[   19.971911] aic8800_bsp: loading out-of-tree module taints kernel.
+systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[   19.974135] aicbsp_init
+         Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[   19.974169] RELEASE_DATE:2026_0123_5f7be68d
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[   19.974176] aicbsp_resv_mem_init
+Bluetooth: HIDP socket layer initialized
+[   19.974288] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[   19.976290] aic_bluetooth_mod_init
+         Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[   19.976486] systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[   19.976950] -->rfkill_bluetooth_init
+Bluetooth: RFCOMM TTY layer initialized
+[   19.977100] [BT_RFKILL]: bt shut off power
+Bluetooth: RFCOMM socket layer initialized
+[   19.977139] bluetooth_set_power: start_block=1
+Bluetooth: RFCOMM ver 1.11
+[   19.977177] aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 0
+         Starting systemd-tmpfiles-setup-de& Device Nodes in /dev gracefully...
+[   19.977187] aicbsp: aicbsp_set_subsys, power state no need to change, current: 0
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   19.977194] bluetooth_set_power: end_block=1
+Bluetooth: BNEP filters: protocol multicast
+[   19.977212] <--rfkill_bluetooth_init
+Bluetooth: BNEP socket layer initialized
+[   19.980097] systemd[1]: Starting systemd-pstore.service - Platform Persistent Storage Archival...
+systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+[   19.982965] systemd[1]: Starting systemd-random-seed.service - Load/Save OS Random Seed...
+aic8800_bsp: loading out-of-tree module taints kernel.
+[   19.983159] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[  OK  ] Finished systemd-remount-fs.servic&mount Root and Kernel File Systems.
+[   19.984616] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+aicbsp_init
+[   19.987223] systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+RELEASE_DATE:2026_0123_5f7be68d
+[   19.994306] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+aicbsp_resv_mem_init
+[   20.000683] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[   20.001600] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+aic_bluetooth_mod_init
+systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+-->rfkill_bluetooth_init
+[BT_RFKILL]: bt shut off power
+bluetooth_set_power: start_block=1
+aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 0
+aicbsp: aicbsp_set_subsys, power state no need to change, current: 0
+bluetooth_set_power: end_block=1
+<--rfkill_bluetooth_init
+         Starting systemd-pstore.service - &form Persistent Storage Archival...
+systemd[1]: Starting systemd-pstore.service - Platform Persistent Storage Archival...
+         Starting systemd-random-seed.service - Load/Save OS Random Seed...
+[  OK  ] Finished systemd-modules-load.service - Load Kernel Modules.
+systemd[1]: Starting systemd-random-seed.service - Load/Save OS Random Seed...
+systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[  OK  ] Finished systemd-udev-load-credent&- Load udev Rules from Credentials.
+systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+         Starting systemd-sysctl.service - Apply Kernel Variables...
+systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+[  OK  ] Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[  OK  ] Mounted sys-kernel-config.mount - Kernel Configuration File System.
+systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[   20.027027] systemd[1]: Finished systemd-pstore.service - Platform Persistent Storage Archival.
+systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[  OK  ] Finished systemd-pstore.service - &atform Persistent Storage Archival.
+systemd[1]: Finished systemd-pstore.service - Platform Persistent Storage Archival.
+[   20.031917] systemd[1]: Finished systemd-random-seed.service - Load/Save OS Random Seed.
+[  OK  ] Finished systemd-random-seed.service - Load/Save OS Random Seed.
+[   20.032665] systemd[1]: first-boot-complete.target - First Boot Complete skipped, unmet condition check ConditionFirstBoot=yes
+systemd[1]: Finished systemd-random-seed.service - Load/Save OS Random Seed.
+[   20.034516] systemd[1]: Finished systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+[  OK  ] Finished systemd-tmpfiles-setup-de&ic Device Nodes in /dev gracefully.
+[   20.035042] systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+systemd[1]: first-boot-complete.target - First Boot Complete skipped, unmet condition check ConditionFirstBoot=yes
+[   20.037379] systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+systemd[1]: Finished systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+         Starting systemd-tmpfiles-setup-de&eate Static Device Nodes in /dev...
+systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+[   20.050222] systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+[  OK  ] Finished systemd-sysctl.service - Apply Kernel Variables.
+[   20.050709] systemd[1]: armbian-console-loglevel.service - Armbian console log level from kernel command line skipped, unmet condition check ConditionKernelCommandLine=logl
+evel
+systemd[1]: Finished systemd-sysctl.service - Apply Kernel Variables.
+systemd[1]: armbian-console-loglevel.service - Armbian console log level from kernel command line skipped, unmet condition check ConditionKernelCommandLine=loglevel
+[   20.054521] systemd[1]: Starting systemd-resolved.service - Network Name Resolution...
+         Starting systemd-resolved.service - Network Name Resolution...
+systemd[1]: Starting systemd-resolved.service - Network Name Resolution...
+[   20.129378] systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+[  OK  ] Finished systemd-tmpfiles-setup-de&Create Static Device Nodes in /dev.
+[   20.129817] systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+[  OK  ] Reached target local-fs-pre.target&Preparation for Local File Systems.
+systemd[1]: Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+[   20.132807] systemd[1]: Starting systemd-udevd.service - Rule-based Manager for Device Events and Files...
+systemd[1]: Reached target local-fs-pre.target - Preparation for Local File Systems.
+         Starting systemd-udevd.service - R&ager for Device Events and Files...
+systemd[1]: Starting systemd-udevd.service - Rule-based Manager for Device Events and Files...
+[   20.282097] systemd[1]: Started systemd-udevd.service - Rule-based Manager for Device Events and Files.
+systemd[1]: Started systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[  OK  ] Started systemd-udevd.service - Ru&anager for Device Events and Files.
+[   20.324539] systemd[1]: Started systemd-resolved.service - Network Name Resolution.
+[  OK  ] Started systemd-resolved.service - Network Name Resolution.
+systemd[1]: Started systemd-resolved.service - Network Name Resolution.
+[   20.473182] systemd[1]: armbian-console-loglevel.service - Armbian console log level from kernel command line skipped, unmet condition check ConditionKernelCommandLine=logl
+evel
+systemd[1]: armbian-console-loglevel.service - Armbian console log level from kernel command line skipped, unmet condition check ConditionKernelCommandLine=loglevel
+[   20.477201] systemd[1]: Starting fake-hwclock-load.service - Restore the current clock...
+[   20.477467] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/Hi
+bernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+         Starting fake-hwclock-load.service - Restore the current clock...
+[   20.477766] systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+systemd[1]: Starting fake-hwclock-load.service - Restore the current clock...
+[   20.477899] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation
+-8cf2644b-4b0b-428f-9387-6d876050dc67
+[   20.478126] systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+[   20.478234] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   20.478302] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   20.497581] systemd[1]: Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+[  OK  ] Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+systemd[1]: Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+[   20.509275] systemd[1]: Starting plymouth-start.service - Show Plymouth Boot Screen...
+         Starting plymouth-start.service - Show Plymouth Boot Screen...
+systemd[1]: Starting plymouth-start.service - Show Plymouth Boot Screen...
+[   20.537254] systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+[   20.538324] systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[  OK  ] Finished fake-hwclock-load.service - Restore the current clock.
+systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[   20.566090] systemd[1]: Found device dev-disk-by\x2duuid-02fe9544\x2de039\x2d4212\x2d8ba5\x2da803fc4274bd.device - YX-520 NVME 128GB rootfs.
+[  OK  ] Found device dev-disk-by\x2duuid-0&.device - YX-520 NVME 128GB rootfs.
+systemd[1]: Found device dev-disk-by\x2duuid-02fe9544\x2de039\x2d4212\x2d8ba5\x2da803fc4274bd.device - YX-520 NVME 128GB rootfs.
+[   20.611936] systemd[1]: Started plymouth-start.service - Show Plymouth Boot Screen.
+[  OK  ] Started plymouth-start.service - Show Plymouth Boot Screen.
+systemd[1]: Started plymouth-start.service - Show Plymouth Boot Screen.
+[   20.652235] systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch skipped, unmet condition check ConditionPathExists=!/run/p
+lymouth/pid
+[  OK  ] Started systemd-ask-password-plymo&quests to Plymouth Directory Watch.
+[   20.652597] systemd[1]: Started systemd-ask-password-plymouth.path - Forward Password Requests to Plymouth Directory Watch.
+[  OK  ] Reached target paths.target - Path Units.
+[   20.652795] systemd[1]: Reached target paths.target - Path Units.
+systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch skipped, unmet condition check ConditionPathExists=!/run/plymouth/pid
+[   20.655647] systemd[1]: Starting systemd-cryptsetup@armbian\x2droot.service - Cryptography Setup for armbian-root...
+systemd[1]: Started systemd-ask-password-plymouth.path - Forward Password Requests to Plymouth Directory Watch.
+systemd[1]: Reached target paths.target - Path Units.
+systemd[1]: Starting systemd-cryptsetup@armbian\x2droot.service - Cryptography Setup for armbian-root...
+         Starting systemd-cryptsetup@armbia&ptography Setup for armbian-root...
+[   20.685814] panfrost 27800000.gpu: clock rate = 198000000
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up gpu-supply from device tree
+rockchip-pm-domain 27380000.power-management:power-controller: Looking up gpu-supply property in node /power-management@27380000/power-controller failed
+[   20.690492] panfrost 27800000.gpu: EM: created perf domain
+panfrost 27800000.gpu: clock rate = 198000000
+[   20.690816] panfrost 27800000.gpu: mali-g52 id 0x7402 major 0x1 minor 0x0 status 0x0
+panfrost 27800000.gpu: Looking up mali-supply from device tree
+[   20.690829] panfrost 27800000.gpu: features: 00000000,00000cf7, issues: 00000000,00000400
+panfrost 27800000.gpu: EM: OPP:600000 is inefficient
+[   20.690837] panfrost 27800000.gpu: Features: L2:0x07120206 Shader:0x00000002 Tiler:0x00000209 Mem:0x1 MMU:0x00002823 AS:0xff JS:0x7
+panfrost 27800000.gpu: EM: OPP:500000 is inefficient
+[   20.690846] panfrost 27800000.gpu: shader_present=0x7 l2_present=0x1
+panfrost 27800000.gpu: EM: OPP:400000 is inefficient
+panfrost 27800000.gpu: EM: OPP:300000 is inefficient
+panfrost 27800000.gpu: EM: created perf domain
+panfrost 27800000.gpu: mali-g52 id 0x7402 major 0x1 minor 0x0 status 0x0
+panfrost 27800000.gpu: features: 00000000,00000cf7, issues: 00000000,00000400
+panfrost 27800000.gpu: Features: L2:0x07120206 Shader:0x00000002 Tiler:0x00000209 Mem:0x1 MMU:0x00002823 AS:0xff JS:0x7
+panfrost 27800000.gpu: shader_present=0x7 l2_present=0x1
+[   20.703105] [drm] Initialized panfrost 1.2.0 20180908 for 27800000.gpu on minor 2
+[drm] Initialized panfrost 1.2.0 20180908 for 27800000.gpu on minor 2
+[   20.726277] systemd[1]: Finished systemd-cryptsetup@armbian\x2droot.service - Cryptography Setup for armbian-root.
+[  OK  ] Finished systemd-cryptsetup@armbia&ryptography Setup for armbian-root.
+[   20.727116] systemd[1]: Reached target blockdev@dev-mapper-armbian\x2droot.target - Block Device Preparation for /dev/mapper/armbian-root.
+[  OK  ] Reached target blockdev@dev-mapper&ation for /dev/mapper/armbian-root.
+[   20.727317] systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+[  OK  ] Reached target cryptsetup.target - Local Encrypted Volumes.
+systemd[1]: Finished systemd-cryptsetup@armbian\x2droot.service - Cryptography Setup for armbian-root.
+systemd[1]: Reached target blockdev@dev-mapper-armbian\x2droot.target - Block Device Preparation for /dev/mapper/armbian-root.
+systemd[1]: Reached target cryptsetup.target - Local Encrypted Volumes.
+[   20.779815] aicbsp: aicbsp_set_subsys, subsys: AIC_WIFI, state to: 1
+[   20.779849] aicbsp: aicbsp_set_subsys, power state change to 1 dure to AIC_WIFI
+[   20.779857] aicbsp: aicbsp_platform_power_on
+aicbsp: aicbsp_set_subsys, subsys: AIC_WIFI, state to: 1
+aicbsp: aicbsp_set_subsys, power state change to 1 dure to AIC_WIFI
+aicbsp: aicbsp_platform_power_on
+[   20.795849] aicbsp: aicbsp_sdio_probe:1 vid:0xC8A1  did:0x0082
+aicbsp: aicbsp_sdio_probe:1 vid:0xC8A1  did:0x0082
+[   20.809632] aicbsp: aicbsp_sdio_probe:2 vid:0xC8A1  did:0x0182
+[   20.809661] aicbsp: aicbsp_sdio_probe after replace:1
+[   20.809670] aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   20.809677] aicbsp: aicwf_sdio_reg_init
+[   20.811453] rk805-pwrkey rk805-pwrkey.1.auto: Probing rk805-pwrkey -> rk805 pwrkey
+aicbsp: aicbsp_sdio_probe:2 vid:0xC8A1  did:0x0182
+aicbsp: aicbsp_sdio_probe after replace:1
+aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   20.813599] rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fw_patch_table_8800d80_u02.bin
+aicbsp: aicwf_sdio_reg_init
+rk805-pwrkey rk805-pwrkey.1.auto: Probing rk805-pwrkey -> rk805 pwrkey
+rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fw_patch_table_8800d80_u02.bin
+[   20.817483] file md5:54b15ce88b3b9ba14bf961e6f90839fc
+[   20.817591] rwnx_plat_bin_fw_upload_android
+[   20.817608] rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fw_adid_8800d80_u02.bin
+[   20.817988] file md5:f546881a81b960d89a672578eb45a809
+file md5:54b15ce88b3b9ba14bf961e6f90839fc
+rwnx_plat_bin_fw_upload_android
+rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fw_adid_8800d80_u02.bin
+file md5:f546881a81b960d89a672578eb45a809
+[   20.821427] input: rk805 pwrkey as /devices/platform/2ac40000.i2c/i2c-1/1-0023/rk805-pwrkey.1.auto/input/input6
+input: rk805 pwrkey as /devices/platform/2ac40000.i2c/i2c-1/1-0023/rk805-pwrkey.1.auto/input/input6
+[   20.822449] rwnx_plat_bin_fw_upload_android
+pwm-fan pwm-fan: Looking up fan-supply from device tree
+[   20.822471] rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fw_patch_8800d80_u02.bin
+[   20.823446] file md5:f5400db1d64e0150c3232eb53e7f78b6
+rwnx_plat_bin_fw_upload_android
+rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fw_patch_8800d80_u02.bin
+file md5:f5400db1d64e0150c3232eb53e7f78b6
+[   20.841481] rwnx_plat_bin_fw_upload_android
+[   20.841524] rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fw_patch_8800d80_u02_ext0.bin
+rwnx_plat_bin_fw_upload_android
+[   20.842862] file md5:6fcbe60f7bcf7bc39bdf6e9c3fb7f1d8
+rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fw_patch_8800d80_u02_ext0.bin
+file md5:6fcbe60f7bcf7bc39bdf6e9c3fb7f1d8
+[   20.881628] aicbt_patch_table_load bt btmode[3]:5
+[   20.881674] aicbt_patch_table_load bt uart_baud[3]:1500000
+[   20.881682] aicbt_patch_table_load bt uart_flowctrl[3]:1
+aicbt_patch_table_load bt btmode[3]:5
+[   20.881689] aicbt_patch_table_load bt lpm_enable[3]:0
+aicbt_patch_table_load bt uart_baud[3]:1500000
+[   20.881696] aicbt_patch_table_load bt tx_pwr[3]:28463
+aicbt_patch_table_load bt uart_flowctrl[3]:1
+aicbt_patch_table_load bt lpm_enable[3]:0
+aicbt_patch_table_load bt tx_pwr[3]:28463
+[   20.943482] systemd[1]: Mounting tmp.mount - /tmp...
+         Mounting tmp.mount - /tmp...
+systemd[1]: Mounting tmp.mount - /tmp...
+[   20.973181] systemd[1]: Mounted tmp.mount - /tmp.
+[   20.973707] systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch skipped, unmet condition check ConditionPathExists=!/run/p
+lymouth/pid
+[  OK  ] Mounted tmp.mount - /tmp.
+[   20.973806] systemd[1]: Reached target local-fs.target - Local File Systems.
+[  OK  ] Reached target local-fs.target - Local File Systems.
+[   20.974172] systemd[1]: Listening on systemd-rfkill.socket - Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[  OK  ] Listening on systemd-rfkill.socket&ll Switch Status /dev/rfkill Watch.
+[   20.978629] systemd[1]: Listening on systemd-sysext.socket - System Extension Image Management.
+systemd[1]: Mounted tmp.mount - /tmp.
+[   20.978976] systemd[1]: armbian-console-loglevel.service - Armbian console log level from kernel command line skipped, unmet condition check ConditionKernelCommandLine=logl
+evel
+systemd[1]: systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch skipped, unmet condition check ConditionPathExists=!/run/plymouth/pid
+[   20.979211] systemd[1]: armbian-ota-firstboot-hook.service - Armbian OTA Firstboot Hook skipped, unmet condition check ConditionPathExists=/usr/share/armbian-ota/firstboot-
+hook.sh
+systemd[1]: Reached target local-fs.target - Local File Systems.
+[   20.983974] systemd[1]: Starting armbian-zram-config.service - Armbian ZRAM config...
+systemd[1]: Listening on systemd-rfkill.socket - Load/Save RF Kill Switch Status /dev/rfkill Watch.
+[   20.987091] systemd[1]: Starting console-setup.service - Set console font and keymap...
+[  OK  ] Listening on systemd-sysext.socket& System Extension Image Management.
+[   20.990866] systemd[1]: Starting fake-hwclock-load.service - Restore the current clock...
+systemd[1]: Listening on systemd-sysext.socket - System Extension Image Management.
+systemd[1]: armbian-console-loglevel.service - Armbian console log level from kernel command line skipped, unmet condition check ConditionKernelCommandLine=loglevel
+systemd[1]: armbian-ota-firstboot-hook.service - Armbian OTA Firstboot Hook skipped, unmet condition check ConditionPathExists=/usr/share/armbian-ota/firstboot-hook.sh
+[   20.997614] systemd[1]: Starting plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data...
+         Starting armbian-zram-config.service - Armbian ZRAM config...
+systemd[1]: Starting armbian-zram-config.service - Armbian ZRAM config...
+         Starting console-setup.service - Set console font and keymap...
+systemd[1]: Starting console-setup.service - Set console font and keymap...
+         Starting fake-hwclock-load.service - Restore the current clock...
+systemd[1]: Starting fake-hwclock-load.service - Restore the current clock...
+         Starting plymouth-read-write.servi&ymouth To Write Out Runtime Data...
+systemd[1]: Starting plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data...
+[   21.008755] systemd[1]: Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+systemd[1]: Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+[   21.009025] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/Hi
+bernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+         Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+[   21.009367] systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/efivars/HibernateLocation
+-8cf2644b-4b0b-428f-9387-6d876050dc67
+[   21.009585] systemd[1]: systemd-machine-id-commit.service - Save Transient machine-id to Disk skipped, unmet condition check ConditionPathIsMountPoint=/etc/machine-id
+systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+[   21.009647] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-machine-id-commit.service - Save Transient machine-id to Disk skipped, unmet condition check ConditionPathIsMountPoint=/etc/machine-id
+[   21.009893] systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   21.010018] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+[   21.010079] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   21.014014] aicbsp: bt patch version: - Aug 01 2025 11:05:26 - git a26f071
+systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   21.014635] systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+         Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+[   21.014913] rwnx_plat_bin_fw_upload_android
+aicbsp: bt patch version: - Aug 01 2025 11:05:26 - git a26f071
+[   21.014934] rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fmacfw_8800d80_u02.bin
+systemd[1]: Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+[   21.020193] file md5:56562779b8c4debfd9b354891418249a
+rwnx_plat_bin_fw_upload_android
+[   21.020965] systemd[1]: Finished console-setup.service - Set console font and keymap.
+rwnx_load_firmware :firmware path = /lib/firmware/aic8800_fw/SDIO/aic8800D80/fmacfw_8800d80_u02.bin
+[   21.032017] systemd[1]: Received SIGRTMIN+20 from PID 354 (plymouthd).
+[  OK  ] Finished console-setup.service - Set console font and keymap.
+[   21.034679] systemd[1]: Finished plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data.
+file md5:56562779b8c4debfd9b354891418249a
+systemd[1]: Finished console-setup.service - Set console font and keymap.
+systemd[1]: Received SIGRTMIN+20 from PID 354 (plymouthd).
+[  OK  ] Finished plymouth-read-write.servi&Plymouth To Write Out Runtime Data.
+[   21.040418] systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+systemd[1]: Finished plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data.
+[   21.041108] systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[  OK  ] Finished fake-hwclock-load.service - Restore the current clock.
+systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[   21.048812] systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 643 (systemd-binfmt)
+systemd[1]: proc-sys-fs-binfmt_misc.automount: Got automount request for /proc/sys/fs/binfmt_misc, triggered by 643 (systemd-binfmt)
+[   21.051369] systemd[1]: Mounting proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System...
+         Mounting proc-sys-fs-binfmt_misc.m&cutable File Formats File System...
+systemd[1]: Mounting proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System...
+[   21.053603] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   21.080766] systemd[1]: Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+[  OK  ] Mounted proc-sys-fs-binfmt_misc.mo&xecutable File Formats File System.
+systemd[1]: Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+[   21.083630] systemd[1]: Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+[  OK  ] Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+systemd[1]: Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+[   21.090846] rd_version_val=06090101
+rd_version_val=06090101
+[   21.105913] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[   21.106018] [BT_RFKILL]: ENABLE UART_RTS
+[   21.107805] aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   21.107868] aicsdio: aicwf_sdio_reg_init
+[BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[BT_RFKILL]: ENABLE UART_RTS
+aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+aicsdio: aicwf_sdio_reg_init
+[   21.113556] aicwf_prealloc_init enter
+[   21.113737] pre alloc rxbuff list len: 30
+[   21.113776] aicbsp: aicbsp_resv_mem_alloc_skb, alloc resv_mem_txdata succuss, id: 0, size: 98304
+[   21.114109] aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+[   21.114274] tcp_ack_init
+aicwf_prealloc_init enter
+pre alloc rxbuff list len: 30
+aicbsp: aicbsp_resv_mem_alloc_skb, alloc resv_mem_txdata succuss, id: 0, size: 98304
+aicbsp: aicbsp_get_feature, set FEATURE_SDIO_CLOCK 150 MHz
+tcp_ack_init
+[   21.144267] zram: Added device: zram0
+[   21.145076] zram: Added device: zram1
+zram: Added device: zram0
+zram: Added device: zram1
+[   21.146113] zram: Added device: zram2
+zram: Added device: zram2
+[   21.190950] zram0: detected capacity change from 0 to 8102752
+zram0: detected capacity change from 0 to 8102752
+[   21.212497] [BT_RFKILL]: DISABLE UART_RTS
+[   21.212601] [BT_RFKILL]: bt turn on power
+[   21.212759] [BT_RFKILL]: Request irq for bt wakeup host
+[   21.213899] [BT_RFKILL]: ** disable irq
+[BT_RFKILL]: DISABLE UART_RTS
+[BT_RFKILL]: bt turn on power
+[BT_RFKILL]: Request irq for bt wakeup host
+[BT_RFKILL]: ** disable irq
+[   21.217352] bluetooth_set_power: start_block=0
+[   21.217372] aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+[   21.217378] aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+bluetooth_set_power: start_block=0
+[   21.217384] bluetooth_set_power: end_block=0
+aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+[   21.219107] Adding 4051372k swap on /dev/zram0.  Priority:5 extents:1 across:4051372k SSFS
+aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+bluetooth_set_power: end_block=0
+Adding 4051372k swap on /dev/zram0.  Priority:5 extents:1 across:4051372k SSFS
+[   21.227679] systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+[  OK  ] Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+systemd[1]: Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+[   21.403025] zram1: detected capacity change from 0 to 102400
+zram1: detected capacity change from 0 to 102400
+[   21.441430] systemd[1]: Finished armbian-zram-config.service - Armbian ZRAM config.
+[  OK  ] Finished armbian-zram-config.service - Armbian ZRAM config.
+systemd[1]: Finished armbian-zram-config.service - Armbian ZRAM config.
+[   21.449994] systemd[1]: Starting armbian-ramlog.service - Armbian memory supported logging...
+         Starting armbian-ramlog.service - Armbian memory supported logging...
+systemd[1]: Starting armbian-ramlog.service - Armbian memory supported logging...
+[   21.532933] EXT4-fs (zram1): mounted filesystem without journal. Quota mode: none.
+EXT4-fs (zram1): mounted filesystem without journal. Quota mode: none.
+[   21.847823] systemd[1]: Finished armbian-ramlog.service - Armbian memory supported logging.
+[  OK  ] Finished armbian-ramlog.service - Armbian memory supported logging.
+systemd[1]: Finished armbian-ramlog.service - Armbian memory supported logging.
+[   21.852809] systemd[1]: Starting systemd-journald.service - Journal Service...
+         Starting systemd-journald.service - Journal Service...
+systemd[1]: Starting systemd-journald.service - Journal Service...
+[   21.932108] systemd-journald[765]: Collecting audit messages is disabled.
+systemd-journald[765]: Collecting audit messages is disabled.
+[   22.184059] systemd[1]: Started systemd-journald.service - Journal Service.
+[  OK  ] Started systemd-journald.service - Journal Service.
+systemd[1]: Started systemd-journald.service - Journal Service.
+         Starting systemd-journal-flush.ser&sh Journal to Persistent Storage...
+[   22.283197] systemd-journald[765]: Received client request to flush runtime journal.
+systemd-journald[765]: Received client request to flush runtime journal.
+[   22.291014] systemd-journald[765]: /var/log/journal/d0c1ab6274a8409cbdeb1ab98007aba8/system.journal: Realtime clock jumped backwards relative to last journal entry, rotatin
+g.
+[   22.291047] systemd-journald[765]: Rotating system journal.
+systemd-journald[765]: /var/log/journal/d0c1ab6274a8409cbdeb1ab98007aba8/system.journal: Realtime clock jumped backwards relative to last journal entry, rotating.
+systemd-journald[765]: Rotating system journal.
+[   22.439100] ieee80211 phy0: HT supp 1, VHT supp 1, HE supp 1
+[   22.440011] rwnx_reg_notifier Enter
+ieee80211 phy0: HT supp 1, VHT supp 1, HE supp 1
+rwnx_reg_notifier Enter
+[   22.450049] get_txpwr_max:txpwr_max:18
+[  OK  ] Finished systemd-journal-flush.ser&lush Journal to Persistent Storage.
+get_txpwr_max:txpwr_max:18
+         Starting systemd-tmpfiles-setup.se&ate System Files and Directories...
+[  OK  ] Finished systemd-tmpfiles-setup.se&reate System Files and Directories.
+         Mounting run-rpc_pipefs.mount - RPC Pipe File System...
+         Starting rpcbind.service - RPC bind portmap service...
+[  OK  ] Reached target sysinit.target - System Initialization.
+[  OK  ] Started apt-daily.timer - Daily apt download activities.
+[  OK  ] Started apt-daily-upgrade.timer - &y apt upgrade and clean activities.
+[  OK  ] Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+[  OK  ] Started e2scrub_all.timer - Period&Metadata Check for All Filesystems.
+[  OK  ] Started fake-hwclock-save.timer - Periodically save current clock.
+[  OK  ] Started fstrim.timer - Discard unused filesystem blocks once a week.
+[  OK  ] Started logrotate.timer - Daily rotation of log files.
+[  OK  ] Started man-db.timer - Daily man-db regeneration.
+[  OK  ] Started systemd-tmpfiles-clean.tim&y Cleanup of Temporary Directories.
+[  OK  ] Reached target timers.target - Timer Units.
+[  OK  ] Listening on dbus.socket - D-Bus System Message Bus Socket.
+[  OK  ] Listening on sshd-unix-local.socke&temd-ssh-generator, AF_UNIX Local).
+[  OK  ] Listening on systemd-hostnamed.socket - Hostname Service Socket.
+[  OK  ] Reached target sockets.target - Socket Units.
+         Starting armbian-hardware-monitor.&ce - Armbian hardware monitoring...
+         Starting armbian-led-state.service - Armbian leds state...
+[  OK  ] Mounted run-rpc_pipefs.mount - RPC Pipe File System.
+[  OK  ] Reached target rpc_pipefs.target.
+         Starting nfs-blkmap.service - pNFS block layout mapping daemon...
+[  OK  ] Reached target nfs-client.target - NFS client services.
+[  OK  ] Finished armbian-hardware-monitor.&vice - Armbian hardware monitoring.
+[  OK  ] Reached target basic.target - Basic System.
+[  OK  ] Started aic-bluetooth.service - AIC8800 Bluetooth.
+         Starting alsa-restore.service - Save/Restore Sound Card State...
+         Starting armbian-resize-userdata.s& userdata partition to fill disk...
+         Starting chrony.service - chrony, an NTP client/server...
+         Starting dbus.service - D-Bus System Message Bus...
+         Starting e2scrub_reap.service - Re&ne ext4 Metadata Check Snapshots...
+         Starting rkaiq_3A.service - Rockchip rkaiq 3A Image Quality Server...
+         Starting rsyslog.service - System Logging Service...
+         Starting systemd-logind.service - User Login Management...
+         Starting usbdevice.service - USB G&get ConfigFS Manager (usbdevice)...
+[  OK  ] Started rpcbind.service - RPC bind portmap service.
+[  OK  ] Finished armbian-led-state.service - Armbian leds state.
+[  OK  ] Started nfs-blkmap.service - pNFS block layout mapping daemon.
+[  OK  ] Finished alsa-restore.service - Save/Restore Sound Card State.
+[  OK  ] Started dbus.service - D-Bus System Message Bus.
+[  OK  ] Started rkaiq_3A.service - Rockchip rkaiq 3A Image Quality Server.
+[  OK  ] Reached target remote-fs-pre.targe&reparation for Remote File Systems.
+[  OK  ] Reached target remote-fs.target - Remote File Systems.
+[  OK  ] Reached target rpcbind.target - RPC Port Mapper.
+[  OK  ] Reached target sound.target - Sound Card.
+         Starting NetworkManager.service - Network Manager...
+         Starting bluetooth.service - Bluetooth service...
+[  OK  ] Started cron.service - Regular background program processing daemon.
+         Starting rng-tools-debian.service &gatherer daemon (Debian variant)...
+         Starting wpa_supplicant.service - WPA supplicant...
+[  OK  ] Finished e2scrub_reap.service - Re&line ext4 Metadata Check Snapshots.
+[  OK  ] Started chrony.service - chrony, an NTP client/server.
+[  OK  ] Started bluetooth.service - Bluetooth service.
+         Starting systemd-hostnamed.service - Hostname Service...
+[  OK  ] Started wpa_supplicant.service - WPA supplicant.
+[  OK  ] Started systemd-logind.service - User Login Management.
+[  OK  ] Started rsyslog.service - System Logging Service.
+[   22.970057] systemd-journald[765]: Received client request to relinquish /var/log/journal/d0c1ab6274a8409cbdeb1ab98007aba8 access.
+systemd-journald[765]: Received client request to relinquish /var/log/journal/d0c1ab6274a8409cbdeb1ab98007aba8 access.
+[  OK  ] Started systemd-hostnamed.service - Hostname Service.
+         Starting NetworkManager-dispatcher&anager Script Dispatcher Service...
+[   23.199882] rk_gmac-dwmac 2a220000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[   23.200507] phy_rtl8211f_led_fixup in
+[   23.200681] phy_rtl8211f_led_fixup in  val=0x0a42
+rk_gmac-dwmac 2a220000.ethernet end0: Register MEM_TYPE_PAGE_POOL RxQ-0
+[   23.203795] phy_rtl8211f_led_fixup in
+phy_rtl8211f_led_fixup in
+[   23.203955] phy_rtl8211f_led_fixup in  val=0x0000
+phy_rtl8211f_led_fixup in  val=0x0a42
+phy_rtl8211f_led_fixup in
+phy_rtl8211f_led_fixup in  val=0x0000
+[  OK  ] Started NetworkManager-dispatcher.& Manager Script Dispatcher Service.
+[   23.295597] rk_gmac-dwmac 2a220000.ethernet end0: PHY [stmmac-0:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   23.296169] dwmac4: Master AXI performs any burst length
+[   23.296239] rk_gmac-dwmac 2a220000.ethernet end0: No Safety Features support found
+[   23.296277] rk_gmac-dwmac 2a220000.ethernet end0: IEEE 1588-2008 Advanced Timestamp supported
+[   23.296673] rk_gmac-dwmac 2a220000.ethernet end0: registered PTP clock
+[   23.297312] rk_gmac-dwmac 2a220000.ethernet end0: FPE workqueue start
+[   23.297354] rk_gmac-dwmac 2a220000.ethernet end0: configuring for phy/rgmii-rxid link mode
+rk_gmac-dwmac 2a220000.ethernet end0: PHY [stmmac-0:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+dwmac4: Master AXI performs any burst length
+rk_gmac-dwmac 2a220000.ethernet end0: No Safety Features support found
+rk_gmac-dwmac 2a220000.ethernet end0: IEEE 1588-2008 Advanced Timestamp supported
+rk_gmac-dwmac 2a220000.ethernet end0: registered PTP clock
+rk_gmac-dwmac 2a220000.ethernet end0: FPE workqueue start
+rk_gmac-dwmac 2a220000.ethernet end0: configuring for phy/rgmii-rxid link mode
+[   23.338938] rk_gmac-dwmac 2a230000.ethernet end1: Register MEM_TYPE_PAGE_POOL RxQ-0
+[   23.339327] phy_rtl8211f_led_fixup in
+[   23.339474] phy_rtl8211f_led_fixup in  val=0x0000
+[   23.339963] phy_rtl8211f_led_fixup in
+[   23.340112] phy_rtl8211f_led_fixup in  val=0x0000
+rk_gmac-dwmac 2a230000.ethernet end1: Register MEM_TYPE_PAGE_POOL RxQ-0
+phy_rtl8211f_led_fixup in
+phy_rtl8211f_led_fixup in  val=0x0000
+phy_rtl8211f_led_fixup in
+phy_rtl8211f_led_fixup in  val=0x0000
+[   23.428972] rk_gmac-dwmac 2a230000.ethernet end1: PHY [stmmac-1:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   23.429540] dwmac4: Master AXI performs any burst length
+[   23.429576] rk_gmac-dwmac 2a230000.ethernet end1: No Safety Features support found
+[   23.429602] rk_gmac-dwmac 2a230000.ethernet end1: IEEE 1588-2008 Advanced Timestamp supported
+rk_gmac-dwmac 2a230000.ethernet end1: PHY [stmmac-1:00] driver [RTL8211F Gigabit Ethernet] (irq=POLL)
+[   23.430014] rk_gmac-dwmac 2a230000.ethernet end1: registered PTP clock
+dwmac4: Master AXI performs any burst length
+[   23.437305] rk_gmac-dwmac 2a230000.ethernet end1: FPE workqueue start
+rk_gmac-dwmac 2a230000.ethernet end1: No Safety Features support found
+[   23.437350] rk_gmac-dwmac 2a230000.ethernet end1: configuring for phy/rgmii-rxid link mode
+rk_gmac-dwmac 2a230000.ethernet end1: IEEE 1588-2008 Advanced Timestamp supported
+rk_gmac-dwmac 2a230000.ethernet end1: registered PTP clock
+rk_gmac-dwmac 2a230000.ethernet end1: FPE workqueue start
+rk_gmac-dwmac 2a230000.ethernet end1: configuring for phy/rgmii-rxid link mode
+[   23.464418] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.496778] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[  OK  ] Started NetworkManager.service - Network Manager.
+[   23.539822] get_txpwr_max:txpwr_max:18
+[   23.539909] get_txpwr_max:txpwr_max:18
+[   23.540170] get_txpwr_max:txpwr_max:18
+[   23.540224] get_txpwr_max:txpwr_max:18
+[   23.541247] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.643177] rwnx_virtual_interface_add: 10, p2p-dev-wlan0
+[   23.643272] rwnx_virtual_interface_add, ifname=p2p-dev-wlan0, wdev=0000000039873308, vif_idx=1
+[   23.643289] p2p dev addr=ca c8 37 e3 fb 20
+[   23.643311] get_txpwr_max:txpwr_max:18
+[   23.643334] get_txpwr_max:txpwr_max:18
+rwnx_virtual_interface_add: 10, p2p-dev-wlan0
+rwnx_virtual_interface_add, ifname=p2p-dev-wlan0, wdev=0000000039873308, vif_idx=1
+p2p dev addr=ca c8 37 e3 fb 20
+get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.664344] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.664878] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.664955] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.665034] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.666269] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.666750] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   23.666869] P2P interface started
+P2P interface started
+[  OK  ] Reached target network.target - Network.
+         Starting NetworkManager-wait-onlin&ce - Network Manager Wait Online...
+[  OK  ] Started fail2ban.service - Fail2Ban Service.
+         Starting openvpn.service - OpenVPN service...
+         Starting ssh.service - OpenBSD Secure Shell server...
+         Starting systemd-user-sessions.service - Permit User Sessions...
+[  OK  ] Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+[  OK  ] Started vnstat.service - vnStat network traffic monitor.
+[  OK  ] Finished openvpn.service - OpenVPN service.
+[  OK  ] Finished systemd-user-sessions.service - Permit User Sessions.
+[  OK  ] Finished armbian-resize-userdata.s&ze userdata partition to fill disk.
+         Starting armbian-ota-health.servic&lth confirmation (recovery mode)...
+[   23.980529] using random self ethernet address
+[   23.980560] using random host ethernet address
+using random self ethernet address
+using random host ethernet address
+[   24.043592] usb0: HOST MAC 1a:76:e1:ae:f7:89
+[   24.043641] usb0: MAC a2:80:9b:f6:2e:83
+usb0: HOST MAC 1a:76:e1:ae:f7:89
+usb0: MAC a2:80:9b:f6:2e:83
+[   24.052498] dwc3 23000000.usb: device reset
+dwc3 23000000.usb: device reset
+[  OK  ] Finished armbian-ota-health.servic&ealth confirmation (recovery mode).
+[  OK  ] Started ssh.service - OpenBSD Secure Shell server.
+[  OK  ] Finished usbdevice.service - USB Gadget ConfigFS Manager (usbdevice).
+[   24.269824] dwc3 23000000.usb: device reset
+dwc3 23000000.usb: device reset
+[   24.325959] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   24.343575] android_work: sent uevent USB_STATE=CONNECTED
+android_work: sent uevent USB_STATE=CONNECTED
+[   24.347911] IPv6: ADDRCONF(NETDEV_CHANGE): usb0: link becomes ready
+[   24.348108] android_work: sent uevent USB_STATE=CONFIGURED
+IPv6: ADDRCONF(NETDEV_CHANGE): usb0: link becomes ready
+android_work: sent uevent USB_STATE=CONFIGURED
+[   24.359803] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   24.410704] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   25.008342] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   25.095994] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[   25.157581] get_txpwr_max:txpwr_max:18
+get_txpwr_max:txpwr_max:18
+[**    ] Job NetworkManager-wait-online.service/start running (7s / no limit)
+[   27.379924] rk_gmac-dwmac 2a220000.ethernet end0: Link is Up - 1Gbps/Full - flow control rx/tx
+[   27.379995] IPv6: ADDRCONF(NETDEV_CHANGE): end0: link becomes ready
+rk_gmac-dwmac 2a220000.ethernet end0: Link is Up - 1Gbps/Full - flow control rx/tx
+[ ***  ] Job NetworkManager-wait-online.service/start running (8s / no limit)
+[   28.210689] get_txpwr_max:txpwr_max:18
+[  *** ] Job NetworkManager-wait-online.service/start running (8s / no limit)
+[   28.654724] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   28.678970] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[   28.679007] [BT_RFKILL]: ENABLE UART_RTS
+[BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[BT_RFKILL]: ENABLE UART_RTS
+[   28.785630] [BT_RFKILL]: DISABLE UART_RTS
+[   28.785669] [BT_RFKILL]: bt turn on power
+[   28.785841] [BT_RFKILL]: Request irq for bt wakeup host
+[   28.786217] [BT_RFKILL]: ** disable irq
+[   28.786243] bluetooth_set_power: start_block=0
+[   28.786250] aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+[   28.786255] aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+[   28.786261] bluetooth_set_power: end_block=0
+[BT_RFKILL]: DISABLE UART_RTS
+[BT_RFKILL]: bt turn on power
+[BT_RFKILL]: Request irq for bt wakeup host
+[BT_RFKILL]: ** disable irq
+bluetooth_set_power: start_block=0
+aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+[  OK  ] Finished NetworkManager-wait-onlin&vice - Network Manager Wait Online.
+[  OK  ] Reached target network-online.target - Network is Online.
+         Starting dnsmasq.service - dnsmasq&ight DHCP and caching DNS server...
+         Starting rc-local.service - /etc/rc.local Compatibility...
+[   29.502699] of_dma_request_slave_channel: dma-names property of node '/serial@2ad70000' missing or empty
+[   29.502763] dw-apb-uart 2ad70000.serial: failed to request DMA, use interrupt mode
+of_dma_request_slave_channel: dma-names property of node '/serial@2ad70000' missing or empty
+dw-apb-uart 2ad70000.serial: failed to request DMA, use interrupt mode
+[  OK  ] Started rc-local.service - /etc/rc.local Compatibility.
+         Starting plymouth-quit-wait.servic&d until boot process finishes up...
+         Starting plymouth-quit.service - Terminate Plymouth Boot Screen...
+[   29.527623] Bluetooth: HCI UART driver ver 2.3
+[   29.527652] Bluetooth: HCI UART protocol H4 registered
+[   29.527658] Bluetooth: HCI UART protocol BCSP registered
+[   29.527664] Bluetooth: HCI UART protocol ATH3K registered
+[   29.527727] Bluetooth: HCI UART protocol Three-wire (H5) registered
+[   29.527956] Bluetooth: HCI UART protocol Intel registered
+[   29.528151] Bluetooth: HCI UART protocol Broadcom registered
+Bluetooth: HCI UART driver ver 2.3
+[   29.528182] Bluetooth: HCI UART protocol QCA registered
+Bluetooth: HCI UART protocol H4 registered
+[   29.528189] Bluetooth: HCI UART protocol AG6XX registered
+Bluetooth: HCI UART protocol BCSP registered
+[   29.528211] Bluetooth: HCI UART protocol AIC (H4) registered
+Bluetooth: HCI UART protocol ATH3K registered
+Bluetooth: HCI UART protocol Three-wire (H5) registered
+Bluetooth: HCI UART protocol Intel registered
+Bluetooth: HCI UART protocol Broadcom registered
+Bluetooth: HCI UART protocol QCA registered
+Bluetooth: HCI UART protocol AG6XX registered
+Bluetooth: HCI UART protocol AIC (H4) registered
+         Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+[  OK  ] Reached target bluetooth.target - Bluetooth Support.
+[  OK  ] Finished plymouth-quit-wait.servic&old until boot process finishes up.
+[  OK  ] Finished plymouth-quit.service - Terminate Plymouth Boot Screen.
+[   30.600238] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host high!
+[   30.625900] [BT_RFKILL]: rfkill_rk_set_power: set bt wake_host input!
+[   30.626022] [BT_RFKILL]: ENABLE UART_RTS
+
+Armbian-unofficial 26.11.0-trunk Trixie ttyFIQ0
+
+recomputer-rk3576-devkit login: [   30.732677] [BT_RFKILL]: DISABLE UART_RTS
+[   30.732775] [BT_RFKILL]: bt turn on power
+[   30.733090] [BT_RFKILL]: Request irq for bt wakeup host
+[   30.734005] [BT_RFKILL]: ** disable irq
+[   30.734062] bluetooth_set_power: start_block=0
+[   30.734125] aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 1
+[   30.734152] aicbsp: aicbsp_set_subsys, power state no need to change, current: 1
+[   30.734175] bluetooth_set_power: end_block=0
+[   30.735388] Bluetooth: MGMT ver 1.22
+[   39.537011] platform mtd_vendor_storage: deferred probe pending
+
