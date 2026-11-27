@@ -1,0 +1,1050 @@
+[    2.924752] Trying to unpack rootfs image as initramfs...
+[    2.925043] rockchip-thermal 2ae70000.tsadc: Missing rockchip,grf property
+[    2.928432] rockchip-thermal 2ae70000.tsadc: tsadc is probed successfully!
+[    2.938755] hw perfevents: enabled with armv8_cortex_a53 PMU driver, 7 counters available
+[    2.950018] hw perfevents: enabled with armv8_cortex_a72 PMU driver, 7 counters available
+[    2.950775] kvm [1]: IPA Size Limit: 40 bits
+[    2.954662] kvm [1]: vgic interrupt IRQ9
+[    2.959302] kvm [1]: Hyp mode initialized successfully
+[    3.549326] Initialise system trusted keyrings
+[    3.549613] workingset: timestamp_bits=46 max_order=21 bucket_order=0
+[    3.552904] zbud: loaded
+[    3.554043] NFS: Registering the id_resolver key type
+[    3.554081] Key type id_resolver registered
+[    3.554090] Key type id_legacy registered
+[    3.554148] nfs4filelayout_init: NFSv4 File Layout Driver Registering...
+[    3.554163] nfs4flexfilelayout_init: NFSv4 Flexfile Layout Driver Registering...
+[    3.581070] NET: Registered PF_ALG protocol family
+[    3.581099] Key type asymmetric registered
+[    3.581109] Asymmetric key parser 'x509' registered
+[    4.315332] Freeing initrd memory: 48504K
+[    4.331693] alg: self-tests for CTR-KDF (hmac(sha256)) passed
+[    4.331773] Block layer SCSI generic (bsg) driver version 0.4 loaded (major 241)
+[    4.332034] io scheduler mq-deadline registered
+[    4.332046] io scheduler kyber registered
+[    4.333590] rockchip-csi2-dphy-hw 2b030000.csi2-dphy0-hw: csi2 dphy hw probe successfully!
+[    4.333770] rockchip-csi2-dphy-hw 2b070000.csi2-dphy1-hw: csi2 dphy hw probe successfully!
+[    4.335366] rockchip-usb2phy 2602e000.syscon:usb2-phy@0: error -ENXIO: IRQ index 0 not found
+[    4.335495] rockchip-usb2phy 2602e000.syscon:usb2-phy@0: refclk freq 24000000
+[    4.337130] rockchip-usb2phy 2602e000.syscon:usb2-phy@2000: error -ENXIO: IRQ index 0 not found
+[    4.337248] rockchip-usb2phy 2602e000.syscon:usb2-phy@2000: refclk freq 24000000
+[    4.344616] dw-pcie 2a200000.pcie: invalid resource
+[    4.344641] dw-pcie 2a200000.pcie: Failed to initialize host
+[    4.344669] dw-pcie: probe of 2a200000.pcie failed with error -22
+[    4.345294] rk-pcie 2a200000.pcie: invalid prsnt-gpios property in node
+[    4.345556] iep: Module initialized.
+[    4.345619] mpp_service mpp-srv: 90eefde08d7d author: Chandler Chen 2026-06-01 video: rockchip: mpp: fix vepu510 spurious wdg timeout after page fault
+[    4.345620] rk-pcie 2a200000.pcie: can't get current limit.
+[    4.345625] mpp_service mpp-srv: probe start
+[    4.345873] rk-pcie 2a200000.pcie: max MSI vector is 32
+[    4.345923] rk-pcie 2a200000.pcie: host bridge /pcie@2a200000 ranges:
+[    4.345952] rk-pcie 2a200000.pcie:      err 0x0020000000..0x00200fffff -> 0x0020000000
+[    4.345971] rk-pcie 2a200000.pcie:       IO 0x0020100000..0x00201fffff -> 0x0020100000
+[    4.345990] rk-pcie 2a200000.pcie:      MEM 0x0020200000..0x0020ffffff -> 0x0020200000
+[    4.346004] rk-pcie 2a200000.pcie:      MEM 0x0900000000..0x097fffffff -> 0x0900000000
+[    4.346169] rk-pcie 2a200000.pcie: iATU unroll: enabled
+[    4.346181] rk-pcie 2a200000.pcie: iATU regions: 8 ob, 8 ib, align 64K, limit 8G
+[    4.348586] mpp_rkvenc2 rkvenc-ccu: probing start
+[    4.348605] mpp_rkvenc2 rkvenc-ccu: probing finish
+[    4.349371] mpp_service mpp-srv: probe success
+[    4.360569] dma-pl330 2ab90000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    4.360591] dma-pl330 2ab90000.dma-controller:       DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    4.361658] dma-pl330 2abb0000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    4.361671] dma-pl330 2abb0000.dma-controller:       DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    4.362737] dma-pl330 2abd0000.dma-controller: Loaded driver for PL330 DMAC-241330
+[    4.362750] dma-pl330 2abd0000.dma-controller:       DBUFF-128x8bytes Num_Chans-8 Num_Peri-32 Num_Events-16
+[    4.363415] rockchip-system-monitor rockchip-system-monitor: system monitor probe
+[    4.364016] arm-scmi firmware:scmi: Failed. SCMI protocol 22 not active.
+[    4.364183] Serial: 8250/16550 driver, 10 ports, IRQ sharing disabled
+[    4.364916] 2ad70000.serial: ttyS4 at MMIO 0x2ad70000 (irq = 59, base_baud = 11718) is a 16550A
+[    4.366203] random: crng init done
+[    4.373940] OF: graph: no port node found in /dp@27e40000
+[    4.374388] /vop@27d00000: Fixed dependency cycle(s) with /dp@27e40000
+[    4.380186] brd: module loaded
+[    4.383525] loop: module loaded
+[    4.383731] lkdtm: No crash points registered, enable through debugfs
+[    4.385972] rockchip-spi 2ad20000.spi: no high_speed pinctrl state
+[    4.386477] rockchip-spi 2ad20000.spi: register misc device rkspi-dev3
+[    4.386490] rockchip-spi 2ad20000.spi: probed, poll=0, rsd=0, cs-inactive=0, ready=0
+[    4.387680] spi-nor spi5.0: ZB25LQ128 (16384 Kbytes) read_data x4
+[    4.387747] 1 fixed-partitions partitions found on MTD device sfc_nor
+[    4.387758] Creating 1 MTD partitions on "sfc_nor":
+[    4.387766] 0x000000000000-0x000001000000 : "loader"
+[    4.390779] rk_gmac-dwmac 2a220000.ethernet: supply phy not found, using dummy regulator
+[    4.390873] rk_gmac-dwmac 2a220000.ethernet: clock input or output? (output).
+[    4.390883] rk_gmac-dwmac 2a220000.ethernet: TX delay(0x20).
+[    4.390892] rk_gmac-dwmac 2a220000.ethernet: Can not read property: rx_delay.
+[    4.390898] rk_gmac-dwmac 2a220000.ethernet: set rx_delay to 0xffffffff
+[    4.390990] rk_gmac-dwmac 2a220000.ethernet: integrated PHY? (no).
+[    4.391002] rk_gmac-dwmac 2a220000.ethernet: cannot get clock mac_clk_rx
+[    4.391011] rk_gmac-dwmac 2a220000.ethernet: cannot get clock mac_clk_tx
+[    4.391031] rk_gmac-dwmac 2a220000.ethernet: cannot get clock clk_mac_speed
+[    4.391256] rk_gmac-dwmac 2a220000.ethernet: init for RGMII_RXID
+[    4.391382] rk_gmac-dwmac 2a220000.ethernet: User ID: 0x30, Synopsys ID: 0x51
+[    4.391395] rk_gmac-dwmac 2a220000.ethernet:         DWMAC4/5
+[    4.391405] rk_gmac-dwmac 2a220000.ethernet: DMA HW capability register supported
+[    4.391412] rk_gmac-dwmac 2a220000.ethernet: RX Checksum Offload Engine supported
+[    4.391419] rk_gmac-dwmac 2a220000.ethernet: TX Checksum insertion supported
+[    4.391426] rk_gmac-dwmac 2a220000.ethernet: Wake-Up On Lan supported
+[    4.391467] rk_gmac-dwmac 2a220000.ethernet: TSO supported
+[    4.391475] rk_gmac-dwmac 2a220000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    4.391483] rk_gmac-dwmac 2a220000.ethernet: Enabled L3L4 Flow TC (entries=2)
+[    4.391491] rk_gmac-dwmac 2a220000.ethernet: Enabled RFS Flow TC (entries=10)
+[    4.391499] rk_gmac-dwmac 2a220000.ethernet: TSO feature enabled
+[    4.391507] rk_gmac-dwmac 2a220000.ethernet: Using 40/40 bits DMA host/device width
+[    4.532427] rk_gmac-dwmac 2a230000.ethernet: supply phy not found, using dummy regulator
+[    4.532520] rk_gmac-dwmac 2a230000.ethernet: clock input or output? (output).
+[    4.532530] rk_gmac-dwmac 2a230000.ethernet: TX delay(0x1a).
+[    4.532538] rk_gmac-dwmac 2a230000.ethernet: Can not read property: rx_delay.
+[    4.532545] rk_gmac-dwmac 2a230000.ethernet: set rx_delay to 0xffffffff
+[    4.532567] rk_gmac-dwmac 2a230000.ethernet: integrated PHY? (no).
+[    4.532577] rk_gmac-dwmac 2a230000.ethernet: cannot get clock mac_clk_rx
+[    4.532586] rk_gmac-dwmac 2a230000.ethernet: cannot get clock mac_clk_tx
+[    4.532606] rk_gmac-dwmac 2a230000.ethernet: cannot get clock clk_mac_speed
+[    4.532791] rk_gmac-dwmac 2a230000.ethernet: init for RGMII_RXID
+[    4.532985] rk_gmac-dwmac 2a230000.ethernet: User ID: 0x30, Synopsys ID: 0x51
+[    4.532997] rk_gmac-dwmac 2a230000.ethernet:         DWMAC4/5
+[    4.533006] rk_gmac-dwmac 2a230000.ethernet: DMA HW capability register supported
+[    4.533013] rk_gmac-dwmac 2a230000.ethernet: RX Checksum Offload Engine supported
+[    4.533020] rk_gmac-dwmac 2a230000.ethernet: TX Checksum insertion supported
+[    4.533026] rk_gmac-dwmac 2a230000.ethernet: Wake-Up On Lan supported
+[    4.533065] rk_gmac-dwmac 2a230000.ethernet: TSO supported
+[    4.533072] rk_gmac-dwmac 2a230000.ethernet: Enable RX Mitigation via HW Watchdog Timer
+[    4.533084] rk_gmac-dwmac 2a230000.ethernet: Enabled L3L4 Flow TC (entries=2)
+[    4.533092] rk_gmac-dwmac 2a230000.ethernet: Enabled RFS Flow TC (entries=10)
+[    4.533099] rk_gmac-dwmac 2a230000.ethernet: TSO feature enabled
+[    4.533107] rk_gmac-dwmac 2a230000.ethernet: Using 40/40 bits DMA host/device width
+[    4.548352] rk-pcie 2a200000.pcie: PCIe Linking... LTSSM is 0x3
+[    4.622785] rk-pcie 2a200000.pcie: PCIe Link up, LTSSM is 0x130011
+[    4.622799] rk-pcie 2a200000.pcie: PCIe Gen.2 x1 link up
+[    4.623292] rk-pcie 2a200000.pcie: PCI host bridge to bus 0000:00
+[    4.623311] pci_bus 0000:00: root bus resource [bus 00-0f]
+[    4.623321] pci_bus 0000:00: root bus resource [??? 0x20000000-0x200fffff flags 0x0]
+[    4.623331] pci_bus 0000:00: root bus resource [io  0x0000-0xfffff] (bus address [0x20100000-0x201fffff])
+[    4.623339] pci_bus 0000:00: root bus resource [mem 0x20200000-0x20ffffff]
+[    4.623347] pci_bus 0000:00: root bus resource [mem 0x900000000-0x97fffffff]
+[    4.623376] pci 0000:00:00.0: [1d87:3576] type 01 class 0x060400
+[    4.623441] pci 0000:00:00.0: supports D1 D2
+[    4.623449] pci 0000:00:00.0: PME# supported from D0 D1 D3hot
+[    4.634651] pci_bus 0000:01: busn_res: can not insert [bus 01-ff] under [bus 00-0f] (conflicts with (null) [bus 00-0f])
+[    4.634743] pci 0000:01:00.0: [126f:2263] type 00 class 0x010802
+[    4.634816] pci 0000:01:00.0: BAR 0 [mem 0x00000000-0x00003fff 64bit]
+[    4.635253] pci 0000:01:00.0: 4.000 Gb/s available PCIe bandwidth, limited by 5.0 GT/s PCIe x1 link at 0000:00:00.0 (capable of 31.504 Gb/s with 8.0 GT/s PCIe x4 l
+ink)
+[    4.642839] pci 0000:00:00.0: bridge window [mem 0x20200000-0x202fffff]: assigned
+[    4.642856] pci 0000:01:00.0: BAR 0 [mem 0x20200000-0x20203fff 64bit]: assigned
+[    4.642895] pci 0000:00:00.0: PCI bridge to [bus 01-ff]
+[    4.642904] pci 0000:00:00.0:   bridge window [mem 0x20200000-0x202fffff]
+[    4.644012] pcieport 0000:00:00.0: PME: Signaling with IRQ 78
+[    4.644327] nvme nvme0: pci function 0000:01:00.0
+[    4.644374] nvme 0000:01:00.0: enabling device (0000 -> 0002)
+[    4.649459] nvme nvme0: missing or invalid SUBNQN field.
+[    4.651401] hwmon hwmon6: temp1_input not attached to any thermal zone
+[    4.657750] nvme nvme0: allocated 64 MiB host memory buffer.
+[    4.672504] phy_rtl8211f_led_fixup in
+[    4.672633] phy_rtl8211f_led_fixup in  val=0x0a42
+[    4.673149] nvme nvme0: 8/0/0 default/read/poll queues
+[    4.676605] usbcore: registered new interface driver rndis_wlan
+[    4.676641] usbcore: registered new interface driver asix
+[    4.676663] usbcore: registered new interface driver cdc_ether
+[    4.676685] usbcore: registered new interface driver rndis_host
+[    4.676712] usbcore: registered new interface driver cdc_ncm
+[    4.676836] VFIO - User Level meta-driver version: 0.3
+[    4.677383] nvme nvme0: Ignoring bogus Namespace Identifiers
+[    4.679707]  nvme0n1: p1 p2 p3 p4 p5
+[    4.683247] usbcore: registered new interface driver cdc_acm
+[    4.683266] cdc_acm: USB Abstract Control Model driver for USB modems and ISDN adapters
+[    4.683386] usbcore: registered new interface driver uas
+[    4.683418] usbcore: registered new interface driver usb-storage
+[    4.683718] mousedev: PS/2 mouse device common for all mice
+[    4.684331] i2c_dev: i2c /dev entries driver
+[    4.687376] rk806 1-0023: chip id: RK806,ver:0xa, 0x5
+[    4.688283] rk806 1-0023: ON: 0x40 OFF:0x10
+[    4.688746] rk806 1-0023: shutown_by_pwrctrln missing!
+[    4.688759] rk806 1-0023: dvs-suspend-control-by missing!
+[    4.732972] vdda0v75_hdmi_s0: Bringing 750000uV into 837500-837500uV
+[    4.749650] vcca_3v3_s0: Bringing 3000000uV into 3300000-3300000uV
+[    4.756303] rk806 1-0023: no power-off pinctrl state
+[    4.756316] rk806 1-0023: no sleep-setting state
+[    4.756324] rk806 1-0023: no reset-setting pinctrl state
+[    4.756330] rk806 1-0023: no dvs-setting pinctrl state
+[    4.767306] pca953x 4-0021: supply vcc not found, using dummy regulator
+[    4.767389] pca953x 4-0021: using no AI
+[    4.769351] at24 4-0057: supply vcc not found, using dummy regulator
+[    4.770089] at24 4-0057: 32768 byte 24c256 EEPROM, writable, 16 bytes/write
+[    4.772561] rtc-pcf8563 4-0051: low voltage detected, date/time is not reliable.
+[    4.772675] rtc-pcf8563 4-0051: registered as rtc0
+[    4.773934] rtc-pcf8563 4-0051: low voltage detected, date/time is not reliable.
+[    4.773943] rtc-pcf8563 4-0051: hctosys: unable to read the hardware clock
+[    4.783123] rockchip-mipi-csi2-hw 27c80000.mipi0-csi2-hw: enter mipi csi2 hw probe!
+[    4.783331] rockchip-mipi-csi2-hw 27c80000.mipi0-csi2-hw: probe success, v4l2_dev:mipi0-csi2-hw!
+[    4.783397] rockchip-mipi-csi2-hw 27c90000.mipi1-csi2-hw: enter mipi csi2 hw probe!
+[    4.783504] rockchip-mipi-csi2-hw 27c90000.mipi1-csi2-hw: probe success, v4l2_dev:mipi1-csi2-hw!
+[    4.783551] rockchip-mipi-csi2-hw 27ca0000.mipi2-csi2-hw: enter mipi csi2 hw probe!
+[    4.783653] rockchip-mipi-csi2-hw 27ca0000.mipi2-csi2-hw: probe success, v4l2_dev:mipi2-csi2-hw!
+[    4.783700] rockchip-mipi-csi2-hw 27cb0000.mipi3-csi2-hw: enter mipi csi2 hw probe!
+[    4.783795] rockchip-mipi-csi2-hw 27cb0000.mipi3-csi2-hw: probe success, v4l2_dev:mipi3-csi2-hw!
+[    4.783840] rockchip-mipi-csi2-hw 27cc0000.mipi4-csi2-hw: enter mipi csi2 hw probe!
+[    4.783934] rockchip-mipi-csi2-hw 27cc0000.mipi4-csi2-hw: probe success, v4l2_dev:mipi4-csi2-hw!
+[    4.786080] usbcore: registered new interface driver uvcvideo
+[    4.787297] device-mapper: ioctl: 4.47.0-ioctl (2022-07-28) initialised: dm-devel@redhat.com
+[    4.788796] sdhci: Secure Digital Host Controller Interface driver
+[    4.788811] sdhci: Copyright(c) Pierre Ossman
+[    4.788817] Synopsys Designware Multimedia Card Interface Driver
+[    4.789573] sdhci-pltfm: SDHCI platform and OF driver helper
+[    4.790244] dwmmc_rockchip 2a310000.mmc: No normal pinctrl state
+[    4.790262] dwmmc_rockchip 2a310000.mmc: No idle pinctrl state
+[    4.790409] dwmmc_rockchip 2a320000.mmc: No normal pinctrl state
+[    4.790431] dwmmc_rockchip 2a320000.mmc: No idle pinctrl state
+[    4.790458] dwmmc_rockchip 2a310000.mmc: IDMAC supports 32-bit address mode.
+[    4.790493] dwmmc_rockchip 2a310000.mmc: Using internal DMA controller.
+[    4.790503] dwmmc_rockchip 2a310000.mmc: Version ID is 270a
+[    4.790538] dwmmc_rockchip 2a310000.mmc: DW MMC controller at irq 106,32 bit host data width,256 deep fifo
+[    4.790629] dwmmc_rockchip 2a320000.mmc: IDMAC supports 32-bit address mode.
+[    4.790672] dwmmc_rockchip 2a320000.mmc: Using internal DMA controller.
+[    4.790685] dwmmc_rockchip 2a320000.mmc: Version ID is 270a
+[    4.790727] dwmmc_rockchip 2a320000.mmc: DW MMC controller at irq 107,32 bit host data width,256 deep fifo
+[    4.791320] dwmmc_rockchip 2a320000.mmc: allocated mmc-pwrseq
+[    4.791335] mmc_host mmc2: card is non-removable.
+[    4.793763] ledtrig-cpu: registered to indicate activity on CPUs
+[    4.793803] arm-scmi firmware:scmi: Failed. SCMI protocol 17 not active.
+[    4.793850] SMCCC: SOC_ID: ARCH_SOC_ID not implemented, skipping ....
+[    4.794724] cryptodev: driver 1.12 loaded.
+[    4.794763] hid: raw HID events driver (C) Jiri Kosina
+[    4.795011] usbcore: registered new interface driver usbhid
+[    4.795022] usbhid: USB HID core driver
+[    4.798908] SPI driver inv-icm42600-spi has no spi_device_id for invensense,icm42600
+[    4.798921] SPI driver inv-icm42600-spi has no spi_device_id for invensense,icm42602
+[    4.798928] SPI driver inv-icm42600-spi has no spi_device_id for invensense,icm42605
+[    4.798935] SPI driver inv-icm42600-spi has no spi_device_id for invensense,icm42622
+[    4.799390] optee: probing for conduit method.
+[    4.799408] optee: revision 3.13 (500b55c8)
+[    4.799830] optee: dynamic shared memory is enabled
+[    4.799952] optee: initialized driver
+[    4.800622] usbcore: registered new interface driver snd-usb-audio
+[    4.801844] es8311 4-0018: Don't need spk-ctl gpio
+[    4.802900] mmc_host mmc1: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    4.803384] [Awinic] aw87xxx_pa_init:driver version: v2.2.0
+[    4.807544] rk-multicodecs es8311-sound: keymap is missing
+[    4.807560] rk-multicodecs es8311-sound: Has no input keys
+[    4.871628] input: rockchip-es8311 Headset as /devices/platform/es8311-sound/sound/card0/input0
+[    4.916900] NET: Registered PF_PACKET protocol family
+[    4.917135] [BT_RFKILL]: Enter rfkill_rk_init
+[    4.917145] [WLAN_RFKILL]: Enter rfkill_wlan_init
+[    4.917753] [WLAN_RFKILL]: Enter rfkill_wlan_probe
+[    4.917769] [WLAN_RFKILL]: can't find rockchip,grf property
+[    4.917775] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi_chip_type = fcs960k
+[    4.917781] [WLAN_RFKILL]: wlan_platdata_parse_dt: enable wifi power control.
+[    4.917787] [WLAN_RFKILL]: wlan_platdata_parse_dt: wifi power controled by gpio.
+[    4.917817] [WLAN_RFKILL]: wlan_platdata_parse_dt: WIFI,host_wake_irq = 8, flags = 0.
+[    4.917827] [WLAN_RFKILL]: wlan_platdata_parse_dt: The ref_wifi_clk not found !
+[    4.917834] [WLAN_RFKILL]: rfkill_wlan_probe: init gpio
+[    4.917841] [WLAN_RFKILL]: rfkill_set_wifi_bt_power: 1
+[    4.917848] [WLAN_RFKILL]: Exit rfkill_wlan_probe
+[    4.918450] [BT_RFKILL]: can't get dts bt_port prop
+[    4.918466] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: uart_rts_gpios = 50.
+[    4.918493] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,reset_gpio = 55.
+[    4.918505] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_gpio = 60.
+[    4.918518] [BT_RFKILL]: bluetooth_platdata_parse_dt: get property: BT,wake_host_irq = 9.
+[    4.918528] [BT_RFKILL]: bluetooth_platdata_parse_dt: clk_get failed!!!.
+[    4.918572] [BT_RFKILL]: Request irq for bt wakeup host
+[    4.918840] [BT_RFKILL]: ** disable irq
+[    4.918936] [BT_RFKILL]: bt shut off power
+[    4.918951] [BT_RFKILL]: bt_default device registered.
+[    4.919034] input: bt-powerkey as /devices/platform/wireless-bluetooth/input/input1
+[    4.919355] Key type dns_resolver registered
+[    4.921221] registered taskstats version 1
+[    4.921254] Loading compiled-in X.509 certificates
+[    4.924200] zswap: loaded using pool zstd/zbud
+[    4.924756] Key type .fscrypt registered
+[    4.924767] Key type fscrypt-provisioning registered
+[    4.925106] pstore: Using crash dump compression: deflate
+[    4.925376] Key type encrypted registered
+[    4.925594] AppArmor: AppArmor sha1 policy hashing enabled
+[    4.932476] rga2 27920000.rga: Adding to iommu group 2
+[    4.932903] rga2 27920000.rga: probe successfully, irq = 63, hw_version:3.e.19357
+[    4.933079] rga2 27930000.rga: Adding to iommu group 3
+[    4.933519] rga2 27930000.rga: probe successfully, irq = 64, hw_version:3.e.19357
+[    4.933778] rga: IOMMU binding successfully, default mapping core[0x4]
+[    4.934000] rga: Module initialized. v1.3.13
+[    4.959406] rockchip-usb2phy 2602e000.syscon:usb2-phy@2000: error -ENXIO: IRQ index 0 not found
+[    4.959633] rockchip-usb2phy 2602e000.syscon:usb2-phy@2000: refclk freq 24000000
+[    4.961177] mpp-iep2 27960000.iep: Adding to iommu group 4
+[    4.961450] mpp-iep2 27960000.iep: probe device
+[    4.961632] mpp-iep2 27960000.iep: reset_group->rw_sem_on=0
+[    4.961647] mpp-iep2 27960000.iep: reset_group->rw_sem_on=0
+[    4.961660] mpp-iep2 27960000.iep: reset_group->rw_sem_on=0
+[    4.961851] mpp-iep2 27960000.iep: probing finish
+[    4.962091] mpp_jpgdec 27910000.jpegd: Adding to iommu group 1
+[    4.962301] mpp_jpgdec 27910000.jpegd: probe device
+[    4.962484] mpp_jpgdec 27910000.jpegd: reset_group->rw_sem_on=0
+[    4.962500] mpp_jpgdec 27910000.jpegd: reset_group->rw_sem_on=0
+[    4.962562] mpp_jpgdec 27910000.jpegd: probing finish
+[    4.962759] mpp_jpgenc 27910800.jpege: Adding to iommu group 1
+[    4.962849] mpp_jpgenc 27910800.jpege: probe device
+[    4.963000] mpp_jpgenc 27910800.jpege: reset_group->rw_sem_on=0
+[    4.963011] mpp_jpgenc 27910800.jpege: reset_group->rw_sem_on=0
+[    4.963056] mpp_jpgenc 27910800.jpege: probe finish
+[    4.963311] mpp_rkvdec2 27b00100.rkvdec: Adding to iommu group 7
+[    4.963582] mpp_rkvdec2 27b00100.rkvdec: rkvdec, probing start
+[    4.963816] mpp_rkvdec2 27b00100.rkvdec: shared_niu_a is not found!
+[    4.963826] rkvdec2_init:1301: No niu aclk reset resource define
+[    4.963834] mpp_rkvdec2 27b00100.rkvdec: shared_niu_h is not found!
+[    4.963841] rkvdec2_init:1304: No niu hclk reset resource define
+[    4.963853] mpp_rkvdec2 27b00100.rkvdec: shared_video_cabac is not found!
+[    4.963859] rkvdec2_init:1310: No cabac reset resource define
+[    4.963915] mpp_rkvdec2 27b00100.rkvdec: no regulator, devfreq is disabled
+[    4.964067] mpp_rkvdec2 27b00100.rkvdec: sram_start 0x000000003ff88000
+[    4.964078] mpp_rkvdec2 27b00100.rkvdec: rcb_iova 0x0000000010000000
+[    4.964085] mpp_rkvdec2 27b00100.rkvdec: sram_size 491520
+[    4.964092] mpp_rkvdec2 27b00100.rkvdec: rcb_size 491520
+[    4.964100] mpp_rkvdec2 27b00100.rkvdec: min_width 512
+[    4.964127] mpp_rkvdec2 27b00100.rkvdec: link mode probe finish
+[    4.964173] mpp_rkvdec2 27b00100.rkvdec: probing finish
+[    4.964192] mpp_rkvdec2 27b00100.rkvdec: probing finish
+[    4.964448] mpp_rkvenc2 27a00000.rkvenc-core: Adding to iommu group 5
+[    4.964724] mpp_rkvenc2 27a00000.rkvenc-core: probing start
+[    4.964920] mpp_rkvenc2 27a00000.rkvenc-core: failed to init opp info
+[    4.964930] mpp_rkvenc2 27a00000.rkvenc-core: failed to init_opp_table
+[    4.964936] rkvenc_init:2412: failed to add venc devfreq
+[    4.964992] mpp_rkvenc2 27a00000.rkvenc-core: attach ccu as core 0
+[    4.965033] mpp_rkvenc2 27a00000.rkvenc-core: probing finish
+[    4.965256] mpp_rkvenc2 27a10000.rkvenc-core: Adding to iommu group 6
+[    4.965482] mpp_rkvenc2 27a10000.rkvenc-core: probing start
+[    4.965673] mpp_rkvenc2 27a10000.rkvenc-core: failed to init opp info
+[    4.965683] mpp_rkvenc2 27a10000.rkvenc-core: failed to init_opp_table
+[    4.965689] rkvenc_init:2412: failed to add venc devfreq
+[    4.965740] mpp_rkvenc2 27a10000.rkvenc-core: attach ccu as core 1
+[    4.965780] mpp_rkvenc2 27a10000.rkvenc-core: probing finish
+[    4.965976] mpp_vdpp 27961000.vdpp: Adding to iommu group 4
+[    4.966034] mpp_vdpp 27961000.vdpp: probe device
+[    4.966185] mpp_vdpp 27961000.vdpp: reset_group->rw_sem_on=0
+[    4.966196] mpp_vdpp 27961000.vdpp: reset_group->rw_sem_on=0
+[    4.966205] mpp_vdpp 27961000.vdpp: reset_group->rw_sem_on=0
+[    4.966252] mpp_vdpp 27961000.vdpp: probing finish
+[    4.966530] rockchip-vop2 27d00000.vop: Adding to iommu group 8
+[    4.967192] rockchip-vop2 27d00000.vop: [drm:vop2_bind] vp0 assign plane mask: Cluster0 | Esmart0[0x5], primary plane phy id: Esmart0[2]
+[    4.967218] rockchip-vop2 27d00000.vop: [drm:vop2_bind] vp1 assign plane mask: Cluster1 | Esmart1[0xa], primary plane phy id: Esmart1[3]
+[    4.967232] rockchip-vop2 27d00000.vop: [drm:vop2_bind] vp2 assign plane mask: Esmart2 | Esmart3[0x300], primary plane phy id: Esmart2[8]
+[    4.967372] [drm] unsupported AFBC format NV12 little-endian (0x3231564e)
+[    4.967426] rockchip-vop2 27d00000.vop: [drm:vop2_create_crtc] Cluster0-win0 as cursor plane for vp0
+[    4.967546] rockchip-vop2 27d00000.vop: [drm:vop2_create_crtc] Cluster1-win0 as cursor plane for vp1
+[    4.967567] [drm] Esmart2-win0(possible_vp_mask = 0x00000004) has no possible crtcs
+[    4.967602] [drm] Esmart3-win0(possible_vp_mask = 0x00000004) has no possible crtcs
+[    4.967628] [drm] failed to init overlay plane Cluster0-win1
+[    4.967634] [drm] failed to init overlay plane Cluster1-win1
+[    4.967950] rockchip-vop2 27d00000.vop: bin=0
+[    4.968132] rockchip-vop2 27d00000.vop: idc=12
+[    4.968145] rockchip-vop2 27d00000.vop: idc-volt-sel=1
+[    4.968156] rockchip-vop2 27d00000.vop: soc version=0, speed=1
+[    4.969059] rockchip-vop2 27d00000.vop: avs=0
+[    4.969154] rockchip-vop2 27d00000.vop: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    4.969183] debugfs: Directory 'vdd_logic_s0' with parent 'vdd_logic_s0' already present!
+[    4.970212] rockchip-vop2 27d00000.vop: Supported VOP aclk dvfs, normal mode:500000000, reset mode:594000000, advanced mode:702000000
+[    4.970421] rockchip-drm display-subsystem: bound 27d00000.vop (ops 0xffff80000930b2e0)
+[    4.971670] dw_hdmi_qp-rockchip 27da0000.hdmi: registered ddc I2C bus driver
+[    4.971695] dw_hdmi_qp-rockchip 27da0000.hdmi: scl_high_ns is out of range, set to 5000
+[    4.972541] rockchip-drm display-subsystem: bound 27da0000.hdmi (ops 0xffff80000932e390)
+[    4.973078] rockchip-drm display-subsystem: bound 27e40000.dp (ops 0xffff8000093304e8)
+[    4.975654] Registered IR keymap rc-cec
+[    4.975765] rc rc0: dw_hdmi_qp as /devices/platform/27da0000.hdmi/rc/rc0
+[    4.975912] input: dw_hdmi_qp as /devices/platform/27da0000.hdmi/rc/rc0/input2
+[    4.976552] dw-hdmi-qp-hdcp dw-hdmi-qp-hdcp.6.auto: dw_hdcp_qp_hdcp_probe success
+[    4.977477] [drm] Initialized rockchip 4.0.0 20140818 for display-subsystem on minor 0
+[    5.000169] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x1
+[    5.009552] mmc_host mmc2: Bus speed (slot 0) = 400000Hz (slot req 400000Hz, actual 400000HZ div = 0)
+[    5.022389] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x10
+[    5.040961] mmc_host mmc2: Bus speed (slot 0) = 100000000Hz (slot req 100000000Hz, actual 100000000HZ div = 0)
+[    5.040989] dwmmc_rockchip 2a320000.mmc: Successfully tuned phase to 0
+[    5.041874] mmc2: new ultra high speed SDR104 SDIO card at address 390b
+[    5.044130] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.066874] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.089624] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.112373] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.112401] dw_hdmi_qp-rockchip 27da0000.hdmi: failed to get edid
+[    5.143318] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x1
+[    5.166009] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x10
+[    5.188744] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.211443] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.234139] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.256839] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.256857] dw_hdmi_qp-rockchip 27da0000.hdmi: failed to get edid
+[    5.279578] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x21
+[    5.279616] dw_hdmi_qp-rockchip 27da0000.hdmi: use tmds mode
+[    5.279675] rockchip-vop2 27d00000.vop: [drm:vop2_crtc_atomic_enable] Update mode to 1920x1080p60, type: 11(if:HDMI0, flag:0x0) for vp0 dclk: 148500000
+[    5.280453] rockchip-vop2 27d00000.vop: [drm:vop2_crtc_atomic_enable] set dclk_vp0 to 148500000, get 148500000
+[    5.280493] dw_hdmi_qp-rockchip 27da0000.hdmi: final tmdsclk = 148500000
+[    5.303051] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x21
+[    5.325741] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc write failed
+[    5.325777] dw_hdmi_qp-rockchip 27da0000.hdmi: don't use dsc mode
+[    5.325783] dw_hdmi_qp-rockchip 27da0000.hdmi: dw hdmi qp use tmds mode
+[    5.325975] rockchip-vop2 27d00000.vop: [drm] vp0 post enable for intf:800
+[    5.398739] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x1
+[    5.421243] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x1
+[    5.443930] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x10
+[    5.466619] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.489172] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x20
+[    5.511629] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x10
+[    5.534085] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x10
+[    5.534101] dw_hdmi_qp-rockchip 27da0000.hdmi: failed to get edid
+[    5.545835] Console: switching to colour frame buffer device 240x67
+[    5.562588] rockchip-drm display-subsystem: [drm] fb0: rockchipdrmfb frame buffer device
+[    5.562938] rockchip-drm display-subsystem: [drm] run display error_event monitor
+[    5.566509] phy phy-2602e000.syscon:usb2-phy@2000.7: illegal mode
+[    5.566529] xhci-hcd xhci-hcd.8.auto: xHCI Host Controller
+[    5.566545] xhci-hcd xhci-hcd.8.auto: new USB bus registered, assigned bus number 1
+[    5.566620] xhci-hcd xhci-hcd.8.auto: hcc params 0x0220fe64 hci version 0x110 quirks 0x0004008002010010
+[    5.566654] xhci-hcd xhci-hcd.8.auto: irq 126, io mem 0x23400000
+[    5.566761] xhci-hcd xhci-hcd.8.auto: xHCI Host Controller
+[    5.566773] xhci-hcd xhci-hcd.8.auto: new USB bus registered, assigned bus number 2
+[    5.566784] xhci-hcd xhci-hcd.8.auto: Host supports USB 3.0 SuperSpeed
+[    5.566899] usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 6.01
+[    5.566910] usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    5.566918] usb usb1: Product: xHCI Host Controller
+[    5.566926] usb usb1: Manufacturer: Linux 6.1.172-vendor-rk35xx xhci-hcd
+[    5.566933] usb usb1: SerialNumber: xhci-hcd.8.auto
+[    5.567348] hub 1-0:1.0: USB hub found
+[    5.567378] hub 1-0:1.0: 1 port detected
+[    5.567607] usb usb2: We don't know the algorithms for LPM for this host, disabling LPM.
+[    5.567689] usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 6.01
+[    5.567700] usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+[    5.567708] usb usb2: Product: xHCI Host Controller
+[    5.567716] usb usb2: Manufacturer: Linux 6.1.172-vendor-rk35xx xhci-hcd
+[    5.567723] usb usb2: SerialNumber: xhci-hcd.8.auto
+[    5.568104] hub 2-0:1.0: USB hub found
+[    5.568134] hub 2-0:1.0: 1 port detected
+[    5.568885] rockchip-dmc dmc: bin=0
+[    5.569076] rockchip-dmc dmc: idc=12
+[    5.569089] rockchip-dmc dmc: idc-volt-sel=1
+[    5.570462] rockchip-dmc dmc: _of_add_opp_table_v2: no supported OPPs
+[    5.570476] rockchip-dmc dmc: failed to add opp table
+[    5.570598] rockchip-dmc: probe of dmc failed with error -2
+[    5.572051] input: rockchip-hdmi0 rockchip-hdmi0 as /devices/platform/hdmi-sound/sound/card1/input3
+[    5.572765] debugfs: File 'Capture' in directory 'dapm' already present!
+[    5.573497] input: rockchip-dp0 rockchip-dp0 as /devices/platform/dp0-sound/sound/card2/input4
+[    5.576781] cpu cpu0: bin=0
+[    5.576985] cpu cpu0: idc=3
+[    5.579425] cpu cpu0: pvtm=1998
+[    5.580083] cpu cpu0: pvtm-volt-sel=7
+[    5.580106] cpu cpu0: soc version=0, speed=7
+[    5.582069] cpu cpu4: bin=0
+[    5.582255] cpu cpu4: idc=5
+[    5.584696] cpu cpu4: pvtm=2138
+[    5.585286] cpu cpu4: pvtm-volt-sel=7
+[    5.585307] cpu cpu4: soc version=0, speed=7
+[    5.587083] cpu cpu0: avs=0
+[    5.588124] cpu cpu4: avs=0
+[    5.588232] cpu cpu0: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    5.589478] cpu cpu0: EM: created perf domain
+[    5.591329] cpu cpu4: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    5.592636] cpu cpu4: EM: created perf domain
+[    5.593910] RKNPU 27700000.npu: Adding to iommu group 0
+[    5.594111] RKNPU 27700000.npu: RKNPU: rknpu iommu is enabled, using iommu mode
+[    5.594385] RKNPU 27700000.npu: can't request region for resource [mem 0x27700000-0x27707fff]
+[    5.594410] RKNPU 27700000.npu: can't request region for resource [mem 0x27708000-0x2770ffff]
+[    5.594753] [drm] Initialized rknpu 0.9.8 20240828 for 27700000.npu on minor 1
+[    5.596353] RKNPU 27700000.npu: bin=0
+[    5.596532] RKNPU 27700000.npu: idc=4
+[    5.596566] debugfs: Directory '27700000.npu-rknpu' with parent 'vdd_npu_s0' already present!
+[    5.598348] RKNPU 27700000.npu: pvtm=866
+[    5.598871] RKNPU 27700000.npu: pvtm-volt-sel=8
+[    5.598887] RKNPU 27700000.npu: soc version=0, speed=8
+[    5.598936] debugfs: Directory '27700000.npu-rknpu' with parent 'vdd_npu_s0' already present!
+[    5.599707] RKNPU 27700000.npu: avs=0
+[    5.599921] RKNPU 27700000.npu: EM: created perf domain
+[    5.600153] RKNPU 27700000.npu: l=15000 h=2147483647 hyst=5000 l_limit=0 h_limit=0 h_table=0
+[    5.601324] RKNPU 27700000.npu: RKNPU: nbuf region: [0x000000003fe80000, 0x000000003ff80000), nbuf size: 0x100000
+[    5.602908] cfg80211: Loading compiled-in X.509 certificates for regulatory database
+[    5.619097] cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+[    5.619516] cfg80211: Loaded X.509 cert 'wens: 61c038651aabdcf94bd0ac7ff06c7248db18c600'
+[    5.620882] clk: Disabling unused clocks
+[    5.621624] rockchip-pm rockchip-suspend: not set pwm-regulator-config
+[    5.622317] rockchip-suspend not set sleep-mode-config for mem-lite
+[    5.622330] rockchip-suspend not set wakeup-config for mem-lite
+[    5.622340] rockchip-suspend not set sleep-mode-config for mem-ultra
+[    5.622347] rockchip-suspend not set wakeup-config for mem-ultra
+[    5.623334] ALSA device list:
+[    5.623345]   #0: rockchip-es8311
+[    5.623352]   #1: rockchip-hdmi0
+[    5.623359]   #2: rockchip-dp0
+[    5.628309] Freeing unused kernel memory: 8064K
+[    5.628393] Run /init as init process
+Loading, please wait...
+[Decryption-disk] ENTER 0-decryption-disk
+[    5.668016] [Decryption-disk] ENTER 0-decryption-disk
+[Decryption-disk] Boot disk from cmdline: /dev/nvme0n1
+[    5.672432] [Decryption-disk] Boot disk from cmdline: /dev/nvme0n1
+[    5.787735] [Decryption-disk] security partition resolved: /dev/nvme0n1p3
+[Decryption-disk] security partition resolved: /dev/nvme0n1p3
+[Decryption-disk] Security partition marker: SSKR
+[    5.801869] [Decryption-disk] Security partition marker: SSKR
+[Decryption-disk] SSKR marker found, reading passphrase with keybox_app
+[    5.802148] [Decryption-disk] SSKR marker found, reading passphrase with keybox_app
+[Decryption-disk] tee-supplicant started
+[    5.802545] [Decryption-disk] tee-supplicant started
+[    5.823082] usb 1-1: new high-speed USB device number 2 using xhci-hcd
+[Decryption-disk] Password successfully retrieved from security partition
+[    5.845231] [Decryption-disk] Password successfully retrieved from security partition
+[    5.964485] usb 1-1: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=32.98
+[    5.964513] usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    5.964523] usb 1-1: Product: USB2.0 Hub
+[Decryption-disk] Found LUKS device: /dev/nvme0n1p4 (UUID: ab418024-fb23-4d5f-96c9-07cc6b2795d8)
+[    5.983717] [Decryption-disk] Found LUKS device: /dev/nvme0n1p4 (UUID: ab418024-fb23-4d5f-96c9-07cc6b2795d8)
+[Decryption-disk] Unlocking LUKS encrypted partition
+[    5.983855] [Decryption-disk] Unlocking LUKS encrypted partition
+[    6.015212] hub 1-1:1.0: USB hub found
+[    6.015499] hub 1-1:1.0: 4 ports detected
+[    6.272833] phy phy-2602e000.syscon:usb2-phy@0.0: charger = USB_SDP_CHARGER
+[    6.359455] usb 1-1.4: new high-speed USB device number 3 using xhci-hcd
+[    6.451166] usb 1-1.4: New USB device found, idVendor=05e3, idProduct=0610, bcdDevice=32.98
+[    6.451182] usb 1-1.4: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+[    6.451189] usb 1-1.4: Product: USB2.0 Hub
+[    6.495282] hub 1-1.4:1.0: USB hub found
+[    6.495655] hub 1-1.4:1.0: 4 ports detected
+[    8.012840] vendor storage:20190527 ret = -1
+[Decryption-disk] root mapper ready: /dev/mapper/armbian-root
+[   12.799734] [Decryption-disk] root mapper ready: /dev/mapper/armbian-root
+[Decryption-disk] LUKS partition unlocked successfully
+[   12.799840] [Decryption-disk] LUKS partition unlocked successfully
+[Decryption-disk] Found encrypted userdata: /dev/nvme0n1p5
+[   12.931260] [Decryption-disk] Found encrypted userdata: /dev/nvme0n1p5
+[Decryption-disk] userdata mapper ready: /dev/mapper/armbian-userdata
+[   19.320344] [Decryption-disk] userdata mapper ready: /dev/mapper/armbian-userdata
+Starting systemd-udevd version 259.9-0ubuntu0.1
+[   20.197555] rk_gmac-dwmac 2a220000.ethernet end0: renamed from eth0
+[   20.230594] rk_gmac-dwmac 2a230000.ethernet end1: renamed from eth1
+[   20.267158] input: adc-keys as /devices/platform/adc-keys/input/input5
+[   20.271069] rockchip-cpuinfo cpuinfo: SoC            : 35760000
+[   20.271135] rockchip-cpuinfo cpuinfo: Serial         : 5a6886fcc73ec2a3
+Begin: Loading essential drivers ... done.
+Begin: Running /scripts/init-premount ... done.
+Begin: Mounting root file system ... Begin: Running /scripts/local-top ... done.
+Begin: Running /scripts/local-premount ... [   20.669581] raid6: neonx8   gen()  3147 MB/s
+[   20.726167] raid6: neonx4   gen()  3255 MB/s
+[   20.782897] raid6: neonx2   gen()  2710 MB/s
+[   20.839589] raid6: neonx1   gen()  1933 MB/s
+[   20.896239] raid6: int64x8  gen()   921 MB/s
+[   20.952842] raid6: int64x4  gen()  1091 MB/s
+[   21.009562] raid6: int64x2  gen()  1761 MB/s
+[   21.066248] raid6: int64x1  gen()  1310 MB/s
+[   21.066266] raid6: using algorithm neonx4 gen() 3255 MB/s
+[   21.122835] raid6: .... xor() 2324 MB/s, rmw enabled
+[   21.122850] raid6: using neon recovery algorithm
+[   21.124455] xor: measuring software checksum speed
+[   21.124738]    8regs           : 12547 MB/sec
+[   21.125051]    32regs          : 10750 MB/sec
+[   21.125426]    arm64_neon      :  8885 MB/sec
+[   21.125431] xor: using function: 8regs (12547 MB/sec)
+[   21.156590] Btrfs loaded, crc32c=crc32c-generic, zoned=no, fsverity=no
+Scanning for Btrfs filesystems
+done.
+[   30.290884] platform mtd_vendor_storage: deferred probe pending
+Begin: Will now check root file system ... fsck from util-linux 2.41.3
+[/usr/sbin/fsck.ext4 (1) -- /dev/mapper/armbian-root] fsck.ext4 -a -C0 /dev/mapper/armbian-root
+armbi_root: recovering journal
+armbi_root: clean, 142514/437184 files, 1248740/1746176 blocks
+done.
+[   51.431430] EXT4-fs (dm-0): mounting with "discard" option, but the device does not support discard
+[   51.431454] EXT4-fs (dm-0): mounted filesystem with writeback data mode. Quota mode: none.
+done.
+Begin: Running /scripts/local-bottom ... /scripts/local-bottom/cryptroot: line 34: realpath: not found
+done.
+Begin: Running /scripts/init-bottom ... [seeed-bind-userdata] linked /dev/armbian-userdata -> /dev/mapper/armbian-userdata (encrypted)
+Warning: overlayroot: configuring overlayroot with driver=overlay mode=device opts='dev=/dev/mapper/armbian-userdata,timeout=30,recurse=0' per /dev/mapper/armbian-roo
+t/etc/overlayroot.conf
+[   51.875214] EXT4-fs (dm-1): recovery complete
+[   51.875785] EXT4-fs (dm-1): mounting with "discard" option, but the device does not support discard
+[   51.875803] EXT4-fs (dm-1): mounted filesystem with ordered data mode. Quota mode: none.
+Success: overlayroot: configured root with 'device:dev=/dev/mapper/armbian-userdata,timeout=30,recurse=0' using overlay per /dev/mapper/armbian-root/etc/overlayroot.c
+onf
+armbian-ota: payload marker staged to /run/armbian-ota
+[seeed-mount-boot] no boot anchor recorded; skipping (raw-FIT or anchor failure)
+done.
+[   52.218908] systemd[1]: System time advanced to built-in epoch: Wed 2026-09-16 14:55:31 UTC
+[   52.583889] NET: Registered PF_INET6 protocol family
+[   52.584975] Segment Routing with IPv6
+[   52.585006] In-situ OAM (IOAM) with IPv6
+[   52.644091] systemd[1]: systemd 259.9-0ubuntu0.1 running in system mode (+PAM +AUDIT +SELINUX +APPARMOR +IMA +IPE +SMACK +SECCOMP +GCRYPT -GNUTLS +OPENSSL +ACL +BL
+KID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +KMOD +LIBCRYPTSETUP +LIBCRYPTSETUP_PLUGINS +LIBFDISK +PCRE2 +PWQUALITY +P11KIT +QRENCODE +TPM2 +BZIP2 +LZ4 +XZ +ZLIB +ZSTD +BPF
+_FRAMEWORK +BTF -XKBCOMMON -UTMP +SYSVINIT +LIBARCHIVE)
+[   52.644148] systemd[1]: Detected architecture arm64.
+
+Welcome to Armbian-unofficial 26.11.0-trunk resolute!
+
+[   52.650745] systemd[1]: Hostname set to <recomputer-rk3576-devkit>.
+[   52.795734] systemd[1]: bpf-restrict-fs: Failed to link program; assuming BPF LSM is not available.
+[   53.421692] systemd[1]: /usr/lib/systemd/system/bluetooth.service:4: Unknown key 'ConditionPathDirectory' in section [Unit], ignoring.
+[   53.493113] systemd[1]: Condition check resulted in dev-ttyFIQ0.device - /dev/ttyFIQ0 being skipped.
+[   53.501937] systemd[1]: Queued start job for default target graphical.target.
+[   53.507133] systemd[1]: Created slice system-cups.slice - CUPS Slice.
+[  OK  ] Created slice system-cups.slice - CUPS Slice.
+[   53.508557] systemd[1]: Created slice system-modprobe.slice - Slice /system/modprobe.
+[  OK  ] Created slice system-modprobe.slice - Slice /system/modprobe.
+[   53.509847] systemd[1]: Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[  OK  ] Created slice system-serial\x2dgetty.slice - Slice /system/serial-getty.
+[   53.511086] systemd[1]: Created slice system-systemd\x2dcryptsetup.slice - Encrypted Volume Units Service Slice.
+[  OK  ] Created slice system-systemd\x2dcryptsetup.slice - Encrypted Volume Units Service Slice.
+[   53.511916] systemd[1]: Created slice user.slice - User and Session Slice.
+[  OK  ] Created slice user.slice - User and Session Slice.
+[   53.512223] systemd[1]: Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[  OK  ] Started systemd-ask-password-wall.path - Forward Password Requests to Wall Directory Watch.
+[   53.512856] systemd[1]: Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[  OK  ] Set up automount proc-sys-fs-binfmt_misc.automount - Arbitrary Executable File Formats File System Automount Point.
+[   53.513028] systemd[1]: Expecting device dev-disk-by\x2duuid-ab418024\x2dfb23\x2d4d5f\x2d96c9\x2d07cc6b2795d8.device - /dev/disk/by-uuid/ab418024-fb23-4d5f-96c9-07
+cc6b2795d8...
+         Expecting device dev-disk-by\x2duuid-ab418024\x2dfb23\x2d4d5f\x2d96c9\x2d07cc6b2795d8.device - /dev/disk/by-uuid/ab418024-fb23-4d5f-96c9-07cc6b2795d8...
+[   53.513170] systemd[1]: Reached target imports.target - Image Downloads.
+[  OK  ] Reached target imports.target - Image Downloads.
+[   53.513277] systemd[1]: Reached target integritysetup.target - Local Integrity Protected Volumes.
+[  OK  ] Reached target integritysetup.target - Local Integrity Protected Volumes.
+[   53.513458] systemd[1]: Reached target slices.target - Slice Units.
+[  OK  ] Reached target slices.target - Slice Units.
+[   53.513579] systemd[1]: Reached target swap.target - Swaps.
+[  OK  ] Reached target swap.target - Swaps.
+[   53.513691] systemd[1]: Reached target usb-gadget.target - Hardware activated USB gadget.
+[  OK  ] Reached target usb-gadget.target - Hardware activated USB gadget.
+[   53.513794] systemd[1]: Reached target veritysetup.target - Local Verity Protected Volumes.
+[  OK  ] Reached target veritysetup.target - Local Verity Protected Volumes.
+[   53.526855] systemd[1]: Listening on rpcbind.socket - RPCbind Server Activation Socket.
+[  OK  ] Listening on rpcbind.socket - RPCbind Server Activation Socket.
+[   53.527634] systemd[1]: Listening on syslog.socket - Syslog Socket.
+[  OK  ] Listening on syslog.socket - Syslog Socket.
+[   53.531991] systemd[1]: Listening on systemd-ask-password.socket - Query the User Interactively for a Password.
+[  OK  ] Listening on systemd-ask-password.socket - Query the User Interactively for a Password.
+[   53.535212] systemd[1]: Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[  OK  ] Listening on systemd-creds.socket - Credential Encryption/Decryption.
+[   53.538421] systemd[1]: Listening on systemd-factory-reset.socket - Factory Reset Management.
+[  OK  ] Listening on systemd-factory-reset.socket - Factory Reset Management.
+[   53.538854] systemd[1]: Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[  OK  ] Listening on systemd-journald-dev-log.socket - Journal Socket (/dev/log).
+[   53.539249] systemd[1]: Listening on systemd-journald.socket - Journal Sockets.
+[  OK  ] Listening on systemd-journald.socket - Journal Sockets.
+[   53.542248] systemd[1]: Listening on systemd-mute-console.socket - Console Output Muting Service Socket.
+[  OK  ] Listening on systemd-mute-console.socket - Console Output Muting Service Socket.
+[   53.542445] systemd[1]: systemd-pcrextend.socket - TPM PCR Measurements skipped, unmet condition check ConditionSecurity=measured-uki
+[  OK  ] Listening on systemd-resolved-monitor.socket - Resolve Monitor Varlink Socket.
+[   53.542493] systemd[1]: systemd-pcrlock.socket - Make TPM PCR Policy skipped, unmet condition check ConditionSecurity=measured-uki
+[  OK  ] Listening on systemd-resolved-varlink.socket - Resolve Service Varlink Socket.
+[   53.542737] systemd[1]: Listening on systemd-resolved-monitor.socket - Resolve Monitor Varlink Socket.
+[  OK  ] Listening on systemd-udevd-control.socket - udev Control Socket.
+[   53.543072] systemd[1]: Listening on systemd-resolved-varlink.socket - Resolve Service Varlink Socket.
+[  OK  ] Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+[   53.543413] systemd[1]: Listening on systemd-udevd-control.socket - udev Control Socket.
+[  OK  ] Listening on systemd-udevd-varlink.socket - udev Varlink Socket.
+[   53.543675] systemd[1]: Listening on systemd-udevd-kernel.socket - udev Kernel Socket.
+         Mounting dev-hugepages.mount - Huge Pages File System...
+[   53.543967] systemd[1]: Listening on systemd-udevd-varlink.socket - udev Varlink Socket.
+         Mounting dev-mqueue.mount - POSIX Message Queue File System...
+[   53.546857] systemd[1]: Mounting dev-hugepages.mount - Huge Pages File System...
+         Mounting sys-kernel-debug.mount - Kernel Debug File System...
+[   53.548978] systemd[1]: Mounting dev-mqueue.mount - POSIX Message Queue File System...
+         Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[   53.551808] systemd[1]: Mounting sys-kernel-debug.mount - Kernel Debug File System...
+         Starting fake-hwclock-load.service - Restore the current clock...
+[   53.554405] systemd[1]: Mounting sys-kernel-tracing.mount - Kernel Trace File System...
+[   53.555048] systemd[1]: auth-rpcgss-module.service - Kernel Module supporting RPCSEC_GSS skipped, unmet condition check ConditionPathExists=/etc/krb5.keytab
+[   53.558407] systemd[1]: Starting fake-hwclock-load.service - Restore the current clock...
+[   53.563651] systemd[1]: Starting keyboard-setup.service - Set the console keyboard layout...
+         Starting keyboard-setup.service - Set the console keyboard layout...
+[   53.567449] systemd[1]: Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+         Starting kmod-static-nodes.service - Create List of Static Device Nodes...
+[   53.568096] systemd[1]: modprobe@configfs.service - Load Kernel Module configfs skipped, unmet condition check ConditionKernelModuleLoaded=!configfs
+[   53.571319] systemd[1]: Mounting sys-kernel-config.mount - Kernel Configuration File System...
+         Mounting sys-kernel-config.mount - Kernel Configuration File System...
+[   53.571686] systemd[1]: modprobe@drm.service - Load Kernel Module drm skipped, unmet condition check ConditionKernelModuleLoaded=!drm
+[   53.571821] systemd[1]: modprobe@efi_pstore.service - Load Kernel Module efi_pstore skipped, unmet condition check ConditionKernelModuleLoaded=!efi_pstore
+[   53.576379] systemd[1]: Starting modprobe@fuse.service - Load Kernel Module fuse...
+         Starting modprobe@fuse.service - Load Kernel Module fuse...
+[   53.576869] systemd[1]: systemd-hibernate-clear.service - Clear Stale Hibernate Storage Info skipped, unmet condition check ConditionPathExists=/sys/firmware/efi/e
+fivars/HibernateLocation-8cf2644b-4b0b-428f-9387-6d876050dc67
+[   53.588167] systemd[1]: Starting systemd-modules-load.service - Load Kernel Modules...
+         Starting systemd-modules-load.service - Load Kernel Modules...
+[   53.588452] systemd[1]: systemd-pcrmachine.service - TPM PCR Machine ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+[   53.591200] systemd[1]: Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+         Starting systemd-remount-fs.service - Remount Root and Kernel File Systems...
+[   53.591548] systemd[1]: systemd-tpm2-setup-early.service - Early TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   53.591665] systemd[1]: systemd-pcrnvdone.service - TPM PCR NvPCR Initialization Separator skipped, unmet condition check ConditionPathExists=/etc/initrd-release
+[   53.591736] systemd[1]: systemd-pcrproduct.service - TPM NvPCR Product ID Measurement skipped, unmet condition check ConditionSecurity=measured-uki
+         Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[   53.595449] systemd[1]: Starting systemd-udev-load-credentials.service - Load udev Rules from Credentials...
+[   53.600280] systemd[1]: Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+         Starting systemd-udev-trigger.service - Coldplug All udev Devices...
+[   53.608275] fuse: unknown parameter 'programmed' ignored
+[   53.608437] fuse: init (API version 7.38)
+[   53.608584] systemd[1]: Mounted dev-hugepages.mount - Huge Pages File System.
+[  OK  ] Mounted dev-hugepages.mount - Huge Pages File System.
+[   53.609882] systemd[1]: Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[  OK  ] Mounted dev-mqueue.mount - POSIX Message Queue File System.
+[   53.611501] systemd[1]: Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[  OK  ] Mounted sys-kernel-debug.mount - Kernel Debug File System.
+[   53.612283] systemd[1]: Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[  OK  ] Mounted sys-kernel-tracing.mount - Kernel Trace File System.
+[   53.613616] systemd[1]: Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[  OK  ] Finished kmod-static-nodes.service - Create List of Static Device Nodes.
+[   53.617186] systemd[1]: Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[  OK  ] Mounted sys-kernel-config.mount - Kernel Configuration File System.
+[   53.618293] systemd[1]: modprobe@fuse.service: Deactivated successfully.
+[  OK  ] Finished modprobe@fuse.service - Load Kernel Module fuse.
+[   53.618974] systemd[1]: Finished modprobe@fuse.service - Load Kernel Module fuse.
+[   53.623038] systemd[1]: Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+         Mounting sys-fs-fuse-connections.mount - FUSE Control File System...
+[   53.628283] Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+[   53.628406] Bluetooth: HIDP socket layer initialized
+[   53.629604] systemd[1]: Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+         Starting systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully...
+[   53.630829] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+[   53.630849] Bluetooth: BNEP filters: protocol multicast
+[   53.630866] Bluetooth: BNEP socket layer initialized
+[   53.634965] aic8800_bsp: loading out-of-tree module taints kernel.
+[   53.636986] aicbsp_init
+[   53.637025] RELEASE_DATE:2026_0123_5f7be68d
+[   53.637032] aicbsp_resv_mem_init
+[   53.637173] Bluetooth: RFCOMM TTY layer initialized
+[   53.637210] Bluetooth: RFCOMM socket layer initialized
+[   53.637259] Bluetooth: RFCOMM ver 1.11
+[   53.639021] aic_bluetooth_mod_init
+[   53.640010] -->rfkill_bluetooth_init
+[   53.640189] [BT_RFKILL]: bt shut off power
+[   53.640224] bluetooth_set_power: start_block=1
+[   53.640260] aicbsp: aicbsp_set_subsys, subsys: AIC_BLUETOOTH, state to: 0
+[   53.640270] aicbsp: aicbsp_set_subsys, power state no need to change, current: 0
+[   53.640278] bluetooth_set_power: end_block=1
+[  OK  ] Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[   53.640297] <--rfkill_bluetooth_init
+[  OK  ] Finished systemd-modules-load.service - Load Kernel Modules.
+[   53.642393] systemd[1]: Finished systemd-remount-fs.service - Remount Root and Kernel File Systems.
+[  OK  ] Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[   53.643612] systemd[1]: Finished systemd-modules-load.service - Load Kernel Modules.
+[   53.645135] systemd[1]: Finished systemd-udev-load-credentials.service - Load udev Rules from Credentials.
+[   53.649063] systemd[1]: fake-hwclock-load.service: Deactivated successfully.
+[   53.649595] systemd[1]: Finished fake-hwclock-load.service - Restore the current clock.
+[  OK  ] Finished fake-hwclock-load.service - Restore the current clock.
+[   53.650270] systemd[1]: Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[  OK  ] Mounted sys-fs-fuse-connections.mount - FUSE Control File System.
+[   53.651470] systemd[1]: systemd-hwdb-update.service - Rebuild Hardware Database skipped, unmet condition check ConditionNeedsUpdate=/etc
+[   53.654175] systemd[1]: Starting systemd-pstore.service - Platform Persistent Storage Archival...
+         Starting systemd-pstore.service - Platform Persistent Storage Archival...
+[   53.656980] systemd[1]: Starting systemd-random-seed.service - Load/Save OS Random Seed...
+         Starting systemd-random-seed.service - Load/Save OS Random Seed...
+[   53.660022] systemd[1]: Starting systemd-sysctl.service - Apply Kernel Variables...
+         Starting systemd-sysctl.service - Apply Kernel Variables...
+[   53.660303] systemd[1]: systemd-tpm2-setup.service - TPM SRK Setup skipped, unmet condition check ConditionSecurity=measured-uki
+[   53.686946] systemd[1]: Finished systemd-random-seed.service - Load/Save OS Random Seed.
+[  OK  ] Finished systemd-random-seed.service - Load/Save OS Random Seed.
+[   53.687439] systemd[1]: first-boot-complete.target - First Boot Complete skipped, unmet condition check ConditionFirstBoot=yes
+[   53.689867] systemd[1]: Finished systemd-pstore.service - Platform Persistent Storage Archival.
+[  OK  ] Finished systemd-pstore.service - Platform Persistent Storage Archival.
+[   53.698449] systemd[1]: Finished systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+[  OK  ] Finished systemd-tmpfiles-setup-dev-early.service - Create Static Device Nodes in /dev gracefully.
+[   53.698991] systemd[1]: systemd-sysusers.service - Create System Users skipped, no trigger condition checks were met.
+[   53.701567] systemd[1]: Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+         Starting systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev...
+[   53.704983] systemd[1]: Finished keyboard-setup.service - Set the console keyboard layout.
+[  OK  ] Finished keyboard-setup.service - Set the console keyboard layout.
+[  OK  ] Finished systemd-sysctl.service - Apply Kernel Variables.
+         Starting systemd-resolved.service - Network Name Resolution...
+[  OK  ] Finished systemd-tmpfiles-setup-dev.service - Create Static Device Nodes in /dev.
+[  OK  ] Reached target local-fs-pre.target - Preparation for Local File Systems.
+         Starting systemd-udevd.service - Rule-based Manager for Device Events and Files...
+[  OK  ] Started systemd-resolved.service - Network Name Resolution.
+[  OK  ] Started systemd-udevd.service - Rule-based Manager for Device Events and Files.
+[  OK  ] Finished systemd-udev-trigger.service - Coldplug All udev Devices.
+[  OK  ] Started systemd-ask-password-console.path - Dispatch Password Requests to Console Directory Watch.
+         Mounting tmp.mount - /tmp...
+[  OK  ] Mounted tmp.mount - /tmp.
+[  OK  ] Reached target local-fs.target - Local File Systems.
+[  OK  ] Listening on systemd-sysext.socket - System Extension Image Management.
+         Starting armbian-zram-config.service - Armbian ZRAM config...
+         Starting console-setup.service - Set console font and keymap...
+         Starting netplan-configure.service - Netplan Backend Configuration...
+         Starting plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data...
+         Starting systemd-binfmt.service - Set Up Additional Binary Formats...
+         Mounting proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System...
+         Starting fake-hwclock-load.service - Restore the current clock...
+[  OK  ] Finished console-setup.service - Set console font and keymap.
+[  OK  ] Finished plymouth-read-write.service - Tell Plymouth To Write Out Runtime Data.
+[  OK  ] Finished fake-hwclock-load.service - Restore the current clock.
+[  OK  ] Mounted proc-sys-fs-binfmt_misc.mount - Arbitrary Executable File Formats File System.
+[  OK  ] Finished systemd-binfmt.service - Set Up Additional Binary Formats.
+[  OK  ] Finished netplan-configure.service - Netplan Backend Configuration.
+[  OK  ] Found device dev-disk-by\x2duuid-ab418024\x2dfb23\x2d4d5f\x2d96c9\x2d07cc6b2795d8.device - YX-520 NVME 128GB rootfs.
+         Starting systemd-cryptsetup@armbian\x2droot.service - Cryptography Setup for armbian-root...
+[  OK  ] Finished systemd-cryptsetup@armbian\x2droot.service - Cryptography Setup for armbian-root.
+[  OK  ] Reached target blockdev@dev-mapper-armbian\x2droot.target - Block Device Preparation for /dev/mapper/armbian-root.
+[  OK  ] Reached target cryptsetup.target - Local Encrypted Volumes.
+[  OK  ] Finished armbian-zram-config.service - Armbian ZRAM config.
+         Starting armbian-ramlog.service - Armbian memory supported logging...
+         Starting fake-hwclock-load.service - Restore the current clock...
+[  OK  ] Finished fake-hwclock-load.service - Restore the current clock.
+[  OK  ] Listening on systemd-rfkill.socket - Load/Save RF Kill Switch Status /dev/rfkill Watch.
+         Starting systemd-rfkill.service - Load/Save RF Kill Switch Status...
+[  OK  ] Started systemd-rfkill.service - Load/Save RF Kill Switch Status.
+[  OK  ] Finished armbian-ramlog.service - Armbian memory supported logging.
+         Starting systemd-journald.service - Journal Service...
+[  OK  ] Started systemd-journald.service - Journal Service.
+         Starting systemd-journal-flush.service - Flush Journal to Persistent Storage...
+[  OK  ] Finished systemd-journal-flush.service - Flush Journal to Persistent Storage.
+         Starting systemd-tmpfiles-setup.service - Create System Files and Directories...
+[  OK  ] Finished systemd-tmpfiles-setup.service - Create System Files and Directories.
+         Mounting run-rpc_pipefs.mount - RPC Pipe File System...
+         Starting rpcbind.service - RPC bind portmap service...
+[  OK  ] Reached target sysinit.target - System Initialization.
+[  OK  ] Started cups.path - CUPS Scheduler.
+[  OK  ] Started apt-daily.timer - Daily apt download activities.
+[  OK  ] Started apt-daily-upgrade.timer - Daily apt upgrade and clean activities.
+[  OK  ] Started dpkg-db-backup.timer - Daily dpkg database backup timer.
+[  OK  ] Started e2scrub_all.timer - Periodic ext4 Online Metadata Check for All Filesystems.
+[  OK  ] Started fake-hwclock-save.timer - Periodically save current clock.
+[  OK  ] Started fstrim.timer - Discard unused filesystem blocks once a week.
+[  OK  ] Started fwupd-refresh.timer - Refresh fwupd metadata regularly.
+[  OK  ] Started logrotate.timer - Daily rotation of log files.
+[  OK  ] Started man-db.timer - Daily man-db regeneration.
+[  OK  ] Started systemd-tmpfiles-clean.timer - Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target paths.target - Path Units.
+[  OK  ] Reached target timers.target - Timer Units.
+[  OK  ] Listening on cups.socket - CUPS Scheduler.
+[  OK  ] Listening on dbus.socket - D-Bus System Message Bus Socket.
+[  OK  ] Listening on sshd-unix-local.socket - OpenSSH Server Socket (systemd-ssh-generator, AF_UNIX Local).
+[  OK  ] Listening on systemd-hostnamed.socket - Hostname Service Socket.
+[  OK  ] Listening on systemd-logind-varlink.socket - User Login Management Varlink Socket.
+[  OK  ] Reached target sockets.target - Socket Units.
+         Starting armbian-hardware-monitor.service - Armbian hardware monitoring...
+         Starting armbian-led-state.service - Armbian leds state...
+[  OK  ] Mounted run-rpc_pipefs.mount - RPC Pipe File System.
+[  OK  ] Reached target rpc_pipefs.target.
+[  OK  ] Reached target nfs-client.target - NFS client services.
+[  OK  ] Started rpcbind.service - RPC bind portmap service.
+[  OK  ] Reached target remote-fs-pre.target - Preparation for Remote File Systems.
+[  OK  ] Reached target remote-fs.target - Remote File Systems.
+[  OK  ] Reached target rpcbind.target - RPC Port Mapper.
+[  OK  ] Finished armbian-hardware-monitor.service - Armbian hardware monitoring.
+[  OK  ] Reached target basic.target - Basic System.
+         Starting accounts-daemon.service - Accounts Service...
+[  OK  ] Started aic-bluetooth.service - AIC8800 Bluetooth.
+         Starting alsa-restore.service - Save/Restore Sound Card State...
+         Starting armbian-resize-userdata.service - Resize userdata partition to fill disk...
+         Starting chrony.service - chrony, an NTP client/server...
+[  OK  ] Started cron.service - Regular background program processing daemon.
+         Starting dbus.service - D-Bus System Message Bus...
+[  OK  ] Started dmesg.service - Save initial kernel messages after boot.
+         Starting e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots...
+         Starting lm-sensors.service - Initialize hardware monitoring sensors...
+         Starting polkit.service - Authorization Manager...
+         Starting rkaiq_3A.service - Rockchip rkaiq 3A Image Quality Server...
+         Starting rng-tools-debian.service - Hardware RNG entropy gatherer daemon (Debian variant)...
+         Starting rsyslog.service - System Logging Service...
+         Starting systemd-logind.service - User Login Management...
+         Starting udisks2.service - Disk Manager...
+         Starting usbdevice.service - USB Gadget ConfigFS Manager (usbdevice)...
+[  OK  ] Finished armbian-led-state.service - Armbian leds state.
+[  OK  ] Started rkaiq_3A.service - Rockchip rkaiq 3A Image Quality Server.
+[  OK  ] Finished alsa-restore.service - Save/Restore Sound Card State.
+[  OK  ] Reached target sound.target - Sound Card.
+[  OK  ] Started dbus.service - D-Bus System Message Bus.
+         Starting NetworkManager.service - Network Manager...
+         Starting bluetooth.service - Bluetooth service...
+         Starting wpa_supplicant.service - WPA supplicant...
+[  OK  ] Finished e2scrub_reap.service - Remove Stale Online ext4 Metadata Check Snapshots.
+[  OK  ] Started rsyslog.service - System Logging Service.
+[  OK  ] Started wpa_supplicant.service - WPA supplicant.
+[  OK  ] Started bluetooth.service - Bluetooth service.
+         Starting systemd-hostnamed.service - Hostname Service...
+[  OK  ] Started chrony.service - chrony, an NTP client/server.
+[  OK  ] Started systemd-logind.service - User Login Management.
+[  OK  ] Finished lm-sensors.service - Initialize hardware monitoring sensors.
+[  OK  ] Started polkit.service - Authorization Manager.
+         Starting ModemManager.service - Modem Manager...
+[  OK  ] Started systemd-hostnamed.service - Hostname Service.
+[  OK  ] Started accounts-daemon.service - Accounts Service.
+         Starting NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service...
+[  OK  ] Started NetworkManager-dispatcher.service - Network Manager Script Dispatcher Service.
+[  OK  ] Started udisks2.service - Disk Manager.
+[  OK  ] Started NetworkManager.service - Network Manager.
+[  OK  ] Reached target network.target - Network.
+         Starting NetworkManager-wait-online.service - Network Manager Wait Online...
+         Starting cups.service - CUPS Scheduler...
+[  OK  ] Started fail2ban.service - Fail2Ban Service.
+         Starting openvpn.service - OpenVPN service...
+         Starting ssh.service - OpenBSD Secure Shell server...
+         Starting systemd-user-sessions.service - Permit User Sessions...
+[  OK  ] Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+[  OK  ] Started vnstat.service - vnStat network traffic monitor.
+[  OK  ] Finished openvpn.service - OpenVPN service.
+[  OK  ] Finished systemd-user-sessions.service - Permit User Sessions.
+[  OK  ] Started ModemManager.service - Modem Manager.
+[  OK  ] Started cups.service - CUPS Scheduler.
+[  OK  ] Started ssh.service - OpenBSD Secure Shell server.
+[  OK  ] Finished armbian-resize-userdata.service - Resize userdata partition to fill disk.
+         Starting armbian-ota-health.service - Armbian OTA health confirmation (recovery mode)...
+[  OK  ] Finished armbian-ota-health.service - Armbian OTA health confirmation (recovery mode).
+[  OK  ] Finished usbdevice.service - USB Gadget ConfigFS Manager (usbdevice).
+[  OK  ] Finished NetworkManager-wait-online.service - Network Manager Wait Online.
+[  OK  ] Reached target network-online.target - Network is Online.
+         Starting dnsmasq.service - dnsmasq - A lightweight DHCP and caching DNS server...
+         Starting rc-local.service - /etc/rc.local Compatibility...
+[  OK  ] Started rc-local.service - /etc/rc.local Compatibility.
+         Starting gdm.service - GNOME Display Manager...
+         Starting plymouth-quit-wait.service - Hold until boot process finishes up...
+[  OK  ] Finished plymouth-quit-wait.service - Hold until boot process finishes up.
+[  OK  ] Started serial-getty@ttyFIQ0.service - Serial Getty on ttyFIQ0.
+[  OK  ] Started serial-getty@ttyGS0.service - Serial Getty on ttyGS0.
+[  OK  ] Reached target getty.target - Login Prompts.
+         Starting setvtrgb.service - Set console scheme...
+[   64.425927] of_dma_request_slave_channel: dma-names property of node '/serial@2ad70000' missing or empty
+
+Armbian-unofficial 26.11.0-trunk Resolute ttyFIQ0
+
+recomputer-rk3576-devkit login: [   67.834234] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x30
+[   67.867836] dw_hdmi_qp-rockchip 27da0000.hdmi: ddc read failed offset:0x30
+[  161.213586] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #309825: block 610092: comm bash: lblock 0 mapped to illegal pblock 610092 (length 1)
+[  161.213729] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282642: block 65342: comm bash: lblock 0 mapped to illegal pblock 65342 (length 1)
+[  161.213790] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282642: block 65342: comm bash: lblock 0 mapped to illegal pblock 65342 (length 1)
+[  161.213802] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #309825: block 610092: comm bash: lblock 0 mapped to illegal pblock 610092 (length 1)
+[  161.213843] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #309414: block 610088: comm bash: lblock 0 mapped to illegal pblock 610088 (length 1)
+[  161.213865] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #309825: block 610092: comm bash: lblock 0 mapped to illegal pblock 610092 (length 1)
+[  161.213889] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #309825: block 610092: comm bash: lblock 0 mapped to illegal pblock 610092 (length 1)
+[  161.214254] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #2: block 8982: comm bash: lblock 0 mapped to illegal pblock 8982 (length 1)
+[  161.214274] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #129549: block 532420: comm bash: lblock 0 mapped to illegal pblock 532420 (length 1)
+[  161.214300] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #2: block 8982: comm bash: lblock 0 mapped to illegal pblock 8982 (length 1)
+[  166.723620] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  167.723638] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  169.033053] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #2: block 8982: comm sshd: lblock 0 mapped to illegal pblock 8982 (length 1)
+[  169.405675] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #129549: block 532420: comm f2b/f.sshd: lblock 0 mapped to illegal pblock 532420 (length 1)
+[  169.406330] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #129549: block 532420: comm f2b/f.sshd: lblock 0 mapped to illegal pblock 532420 (length 1)
+[  169.408541] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #26: block 9783: comm f2b/f.sshd: lblock 0 mapped to illegal pblock 9783 (length 1)
+[  169.410132] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #26: block 9783: comm f2b/f.sshd: lblock 0 mapped to illegal pblock 9783 (length 1)
+[  169.719973] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  169.720230] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  169.720299] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  173.722003] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  173.722315] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  173.722543] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  173.723575] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  173.723699] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  173.723801] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  173.723974] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  173.724093] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  173.724265] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #155061: block 535800: comm gmain: lblock 0 mapped to illegal pblock 535800 (length 1)
+[  173.724337] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #260461: block 1056902: comm gmain: lblock 0 mapped to illegal pblock 1056902 (length 1)
+[  178.723556] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  179.723648] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  181.719894] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  181.720197] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  181.720423] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  181.723203] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  181.723487] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  181.723546] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  181.723705] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  181.723733] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #260461: block 1056902: comm gmain: lblock 0 mapped to illegal pblock 1056902 (length 1)
+[  185.723265] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  185.723570] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  185.723575] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  185.723628] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  185.723791] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  185.723802] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  185.723830] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #204471: block 537542: comm gmain: lblock 0 mapped to illegal pblock 537542 (length 1)
+[  185.723914] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  185.724048] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  185.724079] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #155061: block 535800: comm gmain: lblock 0 mapped to illegal pblock 535800 (length 1)
+[  191.723616] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  193.721724] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  193.721933] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  193.722066] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  193.723532] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  193.723628] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  193.723690] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  193.723797] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  193.723872] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  193.723892] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #204471: block 537542: comm gmain: lblock 0 mapped to illegal pblock 537542 (length 1)
+[  197.723639] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  197.723686] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  197.723769] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  197.723877] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  197.723902] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #204471: block 537542: comm gmain: lblock 0 mapped to illegal pblock 537542 (length 1)
+[  197.723923] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  197.723989] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  197.724041] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  197.724142] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #155061: block 535800: comm gmain: lblock 0 mapped to illegal pblock 535800 (length 1)
+[  197.724224] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  203.723682] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  205.721707] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  205.721925] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  205.722064] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  205.722865] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  205.723191] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  205.723443] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #260461: block 1056902: comm gmain: lblock 0 mapped to illegal pblock 1056902 (length 1)
+[  205.723524] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  205.723681] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  205.723726] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  209.723629] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  209.723701] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  209.723790] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  209.723827] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  209.723905] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  209.723943] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  209.724043] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #204471: block 537542: comm gmain: lblock 0 mapped to illegal pblock 537542 (length 1)
+[  209.724052] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  209.724062] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  209.724145] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  215.723662] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  217.721769] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  217.722070] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  217.722295] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  217.723052] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  217.723452] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  217.723501] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  217.723643] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  217.723667] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  217.723775] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #260461: block 1056902: comm gmain: lblock 0 mapped to illegal pblock 1056902 (length 1)
+[  221.723595] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  221.723663] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  221.723748] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  221.723809] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  221.723829] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #204471: block 537542: comm gmain: lblock 0 mapped to illegal pblock 537542 (length 1)
+[  221.723838] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  221.723903] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  221.723955] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  221.724013] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  221.724107] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  227.723673] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  229.721778] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  229.722081] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  229.722306] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  229.723392] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  229.723635] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #204471: block 537542: comm gmain: lblock 0 mapped to illegal pblock 537542 (length 1)
+[  229.723630] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  229.723706] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  229.723805] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  229.723976] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  233.721840] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  233.721955] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  233.722054] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  233.722116] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #155061: block 535800: comm gmain: lblock 0 mapped to illegal pblock 535800 (length 1)
+[  233.722218] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  233.723538] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  233.723715] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  233.723777] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #204471: block 537542: comm gmain: lblock 0 mapped to illegal pblock 537542 (length 1)
+[  233.724055] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  233.724403] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  238.723523] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  239.723571] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  240.660980] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #205938: block 633484: comm gnome-shell: lblock 652 mapped to illegal pblock 633484 (length 1)
+[  240.661470] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #205938: block 633488: comm gnome-shell: lblock 656 mapped to illegal pblock 633488 (length 18)
+[  240.663331] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #205938: block 633550: comm gnome-shell: lblock 718 mapped to illegal pblock 633550 (length 1)
+[  240.663428] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #205938: block 633552: comm gnome-shell: lblock 720 mapped to illegal pblock 633552 (length 20)
+[  240.664273] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #205938: block 640364: comm gnome-shell: lblock 7532 mapped to illegal pblock 640364 (length 1)
+[  240.664356] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #205938: block 640368: comm gnome-shell: lblock 7536 mapped to illegal pblock 640368 (length 22
+)
+[  241.719909] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  241.720270] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  245.723125] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  245.723129] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  245.723302] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  245.723359] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #204471: block 537542: comm gmain: lblock 0 mapped to illegal pblock 537542 (length 1)
+[  245.723455] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #20: block 8989: comm gmain: lblock 0 mapped to illegal pblock 8989 (length 1)
+[  245.723646] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  245.723712] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #259076: block 1056707: comm gmain: lblock 0 mapped to illegal pblock 1056707 (length 1)
+[  245.723791] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+[  245.723881] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #6128: block 9795: comm gmain: lblock 0 mapped to illegal pblock 9795 (length 1)
+[  245.723966] EXT4-fs error (device dm-0): ext4_map_blocks:637: inode #282644: block 649202: comm gmain: lblock 0 mapped to illegal pblock 649202 (length 1)
+

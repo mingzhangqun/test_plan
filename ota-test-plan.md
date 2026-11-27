@@ -341,6 +341,11 @@ conv=notrunc` → reboot → 武装。
 | V5 | p1 FIT + p2 rescue 均损 | 确认后（双重故障） | U-Boot 无可引导目标 → **硬停砖**；无明文/未验证 fallback；恢复 = maskrom 重刷（安排在批次末，设备本就要换形态重刷，零额外窗口） |
 | V6 | 候选 + backup payload 均不可用 | 武装态（三重故障：重放反复失败耗尽 + restore 失败） | rescue shell fail-stop（不静默、不砖）；构造贵（apply 层故障注入 ×3 + 损 backup），低优先 |
 
+261126 裁定（REC 轮）：V2 与 V6 不再覆盖——commit 后介质级 rootfs 损坏非 OTA 契约
+（事务窗口自愈 V3/V4 已验），最坏情况 maskrom 重刷兜底；health 仅对 payload-id（无 fs
+完整性感知）记为已知限制。构造方法存档：mapper 层灭 9 超级块 + drop_caches + reboot -f
+（裸分区 dd 打密文层，会被运行中 fs flush 回写覆盖）。
+
 注记：四变体均须 rescue 引擎 fw_* 可用（libyaml 修复后跑）；V2/V4 的 rootfs 损坏不触发
 campaign_fail（重放成功即自愈），失败梯子另见 2.5 耗尽行。env 重建失败两分支（normal 侧
 fail-open / rescue 侧 fail-stop shell）已被 libyaml 缺陷期实证（B-1 首启与历次 rescue 原样落壳）。
